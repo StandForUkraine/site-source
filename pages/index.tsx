@@ -154,7 +154,7 @@ export const posts: PostItem[] = [
     segment: 'aggresion',
     text: '',
     image: '/posts/aggresion.png',
-    imageAlt: 'RUSSIAN AGGRESION WILL TO BE STOPPED',
+    imageAlt: 'RUSSIAN AGGRESION WILL BE STOPPED',
   },
   {
     segment: 'savelife',
