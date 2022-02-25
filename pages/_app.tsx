@@ -57,6 +57,10 @@ export const renderMetaData = ({
       <meta itemProp="og:title" content={title} />
       <meta itemProp="name" content={title} />
 
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@stand4ukr" />
+      <meta name="twitter:title" content={title} />
+
       <meta name="description" content={description} />
       <meta itemProp="description" content={description} />
       <meta property="og:description" content={description} />
