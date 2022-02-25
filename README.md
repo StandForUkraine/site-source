@@ -1,1 +1,3 @@
-# standforukraine.com
+* install yarn
+* `yarn install`
+
