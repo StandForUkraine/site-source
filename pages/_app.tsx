@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import { createGlobalStyle, css } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -45,25 +45,29 @@ export const renderMetaData = ({
   title?: string
   description?: string
   image?: string
-}) => (
-  <>
-    <title>Stand For Ukraine</title>
-    <meta property="og:type" content="article" />
+}) => {
+  const fullImage = 'https://standforukraine.com' + image
 
-    <meta property="og:site_name" content={title} />
-    <meta itemProp="og:title" content={title} />
-    <meta itemProp="name" content={title} />
+  return (
+    <>
+      <title>Stand For Ukraine</title>
+      <meta property="og:type" content="article" />
 
-    <meta name="description" content={description} />
-    <meta itemProp="description" content={description} />
-    <meta property="og:description" content={description} />
-    <meta name="twitter:description" content={description} />
+      <meta property="og:site_name" content={title} />
+      <meta itemProp="og:title" content={title} />
+      <meta itemProp="name" content={title} />
 
-    <meta itemProp="image" content={image} />
-    <meta property="og:image" content={image} />
-    <meta name="twitter:image" content={image} />
-  </>
-)
+      <meta name="description" content={description} />
+      <meta itemProp="description" content={description} />
+      <meta property="og:description" content={description} />
+      <meta name="twitter:description" content={description} />
+
+      <meta itemProp="image" content={fullImage} />
+      <meta property="og:image" content={fullImage} />
+      <meta name="twitter:image" content={fullImage} />
+    </>
+  )
+}
 
 function App({ Component, pageProps }: AppProps) {
   return (
