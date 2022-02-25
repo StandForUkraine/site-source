@@ -5,30 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#StandForUkraine</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
 
-        body {
-            display: flex;
-            width: 100%;
-            height: 100vh;
-            align-items: center;
-            justify-content: center;
-            background: #000;
-            color: #fff;
-            padding: 0;
-            margin: 0;
-            font-family: Helvetica, Arial, Sans-Serif;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
 
-        h1 {
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/index.css">
 </head>
 <body>
-    <h1>#StandForUkraine</h1>
+<div class="page">
+    <div class="top-header">
+        <div class="top-header-flag"></div>
+        <h1>Stand For Ukraine</h1>
+
+        <button class="share-button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 7.58908L10 0.5V3.7791C4.17347 5.79286 0 11.2274 0 17.614C0 18.2526 0.0428571 18.8833 0.122449 19.5C0.877551 14.8298 5.01224 11.2574 10 11.2574V14.6801L20 7.58908Z" fill="black"/>
+            </svg>
+        </button>
+    </div>
+
+    <div class="hero">
+        <h1 class="hero-header">
+            Help Ukrainian Military & Humanitarian Organizations
+        </h1>
+
+        <p class="hero-text">
+            Support Ukraine in the face of <i>Russian military aggression</i>.
+        </p>
+        <p class="hero-text">
+            Donate to verified projects to help Armed Forces of Ukraine or humanitarian charities.
+        </p>
+        <p class="hero-text">
+            Inform the public by sharing our newslets.
+        </p>
+    </div>
+
+    <div class="page-sections-tabs">
+        <button class="page-section-tab page-section-tab-active">Donate</button>
+        <button class="page-section-tab">Inform</button>
+    </div>
+
+    <div class="content-tags-panel">
+        <button class="content-tag">Military</button>
+        <button class="content-tag">Non-goverment</button>
+        <button class="content-tag">Humanitarian</button>
+    </div>
+
+    <div class="donation-post">
+        <img src="/assets/logo-nbu.png" alt="National bank of Ukraine" class="donation-post-logo">
+        <h3 class="donation-post-title">Armed Forces of Ukraine (IBAN)</h3>
+        <p class="donation-post-text">The National Bank of Ukraine has decided to open a special fundraising account to support the Armed Forces of Ukraine. This account accepts multiple currencies. It has been established and opened to receive transfers from international partners and donors in multiple currencies.</p>
+        <button class="donation-button">Donate</button>
+    </div>
+</div>
 </body>
 </html>

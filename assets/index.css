@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    padding-top: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page {
+    max-width: 100%;
+    width: 1112px;
+    margin: auto;
+}
+
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding-left: 90px;
+    background: #fff;
+    display: flex;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.04);
+}
+
+.top-header h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    flex-grow: 1;
+}
+
+.top-header-flag {
+    position: absolute;
+    width: 83px;
+    height: 77px;
+    left: 0px;
+    top: 0px;
+
+    background: url(./ua-flag.png);
+}
+
+.share-button {
+    background: none;
+    border: none;
+    display: flex;
+    height: 100%;
+    width: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.share-button:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero {
+    padding: 20px;
+}
+
+.hero-header {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 44px;
+    text-align: center;
+}
+
+.hero-text {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #333;
+}
+
+.page-sections-tabs {
+    width: 100%;
+    background: #FFE600;
+    height: 64px;
+    display: flex;
+}
+
+.page-section-tab {
+    text-decoration: underline;
+    font-size: 32px;
+    width: 50%;
+    background: transparent;
+    border: none;
+    border-top: 4px solid #FFE600;
+}
+
+.page-section-tab:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.page-section-tab-active {
+    background: #fff !important;
+    cursor: auto;
+    text-decoration: none;
+}
+
+.content-tags-panel {
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.content-tag {
+    background: #F2F2F2;
+    border-radius: 40px;
+    padding: 8px 12px;
+    border: none;
+}
+
+.content-tag:hover, .content-tag-active {
+    background: #000;
+    color: #fff;
+}
+
+.donation-post {
+    padding: 20px;
+}
+
+.donation-button {
+    padding: 8px 16px;
+    background: #000;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+}
