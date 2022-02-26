@@ -49,7 +49,7 @@ const donations: DonationItem[] = [
     title: `Armed Forces of Ukraine (IBAN)`,
     tags: ['Military'],
     description: `The National Bank of Ukraine has decided to open a special fundraising account to support the Armed Forces of Ukraine. This account accepts multiple currencies. It has been established and opened to receive transfers from international partners and donors in multiple currencies.`,
-    link: 'https://www.zsu.gov.ua/',
+    link: 'https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi',
     donateLink:
       'https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi',
   },
