@@ -162,25 +162,25 @@ const donations: DonationItem[] = [
 export const posts: PostItem[] = [
   {
     segment: 'declared-war',
-    text: '',
+    text: '#StandForUkraine',
     image: '/posts/declared-war.png',
     imageAlt: 'Russia & Belarus Officially Declared War on Ukraine.',
   },
   {
     segment: 'aggresion',
-    text: '',
+    text: '#StandForUkraine',
     image: '/posts/aggresion.png',
     imageAlt: 'RUSSIAN AGGRESION WILL BE STOPPED',
   },
   {
     segment: 'savelife',
-    text: '',
+    text: '#StandForUkraine',
     image: '/posts/savelife.png',
     imageAlt: 'I support Come Back Alive Fuoundation. Join me.',
   },
   {
     segment: 'savelife-ua-army',
-    text: '',
+    text: '#StandForUkraine',
     image: '/posts/savelife-ua-army.png',
     imageAlt: 'I support Come Back Alive Foundation & Ukraninan Armed Forces. Join Me!',
   },
@@ -233,7 +233,7 @@ const SharePopup = ({ onClose }: { onClose: () => any }) => (
       </p>
       <SocialButtons
         link="https://standforukraine.com/"
-        text="Help Ukrainian Military & Humanitarian Organizations"
+        text="Help Ukrainian Military & Humanitarian Organizations #StandForUkraine"
       />
       <CopyToClipboard text="https://standforukraine.com/">
         <CopyButton>Copy Link</CopyButton>
