@@ -511,7 +511,7 @@ const Donations = () => {
           <DonationLogo src={donation.logo} alt={donation.logoAlt || donation.title} />
           <DonationTitle href={donation.link}>{donation.title}</DonationTitle>
           <DonationDescription>{donation.description}</DonationDescription>
-          <DonationButton href={donation.link} target="_blank">
+          <DonationButton href={donation.donateLink} target="_blank">
             Donate
           </DonationButton>
         </DonationPost>
