@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Head from 'next/head'
-import { renderMetaData } from './_app'
+import { useMetadataRenderer } from 'utils/metadata'
 
 type Tab = 'donate' | 'inform'
 
@@ -49,7 +49,7 @@ const donations: DonationItem[] = [
     title: `Armed Forces of Ukraine (IBAN)`,
     tags: ['Military'],
     description: `The National Bank of Ukraine has decided to open a special fundraising account to support the Armed Forces of Ukraine. This account accepts multiple currencies. It has been established and opened to receive transfers from international partners and donors in multiple currencies.`,
-    link: 'https://www.zsu.gov.ua/',
+    link: 'https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi',
     donateLink:
       'https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi',
   },
@@ -627,9 +627,10 @@ const Page = styled.div`
 `
 
 export default function Index() {
+  const renderMetadata = useMetadataRenderer()
   return (
     <>
-      <Head>{renderMetaData({})}</Head>
+      <Head>{renderMetadata({})}</Head>
       <LandingPage />
     </>
   )
