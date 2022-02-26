@@ -141,14 +141,14 @@ const donations: DonationItem[] = [
     link: 'http://molfar.org/en/about-us/vision-mission-goals',
     donateLink: 'http://molfar.org/en/take-part/donate/money',
   },
-  {
-    logo: '/logos/pwings.png',
-    title: `Phoenix Wings`,
-    tags: ['Non-government', 'Military', 'Non-lethal', 'Medical'],
-    description: `Charitable Foundation Phoenix Wings provides the Ukrainian army with the necessary assistance in regards to the appropriate equipment & uniform, personal non-lethal protection(vests, helmets), required treatment of the wounded soldiers, and acquisition the individual first aid kits, and repair of the buildings used by the army.`,
-    link: 'http://wings-phoenix.org.ua/en/about-fund/',
-    donateLink: 'http://wings-phoenix.org.ua/en/donate/',
-  },
+  // {
+  //   logo: '/logos/pwings.png',
+  //   title: `Phoenix Wings`,
+  //   tags: ['Non-government', 'Military', 'Non-lethal', 'Medical'],
+  //   description: `Charitable Foundation Phoenix Wings provides the Ukrainian army with the necessary assistance in regards to the appropriate equipment & uniform, personal non-lethal protection(vests, helmets), required treatment of the wounded soldiers, and acquisition the individual first aid kits, and repair of the buildings used by the army.`,
+  //   link: 'http://wings-phoenix.org.ua/en/about-fund/',
+  //   donateLink: 'http://wings-phoenix.org.ua/en/donate/',
+  // },
   {
     logo: '/logos/pp.png',
     title: `People's Project`,
@@ -189,12 +189,17 @@ export const posts: PostItem[] = [
 const socialNetworks: SocialNetwork[] = [
   {
     icon: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 23.9859 5.85094 30.6053 13.5 31.8056V20.625H9.4375V16H13.5V12.475C13.5 8.465 15.8888 6.25 19.5434 6.25C21.2934 6.25 23.125 6.5625 23.125 6.5625V10.5H21.1075C19.12 10.5 18.5 11.7334 18.5 13V16H22.9375L22.2281 20.625H18.5V31.8056C26.1491 30.6053 32 23.9859 32 16Z" fill="#4F4F4F"/></svg>`,
-    generateLink: (link, text) => `https://www.facebook.com/sharer/sharer.php?u=${link}`,
+    generateLink: (link, text) =>
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+        link
+      )}&quote=${encodeURIComponent(text)}`,
   },
   {
     icon: `<svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0669 26C22.1394 26 28.7444 15.9957 28.7444 7.32254C28.7444 7.04129 28.7381 6.75379 28.7256 6.47254C30.0105 5.54334 31.1193 4.3924 32 3.07379C30.8034 3.60619 29.5329 3.9539 28.2319 4.10504C29.6017 3.28394 30.6274 1.99402 31.1187 0.474417C29.8301 1.23814 28.4208 1.77688 26.9513 2.06754C25.9611 1.01548 24.652 0.318883 23.2262 0.0854624C21.8005 -0.147958 20.3376 0.0947949 19.0637 0.77619C17.7897 1.45758 16.7757 2.53967 16.1785 3.85514C15.5812 5.17062 15.4339 6.64621 15.7594 8.05379C13.15 7.92285 10.5972 7.245 8.26664 6.06419C5.93604 4.88338 3.87959 3.22598 2.23062 1.19942C1.39253 2.64439 1.13608 4.35425 1.51337 5.98152C1.89067 7.60878 2.87342 9.03132 4.26188 9.96004C3.2195 9.92695 2.19997 9.6463 1.2875 9.14129V9.22254C1.28657 10.7389 1.8108 12.2088 2.77108 13.3824C3.73136 14.556 5.06843 15.3608 6.555 15.66C5.58941 15.9242 4.57598 15.9627 3.59313 15.7725C4.01261 17.0766 4.82876 18.2172 5.92769 19.0352C7.02662 19.8531 8.35349 20.3075 9.72313 20.335C7.3979 22.1615 4.52557 23.1522 1.56875 23.1475C1.04438 23.1467 0.520532 23.1146 0 23.0513C3.00381 24.9784 6.49804 26.0019 10.0669 26Z" fill="#4F4F4F"/></svg>`,
     generateLink: (link, text) =>
-      `https://twitter.com/intent/tweet?text=${encodeURIComponent(link)}`,
+      `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+        text ? text + ' ' + link : link
+      )}`,
   },
 ]
 
@@ -226,6 +231,10 @@ const SharePopup = ({ onClose }: { onClose: () => any }) => (
         <br />
         Let people know how to support Ukraine.
       </p>
+      <SocialButtons
+        link="https://standforukraine.com/"
+        text="Help Ukrainian Military & Humanitarian Organizations"
+      />
       <CopyToClipboard text="https://standforukraine.com/">
         <CopyButton>Copy Link</CopyButton>
       </CopyToClipboard>
@@ -290,6 +299,7 @@ const CopyButton = styled.button`
   background: #f2f2f2;
   border-radius: 4px;
   padding: 8px;
+  margin-top: 10px;
   border: none;
   width: 100%;
   font-weight: 600;
@@ -366,6 +376,7 @@ const ShareButton = styled.button`
     display: none;
     margin-right: 5px;
   }
+
   @media (min-width: 768px) {
     width: 100px;
     span {
@@ -558,24 +569,35 @@ const DonationButton = styled.a`
   font-weight: 600;
 `
 
+const SocialButtons = ({ text, link }: { link: string; text?: string }) => (
+  <SocialButtonsWrapper>
+    {socialNetworks.map((network, i) => (
+      <SocialButton
+        key={i}
+        target="_blank"
+        href={network.generateLink(link, text || '')}
+        dangerouslySetInnerHTML={{ __html: network.icon }}
+      />
+    ))}
+  </SocialButtonsWrapper>
+)
+
+const SocialButtonsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const SocialButton = styled.a`
+  margin: 5px;
+`
+
 const SocialPosts = () => (
   <>
     {posts.map((post) => (
       <PostWrapper key={post.segment}>
         <PostImage src={post.image} alt={post.imageAlt} />
-        <SocialButtons>
-          {socialNetworks.map((network, i) => (
-            <SocialButton
-              key={i}
-              target="_blank"
-              href={network.generateLink(
-                `https://standforukraine.com/p/${post.segment}`,
-                post.text
-              )}
-              dangerouslySetInnerHTML={{ __html: network.icon }}
-            />
-          ))}
-        </SocialButtons>
+        <SocialButtons link={`https://standforukraine.com/p/${post.segment}`} text={post.text} />
       </PostWrapper>
     ))}
   </>
@@ -590,16 +612,6 @@ const PostWrapper = styled.div`
 const PostImage = styled.img`
   max-width: 100%;
   width: 100%;
-`
-
-const SocialButtons = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-const SocialButton = styled.a`
-  margin: 5px;
 `
 
 export function LandingPage() {
