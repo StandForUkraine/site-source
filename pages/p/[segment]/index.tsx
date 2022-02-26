@@ -1,18 +1,21 @@
 import { LandingPage, posts, PostItem } from 'pages/index'
 import Head from 'next/head'
-import { renderMetaData } from 'pages/_app'
+import { useMetadataRenderer } from 'utils/metadata'
 
-export default ({ postData }: { postData: PostItem }) => (
-  <>
-    <Head>
-      {renderMetaData({
-        title: postData.imageAlt,
-        image: postData.image,
-      })}
-    </Head>
-    <LandingPage />
-  </>
-)
+export default ({ postData }: { postData: PostItem }) => {
+  const renderMetadata = useMetadataRenderer()
+  return (
+    <>
+      <Head>
+        {renderMetadata({
+          title: postData.imageAlt,
+          image: postData.image,
+        })}
+      </Head>
+      <LandingPage />
+    </>
+  )
+}
 
 export async function getStaticProps({ params }: any) {
   const postData = posts.find((p) => p.segment === params.segment.toLowerCase().trim())

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Head from 'next/head'
-import { renderMetaData } from './_app'
+import { useMetadataRenderer } from 'utils/metadata'
 
 type Tab = 'donate' | 'inform'
 
@@ -627,9 +627,10 @@ const Page = styled.div`
 `
 
 export default function Index() {
+  const renderMetadata = useMetadataRenderer()
   return (
     <>
-      <Head>{renderMetaData({})}</Head>
+      <Head>{renderMetadata({})}</Head>
       <LandingPage />
     </>
   )
