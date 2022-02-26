@@ -141,14 +141,14 @@ const donations: DonationItem[] = [
     link: 'http://molfar.org/en/about-us/vision-mission-goals',
     donateLink: 'http://molfar.org/en/take-part/donate/money',
   },
-  {
-    logo: '/logos/pwings.png',
-    title: `Phoenix Wings`,
-    tags: ['Non-government', 'Military', 'Non-lethal', 'Medical'],
-    description: `Charitable Foundation Phoenix Wings provides the Ukrainian army with the necessary assistance in regards to the appropriate equipment & uniform, personal non-lethal protection(vests, helmets), required treatment of the wounded soldiers, and acquisition the individual first aid kits, and repair of the buildings used by the army.`,
-    link: 'http://wings-phoenix.org.ua/en/about-fund/',
-    donateLink: 'http://wings-phoenix.org.ua/en/donate/',
-  },
+  // {
+  //   logo: '/logos/pwings.png',
+  //   title: `Phoenix Wings`,
+  //   tags: ['Non-government', 'Military', 'Non-lethal', 'Medical'],
+  //   description: `Charitable Foundation Phoenix Wings provides the Ukrainian army with the necessary assistance in regards to the appropriate equipment & uniform, personal non-lethal protection(vests, helmets), required treatment of the wounded soldiers, and acquisition the individual first aid kits, and repair of the buildings used by the army.`,
+  //   link: 'http://wings-phoenix.org.ua/en/about-fund/',
+  //   donateLink: 'http://wings-phoenix.org.ua/en/donate/',
+  // },
   {
     logo: '/logos/pp.png',
     title: `People's Project`,
