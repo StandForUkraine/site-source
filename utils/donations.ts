@@ -18,7 +18,7 @@ export interface DonationItem {
 }
 
 export const loadDonations = () => {
-  const files = glob.sync(path.join(serverRuntimeConfig.PROJECT_ROOT, 'donations/**/*.yml'))
+  const files = glob.sync(path.join(serverRuntimeConfig.PROJECT_ROOT, 'donations/**/en.yml'))
   const data = files
     .map((file) => {
       const id = parseInt(path.basename(path.dirname(file)), 10)

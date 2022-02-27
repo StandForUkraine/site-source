@@ -127,5 +127,5 @@ for (const id in donations) {
 
   fs.mkdirSync(dir)
   fs.renameSync(path.join(__dirname, 'public', logo), path.join(dir, 'logo.png'))
-  fs.writeFileSync(path.join(dir, 'info.yml'), doc.toString())
+  fs.writeFileSync(path.join(dir, 'en.yml'), doc.toString())
 }
