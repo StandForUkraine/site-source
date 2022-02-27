@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useMetadataRenderer } from 'utils/metadata'
 import LandingPage from 'components/LandingPage'
 import { PostItem, posts } from 'utils/posts'
+import { langs } from 'texts'
 
 export default ({ postData }: { postData: PostItem }) => {
   const renderMetadata = useMetadataRenderer()
@@ -30,8 +31,12 @@ export async function getStaticProps({ params }: any) {
 export async function getStaticPaths() {
   return {
     fallback: false,
-    paths: posts.map((p) => ({
-      params: { segment: p.segment },
-    })),
+    paths: langs
+      .map((lang) =>
+        posts.map(({ segment }) => ({
+          params: { segment, lang },
+        }))
+      )
+      .flat(),
   }
 }

@@ -4,12 +4,13 @@
     "start": "next dev",
     "deploy": "npm run build && node deploy.js",
     "build-next": "next build && next export",
-    "build": "rm -rf out && npm run build-next && ./build-folders.sh",
+    "build": "rm -rf out && npm run build-next && node build-folders.js",
     "lint": "tslint -p . -c tslint.json --fix --format verbose",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "dependencies": {
     "gh-pages": "^3.2.3",
+    "glob": "^7.2.0",
     "next": "^12.1.0",
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.4",

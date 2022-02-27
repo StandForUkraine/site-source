@@ -16,8 +16,8 @@ const LangContext = createContext<LangContextValue>({
 
 export const LangContextProvider = ({ children }: { children: React.ReactElement }) => {
   const router = useRouter()
-  const lang = defaultLang
-  console.log(router)
+  const lang = (router.query.lang || defaultLang) as Lang
+
   return (
     <LangContext.Provider
       value={{

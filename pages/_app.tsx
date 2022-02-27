@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
+import { LangContextProvider } from 'utils/lang'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -35,7 +36,9 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <LangContextProvider>
+        <Component {...pageProps} />
+      </LangContextProvider>
     </>
   )
 }

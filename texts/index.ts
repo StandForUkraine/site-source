@@ -8,6 +8,8 @@ export const byLang = {
 
 export type Lang = keyof typeof byLang
 
+export const langs = Object.keys(byLang)
+
 const defaultLangTexts = byLang[defaultLang]
 
 export type Texts = typeof defaultLangTexts
