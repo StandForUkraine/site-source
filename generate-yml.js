@@ -120,7 +120,12 @@ const path = require('path')
 const yaml = require('yaml')
 
 for (const id in donations) {
+  const { logo, ...info } = donations[id]
+  const dir = path.join(__dirname, 'donations', (id * 1 + 1).toString())
   const doc = new yaml.Document()
-  doc.contents = donations[id]
-  fs.writeFileSync(path.join(__dirname, 'posts', (id * 1 + 1) + '.yml'), doc.toString())
+  doc.contents = info
+
+  fs.mkdirSync(dir)
+  fs.renameSync(path.join(__dirname, 'public', logo), path.join(dir, 'logo.png'))
+  fs.writeFileSync(path.join(dir, 'info.yml'), doc.toString())
 }

@@ -18,13 +18,14 @@ export interface DonationItem {
 }
 
 export const loadDonations = () => {
-  const files = glob.sync(path.join(serverRuntimeConfig.PROJECT_ROOT, 'posts/*.yml'))
+  const files = glob.sync(path.join(serverRuntimeConfig.PROJECT_ROOT, 'donations/**/*.yml'))
   const data = files
     .map((file) => {
-      const id = parseInt(path.basename(file).replace('.yml', ''), 10)
+      const id = parseInt(path.basename(path.dirname(file)), 10)
       const text = fs.readFileSync(file, 'utf-8')
       return {
         ...yaml.parse(text),
+        logo: `/logos/${id}.png`,
         id,
       }
     })

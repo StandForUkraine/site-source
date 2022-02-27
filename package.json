@@ -4,7 +4,7 @@
     "start": "next dev",
     "deploy": "npm run build && node deploy.js",
     "build-next": "next build && next export",
-    "build": "rm -rf out && npm run build-next && node build-folders.js",
+    "build": "rm -rf out && npm run build-next && node after-build.js",
     "lint": "tslint -p . -c tslint.json --fix --format verbose",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
