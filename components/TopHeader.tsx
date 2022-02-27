@@ -1,18 +1,20 @@
 import { useState } from 'react'
 import styled from 'styled-components'
+import { useText } from 'utils/lang'
 import ShareIcon from './ShareIcon'
 import SharePopup from './SharePopup'
 
 export const TopHeader = () => {
   const [visibleShare, setVisibleShare] = useState(false)
+  const t = useText()
 
   return (
     <TopHeaderWrapper>
       <TopHeaderFlag />
-      <TopHeaderTitle>Stand For Ukraine</TopHeaderTitle>
+      <TopHeaderTitle>{t('siteName')}</TopHeaderTitle>
 
       <ShareButton onClick={() => setVisibleShare(true)}>
-        <span>Share</span>
+        <span>{t('share')}</span>
         <ShareIcon />
       </ShareButton>
 

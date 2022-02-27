@@ -1,9 +1,11 @@
 import en from './en'
+import ua from './ua'
 
 export const defaultLang = 'en'
 
 export const byLang = {
   en,
+  ua,
 } as const
 
 export type Lang = keyof typeof byLang

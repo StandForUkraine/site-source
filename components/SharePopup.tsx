@@ -2,30 +2,32 @@ import ShareIcon from 'components/ShareIcon'
 import SocialButtons from 'components/SocialButtons'
 import CopyToClipboard from 'react-copy-to-clipboard'
 import styled from 'styled-components'
+import { useText } from 'utils/lang'
 
-export const SharePopup = ({ onClose }: { onClose: () => any }) => (
-  <>
-    <SharePopupBG onClick={onClose} />
+export const SharePopup = ({ onClose }: { onClose: () => any }) => {
+  const t = useText()
 
-    <SharePopupWrapper>
-      <CloseButton onClick={onClose}>Close</CloseButton>
-      <ShareIcon size={60} />
-      <SharePopupTitle>Spread The Cause</SharePopupTitle>
-      <p>
-        Share this resource to your friends and colleagues.
-        <br />
-        Let people know how to support Ukraine.
-      </p>
-      <SocialButtons
-        link="https://standforukraine.com/"
-        text="Help Ukrainian Military & Humanitarian Organizations #StandForUkraine"
-      />
-      <CopyToClipboard text="https://standforukraine.com/">
-        <CopyButton>Copy Link</CopyButton>
-      </CopyToClipboard>
-    </SharePopupWrapper>
-  </>
-)
+  return (
+    <>
+      <SharePopupBG onClick={onClose} />
+
+      <SharePopupWrapper>
+        <CloseButton onClick={onClose}>{t('close')}</CloseButton>
+        <ShareIcon size={60} />
+        <SharePopupTitle>{t('sharePopupTitle')}</SharePopupTitle>
+        <p>
+          {t('sharePopupText1')}
+          <br />
+          {t('sharePopupText2')}
+        </p>
+        <SocialButtons link="https://standforukraine.com/" text={t('sharingText')} />
+        <CopyToClipboard text="https://standforukraine.com/">
+          <CopyButton>{t('copyLink')}</CopyButton>
+        </CopyToClipboard>
+      </SharePopupWrapper>
+    </>
+  )
+}
 export default SharePopup
 
 const SharePopupBG = styled.div`
@@ -45,7 +47,8 @@ const SharePopupWrapper = styled.div`
   background: #fff;
   border-radius: 24px;
   padding: 20px;
-  max-width: 100%;
+  width: 560px;
+  max-width: 90%;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;

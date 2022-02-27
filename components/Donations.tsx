@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { DonationItem } from 'utils/donations'
+import { useLang, useText } from 'utils/lang'
 import { allTags, TagOrAll } from 'utils/tags'
 import ContentTags from './ContentTags'
 
 export const Donations = ({ donations }: { donations: DonationItem[] }) => {
+  const t = useText()
   const [currentTag, setTag] = useState<TagOrAll>('All')
+  const { lang } = useLang()
+  donations = donations.map((donation) => ({ ...donation, ...donation.byLang[lang] }))
 
   const filteredDonations =
     currentTag !== 'All'
@@ -22,7 +26,7 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
           <DonationTitle href={donation.link}>{donation.title}</DonationTitle>
           <DonationDescription>{donation.description}</DonationDescription>
           <DonationButton href={donation.donateLink} target="_blank">
-            Donate
+            {t('donateButton')}
           </DonationButton>
         </DonationPost>
       ))}
@@ -35,6 +39,7 @@ export default Donations
 const DonationPost = styled.div`
   padding: 20px;
   max-width: 556px;
+  min-width: 50%;
   display: inline-block;
 `
 

@@ -1,17 +1,20 @@
 import styled from 'styled-components'
+import { useText } from 'utils/lang'
+import Langs from './Langs'
 
-export const Hero = () => (
-  <HeroWrapper>
-    <HeroHeader>Help Ukrainian Military &amp; Humanitarian Organizations</HeroHeader>
-    <HeroText>
-      Support Ukraine in the face of <i>Russian military aggression</i>.
-    </HeroText>
-    <HeroText>
-      Donate to verified projects to help Armed Forces of Ukraine or humanitarian charities.
-    </HeroText>
-    <HeroText>Inform the public by sharing our newslets.</HeroText>
-  </HeroWrapper>
-)
+export const Hero = () => {
+  const t = useText()
+
+  return (
+    <HeroWrapper>
+      <Langs />
+      <HeroHeader>{t('heroHeader')}</HeroHeader>
+      <HeroText>{t('heroText1')}</HeroText>
+      <HeroText>{t('heroText2')}</HeroText>
+      <HeroText>{t('heroText3')}</HeroText>
+    </HeroWrapper>
+  )
+}
 
 export default Hero
 

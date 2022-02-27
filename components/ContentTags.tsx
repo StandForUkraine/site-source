@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useText } from 'utils/lang'
 import { TagOrAll } from 'utils/tags'
 
 export const ContentTags = ({
@@ -9,15 +10,19 @@ export const ContentTags = ({
   tags: TagOrAll[]
   currentTag: TagOrAll
   onTagChange: (value: TagOrAll) => any
-}) => (
-  <TagsWrapper>
-    {tags.map((tag) => (
-      <Tag key={tag} isActive={tag === currentTag} onClick={() => onTagChange(tag)}>
-        {tag}
-      </Tag>
-    ))}
-  </TagsWrapper>
-)
+}) => {
+  const t = useText()
+
+  return (
+    <TagsWrapper>
+      {tags.map((tag) => (
+        <Tag key={tag} isActive={tag === currentTag} onClick={() => onTagChange(tag)}>
+          {t(tag)}
+        </Tag>
+      ))}
+    </TagsWrapper>
+  )
+}
 
 export default ContentTags
 

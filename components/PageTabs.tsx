@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useText } from 'utils/lang'
 
 export type Tab = 'donate' | 'inform'
 
@@ -8,16 +9,19 @@ export const PageTabs = ({
 }: {
   currentTab: Tab
   onTabChange: (value: Tab) => any
-}) => (
-  <TabsWrapper>
-    <Tab isActive={currentTab === 'donate'} onClick={() => onTabChange('donate')}>
-      Donate
-    </Tab>
-    <Tab isActive={currentTab === 'inform'} onClick={() => onTabChange('inform')}>
-      Inform
-    </Tab>
-  </TabsWrapper>
-)
+}) => {
+  const t = useText()
+  return (
+    <TabsWrapper>
+      <Tab isActive={currentTab === 'donate'} onClick={() => onTabChange('donate')}>
+        {t('donate')}
+      </Tab>
+      <Tab isActive={currentTab === 'inform'} onClick={() => onTabChange('inform')}>
+        {t('inform')}
+      </Tab>
+    </TabsWrapper>
+  )
+}
 
 export default PageTabs
 
