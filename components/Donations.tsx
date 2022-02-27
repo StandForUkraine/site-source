@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import { donations } from 'utils/donations'
+import { DonationItem } from 'utils/donations'
 import { allTags, TagOrAll } from 'utils/tags'
 import ContentTags from './ContentTags'
 
-export const Donations = () => {
+export const Donations = ({ donations }: { donations: DonationItem[] }) => {
   const [currentTag, setTag] = useState<TagOrAll>('All')
 
   const filteredDonations =

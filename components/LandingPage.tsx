@@ -5,8 +5,9 @@ import Hero from 'components/Hero'
 import PageTabs, { Tab } from 'components/PageTabs'
 import Donations from 'components/Donations'
 import SocialPosts from 'components/SocialPosts'
+import { DonationItem } from 'utils/donations'
 
-export default function LandingPage() {
+export default function LandingPage({ donations }: { donations: DonationItem[] }) {
   const [currentTab, setTab] = useState<Tab>('donate')
 
   return (
@@ -16,7 +17,7 @@ export default function LandingPage() {
         <Hero />
         <PageTabs currentTab={currentTab} onTabChange={setTab} />
 
-        {currentTab === 'donate' && <Donations />}
+        {currentTab === 'donate' && <Donations donations={donations} />}
         {currentTab === 'inform' && <SocialPosts />}
       </Page>
     </>
