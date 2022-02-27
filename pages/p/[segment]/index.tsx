@@ -1,6 +1,7 @@
-import { LandingPage, posts, PostItem } from 'pages/index'
 import Head from 'next/head'
 import { useMetadataRenderer } from 'utils/metadata'
+import LandingPage from 'components/LandingPage'
+import { PostItem, posts } from 'utils/posts'
 
 export default ({ postData }: { postData: PostItem }) => {
   const renderMetadata = useMetadataRenderer()
