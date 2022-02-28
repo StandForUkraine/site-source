@@ -21,7 +21,7 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
       <ContentTags tags={['All', ...allTags]} currentTag={currentTag} onTagChange={setTag} />
 
       {filteredDonations.map((donation) => (
-        <DonationPost key={donation.title}>
+        <DonationPost key={donation.id}>
           <DonationLogo src={donation.logo} alt={donation.logoAlt || donation.title} />
           <DonationTitle href={donation.link}>{donation.title}</DonationTitle>
           <DonationDescription>{donation.description}</DonationDescription>
