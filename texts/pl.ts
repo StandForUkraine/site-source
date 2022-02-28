@@ -26,6 +26,8 @@ export default {
   Medical: 'Medical',
   Humanitarian: 'Humanitarian',
   Refugees: 'Refugees',
+  Press: 'Press',
+  Veterancy: 'Veterancy',
   'Non-lethal': 'Non-lethal',
   'Non-government': 'Non-government',
   'Human Rights': 'Human Rights',

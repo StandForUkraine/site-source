@@ -26,6 +26,8 @@ export default {
   Medical: 'Медичні',
   Humanitarian: 'Гуманітарні',
   Refugees: 'Притулки',
+  Press: 'Преса',
+  Veterancy: 'Ветерани',
   'Non-lethal': 'Нелетальні',
   'Non-government': 'Недержавні',
   'Human Rights': 'Права людини',
