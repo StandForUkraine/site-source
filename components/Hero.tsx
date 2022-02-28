@@ -7,7 +7,7 @@ export const Hero = () => {
 
   return (
     <HeroWrapper>
-      <Langs />
+      {/* <Langs /> */}
       <HeroHeader>{t('heroHeader')}</HeroHeader>
       <HeroText>{t('heroText1')}</HeroText>
       <HeroText>{t('heroText2')}</HeroText>

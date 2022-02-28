@@ -1,13 +1,12 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-const GA_ID = 'G-48DN99WD6W'
+export const GA_ID = 'G-48DN99WD6W'
 
 export default function Document() {
   return (
     <Html>
       <Head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="theme-color" content="#ffffff" />
@@ -26,7 +25,6 @@ export default function Document() {
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
-              window.gtag = gtag
               gtag('js', new Date());
               gtag('config', '${GA_ID}', { page_path: window.location.pathname });
             `,

@@ -3,6 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 import { LangContextProvider } from 'utils/lang'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import { GA_ID } from './_document'
+import Head from 'next/head'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -40,7 +42,7 @@ function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
       const gtag = (window as any).gtag as any
-      gtag.pageview(url)
+      gtag('config', GA_ID, { page_path: url })
     }
 
     router.events.on('routeChangeComplete', handleRouteChange)
@@ -51,6 +53,9 @@ function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <GlobalStyles />
       <LangContextProvider>
         <Component {...pageProps} />
