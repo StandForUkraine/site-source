@@ -1,6 +1,8 @@
 import { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
 import { LangContextProvider } from 'utils/lang'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -33,6 +35,20 @@ const GlobalStyles = createGlobalStyle`
 `
 
 function App({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = (url: URL) => {
+      const gtag = (window as any).gtag as any
+      gtag.pageview(url)
+    }
+
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
   return (
     <>
       <GlobalStyles />
