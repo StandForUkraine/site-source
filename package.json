@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "next dev",
+    "start": "node server.js",
     "deploy": "npm run build && node deploy.js",
     "build-next": "next build && next export",
     "build": "rm -rf out && npm run build-next && node after-build.js",
