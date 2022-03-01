@@ -4,6 +4,7 @@ import { DonationItem } from 'utils/donations'
 import { useLang, useText } from 'utils/lang'
 import { allTags, TagOrAll } from 'utils/tags'
 import ContentTags from './ContentTags'
+import LazyLoad from 'react-lazyload'
 
 export const Donations = ({ donations }: { donations: DonationItem[] }) => {
   const t = useText()
@@ -22,7 +23,9 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
 
       {filteredDonations.map((donation) => (
         <DonationPost key={donation.id}>
-          <DonationLogo src={donation.logo} alt={donation.logoAlt || donation.title} />
+          <LazyLoad once offset={500}>
+            <DonationLogo src={donation.logo} alt={donation.logoAlt || donation.title} />
+          </LazyLoad>
           <DonationTitle href={donation.link}>{donation.title}</DonationTitle>
           <DonationDescription>{donation.description}</DonationDescription>
           <DonationButton href={donation.donateLink} target="_blank">

@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 import { posts } from 'utils/posts'
 import SocialButtons from './SocialButtons'
+import LazyLoad from 'react-lazyload'
 
 export const SocialPosts = () => (
   <>
     {posts.map((post) => (
       <PostWrapper key={post.segment}>
-        <PostImage src={post.image} alt={post.imageAlt} />
+        <LazyLoad once offset={500}>
+          <PostImage src={post.image} alt={post.imageAlt} />
+        </LazyLoad>
         <SocialButtons link={`https://standforukraine.com/p/${post.segment}`} text={post.text} />
       </PostWrapper>
     ))}
