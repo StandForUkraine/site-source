@@ -19,6 +19,7 @@ export default {
   sharePopupText2: 'Faire savoir aux gens comment soutenir l\'Ukraine.',
   sharingText: 'Aider les militaires ukrainiens et les organisations humanitaires #Soutien à l\'Ukraine. ',
   copyLink: 'Copier le lien',
+  copyLinkDone: 'Copié!'
 
   // tags
   All: 'Tout',
