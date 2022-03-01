@@ -7,11 +7,13 @@ export const Langs = () => {
   const { lang } = useLang()
   return (
     <LangsWrapper>
-      {langs.map((langKey) => (
-        <Link key={langKey} href={langKey === defaultLang ? '/' : `/${langKey}/`}>
-          <Lang isActive={langKey === lang}>{langKey}</Lang>
-        </Link>
-      ))}
+      {langs
+        .filter((langKey) => langKey !== 'ua')
+        .map((langKey) => (
+          <Link key={langKey} href={langKey === defaultLang ? '/' : `/${langKey}/`}>
+            <Lang isActive={langKey === lang}>{langKey}</Lang>
+          </Link>
+        ))}
     </LangsWrapper>
   )
 }

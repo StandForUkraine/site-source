@@ -1,10 +1,12 @@
 import en from './en'
+import fr from './fr'
 import ua from './ua'
 
 export const defaultLang = 'en'
 
 export const byLang = {
   en,
+  fr,
   ua,
 } as const
 
