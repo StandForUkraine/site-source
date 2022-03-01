@@ -28,7 +28,7 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
           </LazyLoad>
           <DonationTitle href={donation.link}>{donation.title}</DonationTitle>
           <DonationDescription>{donation.description}</DonationDescription>
-          <DonationButton href={donation.donateLink} target="_blank">
+          <DonationButton href={donation.donateLink} target="_blank" rel="noopener">
             {t('donateButton')}
           </DonationButton>
         </DonationPost>

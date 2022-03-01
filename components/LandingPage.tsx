@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import TopHeader from 'components/TopHeader'
 import Hero from 'components/Hero'
+import Footer from 'components/Footer'
 import PageTabs, { Tab } from 'components/PageTabs'
 import Donations from 'components/Donations'
 import SocialPosts from 'components/SocialPosts'
@@ -19,6 +20,7 @@ export default function LandingPage({ donations }: { donations: DonationItem[] }
 
         {currentTab === 'donate' && <Donations donations={donations} />}
         {currentTab === 'inform' && <SocialPosts />}
+        <Footer />
       </Page>
     </>
   )

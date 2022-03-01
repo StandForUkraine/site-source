@@ -7,6 +7,7 @@ export const SocialButtons = ({ text, link }: { link: string; text?: string }) =
       <SocialButton
         key={i}
         target="_blank"
+        rel="noopener"
         href={network.generateLink(link, text || '')}
         dangerouslySetInnerHTML={{ __html: network.icon }}
       />

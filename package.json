@@ -9,6 +9,7 @@
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "dependencies": {
+    "@svgr/webpack": "^6.2.1",
     "@types/glob": "^7.2.0",
     "gh-pages": "^3.2.3",
     "glob": "^7.2.0",
