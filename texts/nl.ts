@@ -15,11 +15,11 @@ export default {
 
   close: 'Afsluiten',
   sharePopupTitle: 'Verspreid de oorzaak',
-  sharePopupText1: 'Deel deze bron met je vrienden en collega\'s.',
+  sharePopupText1: "Deel deze bron met je vrienden en collega's.",
   sharePopupText2: 'Laat mensen weten hoe ze Oekraïne kunnen steunen.',
   sharingText: 'Help Oekraïense militaire en humanitaire organisaties #StandForUkraine',
   copyLink: 'Link kopiëren',
-  copyLinkDone: 'Gekopieerd!'
+  copyLinkDone: 'Gekopieerd!',
 
   // tags
   All: 'Alles',

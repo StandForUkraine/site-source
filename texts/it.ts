@@ -16,10 +16,10 @@ export default {
   close: 'Chiudi',
   sharePopupTitle: 'Condividi',
   sharePopupText1: 'Condividi questa pagina con i tuoi amici e colleghi.',
-  sharePopupText2: 'Fai sapere alle persone come aiutare l\'Ucraina',
+  sharePopupText2: "Fai sapere alle persone come aiutare l'Ucraina",
   sharingText: 'Aiuta i militari ucraini e gli enti di beneficenza umanitari #StandForUkraine',
   copyLink: 'Copia il link',
-  copyLinkDone: 'Copiato!'
+  copyLinkDone: 'Copiato!',
 
   // tags
   All: 'Tutto',

@@ -16,10 +16,11 @@ export default {
   close: 'Fermer',
   sharePopupTitle: 'Faire circuler la cause',
   sharePopupText1: 'Partager la ressource à vos amis et collègues.',
-  sharePopupText2: 'Faire savoir aux gens comment soutenir l\'Ukraine.',
-  sharingText: 'Aider les militaires ukrainiens et les organisations humanitaires #Soutien à l\'Ukraine. ',
+  sharePopupText2: "Faire savoir aux gens comment soutenir l'Ukraine.",
+  sharingText:
+    "Aider les militaires ukrainiens et les organisations humanitaires #Soutien à l'Ukraine. ",
   copyLink: 'Copier le lien',
-  copyLinkDone: 'Copié!'
+  copyLinkDone: 'Copié!',
 
   // tags
   All: 'Tout',
