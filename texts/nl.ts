@@ -19,7 +19,7 @@ export default {
   sharePopupText2: 'Laat mensen weten hoe ze Oekraïne kunnen steunen.',
   sharingText: 'Help Oekraïense militaire en humanitaire organisaties #StandForUkraine',
   copyLink: 'Link kopiëren',
-  copyLinkDone: 'Gekopieerd!',
+  // copyLinkDone: 'Gekopieerd!',
 
   // tags
   All: 'Alles',
