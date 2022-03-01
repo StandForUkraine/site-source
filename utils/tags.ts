@@ -7,7 +7,7 @@ export const allTags = [
   'Refugees',
   'Human Rights',
   'Press',
-  'Veterancy',
+  // 'Veterancy',
 ] as const
 
 export type Tag = typeof allTags[number]
