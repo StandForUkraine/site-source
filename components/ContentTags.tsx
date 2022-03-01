@@ -39,6 +39,7 @@ const Tag = styled.button<{ isActive?: boolean }>`
   padding: 8px 12px;
   border: none;
   margin-right: 5px;
+  margin-top: 5px;
 
   ${({ isActive }) =>
     isActive

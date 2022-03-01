@@ -34,7 +34,7 @@ const TabsWrapper = styled.div`
 
 const Tab = styled.button<{ isActive?: boolean }>`
   text-decoration: underline;
-  font-size: 32px;
+  font-size: 18px;
   width: 50%;
   background: transparent;
   border: none;
@@ -50,5 +50,13 @@ const Tab = styled.button<{ isActive?: boolean }>`
 
   &:hover {
     background: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: 400px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 32px;
   }
 `
