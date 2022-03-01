@@ -33,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
   button {
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
+    color: #000;
   }
 `
 
