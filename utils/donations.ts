@@ -34,7 +34,12 @@ export const loadDonations = () => {
         .sync(path.join(path.dirname(file), '*.yml'))
         .reduce((obj, langFile) => {
           const lang = path.basename(langFile).replace('.yml', '')
-          return { ...obj, [lang]: yaml.parse(fs.readFileSync(langFile, 'utf-8')) }
+          try {
+            return { ...obj, [lang]: yaml.parse(fs.readFileSync(langFile, 'utf-8')) }
+          } catch (err) {
+            console.error('Failed to load lang', lang, 'for', id, err)
+            return { ...obj }
+          }
         }, {})
 
       return {
