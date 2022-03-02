@@ -36,19 +36,26 @@ const TagsWrapper = styled.div`
 const Tag = styled.button<{ isActive?: boolean }>`
   background: #f2f2f2;
   border-radius: 40px;
-  padding: 8px 12px;
-  border: none;
+  padding: 5px 9px;
+  border: 3px solid #f2f2f2;
   margin-right: 5px;
   margin-top: 5px;
+  outline: none;
+
+  &:hover {
+    border-color: rgba(255, 229, 0, 0.5);
+  }
+  
+  &:focus {
+    border-color: #FFE500;
+  }
 
   ${({ isActive }) =>
     isActive
       ? `
         background: #000;
-        color: #fff;`
+        color: #fff;
+        border-color: #000;
+        `
       : ''}
-
-  &:hover {
-    background: #999;
-  }
 `

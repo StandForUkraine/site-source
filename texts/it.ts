@@ -32,4 +32,15 @@ export default {
   'Non-lethal': 'Non letale',
   'Non-government': 'Non governativo',
   'Human Rights': 'Diritti umani',
+
+  // footer
+  footerHeader: `Stand for Ukraine è un aggregatore di organizzazioni affidabili per aiutarci a combattere l'invasione russa e prevenire le conseguenze degli scontri.`,
+  footerGoals: 'I nostri obiettivi',
+  goal1: 'Aiutare i militari ucraini con armi, munizioni e forniture',
+  goal2: 'Proteggere veterani e vittime di guerra',
+  goal3: 'Mettere al riparo e sfamare i rifugiati',
+  goal4: 'Aiutare bambini, anziani e altri gruppi vulnerabili',
+  goal5: 'Aiutare la stampa indipendente',
+  footerCreds: `Questo sito è fatto da ingegneri IT, dirigenti, designers, scrittori, traduttori, giornalisti e attivisti dall'Ucraina e non solo.`,
+  footerContact: 'Contattaci',
 }

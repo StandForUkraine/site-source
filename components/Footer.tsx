@@ -11,30 +11,28 @@ export const Hero = () => {
     <FooterWrapper>
       <Column>
         <FirstColumnText>
-          Stand for Ukraine - is an aggregator of reliable organizations that helps to fight the
-          Russian invasion and overcome its consequences.
+          {t('footerHeader')}.
         </FirstColumnText>
       </Column>
       <Column>
-        <SecondColumnTitle>Our Goals</SecondColumnTitle>
+        <SecondColumnTitle>{t('footerGoals')}</SecondColumnTitle>
         <SecondColumnList>
-          <li>Help the Ukrainian military with weapons, ammunition, and supplies</li>
-          <li>Recover the veterans &amp; victims of war</li>
-          <li>Shelter and feed the refugees</li>
-          <li>Aid children, elders, and other vulnerable groups</li>
-          <li>Support independent press</li>
+          <li>{t('goal1')}</li>
+          <li>{t('goal2')}</li>
+          <li>{t('goal3')}</li>
+          <li>{t('goal4')}</li>
+          <li>{t('goal5')}</li>
         </SecondColumnList>
       </Column>
       <Column>
         <p>
-          This website is made by IT engineers, managers, designers, writers, translators,
-          journalists, and activists from all over Ukraine &amp; beyond.
+          {t('footerCreds')}
         </p>
         <br />
         <Flags>🇺🇦 🇬🇧 🇫🇷 🇩🇪 🇦🇹 🇵🇱 🇷🇴 🇹🇷</Flags>
         <br />
         <p>
-          Reach us: <a href="mailto:team@standforukraine.com">team@standforukraine.com</a>
+          {t('footerContact')}: <a href="mailto:team@standforukraine.com">team@standforukraine.com</a>
         </p>
         <br />
         <SocialIcons>
