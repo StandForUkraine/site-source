@@ -3,14 +3,15 @@ import styled from 'styled-components'
 import { defaultLang, Lang as LangKeys, langs } from 'texts'
 import { useLang } from 'utils/lang'
 
-const _kFlags = new Map<LangKeys, string>([
-  ['en', '🇬🇧'],
-  ['es', '🇪🇸'],
-  ['fr', '🇫🇷'],
-  ['nl', '🇳🇱'],
-  ['it', '🇪🇸'],
-  ['pl', '🇮🇹'],
-])
+const _kFlags: Record<LangKeys, string> = {
+  en: '🇬🇧',
+  es: '🇪🇸',
+  fr: '🇫🇷',
+  nl: '🇳🇱',
+  it: '🇮🇹',
+  pl: '🇵🇱',
+  ua: '🇺🇦',
+}
 
 export const Langs = () => {
   const { lang } = useLang()
@@ -25,7 +26,7 @@ export const Langs = () => {
             as={langKey === defaultLang ? '/' : `/${langKey}/`}
           >
             <Lang href={langKey === defaultLang ? '/' : `/${langKey}/`} isActive={langKey === lang}>
-              {_kFlags.get(langKey as never)}&nbsp;{langKey.toUpperCase()}
+              {_kFlags[langKey]}&nbsp;{langKey.toUpperCase()}
             </Lang>
           </Link>
         ))}
