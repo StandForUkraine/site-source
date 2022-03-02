@@ -89,8 +89,7 @@ export const posts: PostItem[] = [
     segment: 'declared-war',
     text: '#StandForUkraine',
     image: '/posts/declared-war.png',
-    imageAlt: 'Russia & Belarus Officially Declared War on Ukraine.',
-    hidden: true,
+    imageAlt: 'russia & belarus Declared War on Ukraine.',
   },
   {
     segment: 'savelife',
