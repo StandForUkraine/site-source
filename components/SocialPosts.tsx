@@ -9,7 +9,19 @@ export const SocialPosts = () => (
       .filter((p) => !p.hidden)
       .map((post) => (
         <PostWrapper key={post.segment}>
-          <LazyLoad once offset={500}>
+          <LazyLoad
+            once
+            offset={500}
+            placeholder={
+              <img
+                width={1200}
+                height={630}
+                data-src={post.image}
+                alt={post.imageAlt}
+                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+              />
+            }
+          >
             <PostImage width={1200} height={630} src={post.image} alt={post.imageAlt} />
           </LazyLoad>
           <SocialButtons link={`https://standforukraine.com/p/${post.segment}`} text={post.text} />
