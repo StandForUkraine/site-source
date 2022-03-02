@@ -10,9 +10,7 @@ export const Hero = () => {
   return (
     <FooterWrapper>
       <Column>
-        <FirstColumnText>
-          {t('footerHeader')}.
-        </FirstColumnText>
+        <FirstColumnText>{t('footerHeader')}.</FirstColumnText>
       </Column>
       <Column>
         <SecondColumnTitle>{t('footerGoals')}</SecondColumnTitle>
@@ -25,14 +23,13 @@ export const Hero = () => {
         </SecondColumnList>
       </Column>
       <Column>
-        <p>
-          {t('footerCreds')}
-        </p>
+        <p>{t('footerCreds')}</p>
         <br />
         <Flags>🇺🇦 🇬🇧 🇫🇷 🇩🇪 🇦🇹 🇵🇱 🇷🇴 🇹🇷</Flags>
         <br />
         <p>
-          {t('footerContact')}: <a href="mailto:team@standforukraine.com">team@standforukraine.com</a>
+          {t('footerContact')}:{' '}
+          <a href="mailto:team@standforukraine.com">team@standforukraine.com</a>
         </p>
         <br />
         <SocialIcons>

@@ -45,9 +45,9 @@ const Tag = styled.button<{ isActive?: boolean }>`
   &:hover {
     border-color: rgba(255, 229, 0, 0.5);
   }
-  
+
   &:focus {
-    border-color: #FFE500;
+    border-color: #ffe500;
   }
 
   ${({ isActive }) =>

@@ -10,7 +10,7 @@ const _kFlags = new Map<LangKeys, string>([
   ['nl', '🇳🇱'],
   ['it', '🇪🇸'],
   ['pl', '🇮🇹'],
-]);
+])
 
 export const Langs = () => {
   const { lang } = useLang()
