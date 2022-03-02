@@ -29,4 +29,5 @@ const PostWrapper = styled.div`
 const PostImage = styled.img`
   max-width: 100%;
   width: 100%;
+  height: auto;
 `
