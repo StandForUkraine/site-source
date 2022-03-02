@@ -32,4 +32,15 @@ export default {
   'Non-lethal': 'Niet-dodelijk',
   'Non-government': 'Niet-gouvernementele',
   'Human Rights': 'Mensenrechten',
+
+  // footer
+  footerHeader: `Stand For Ukraine - is een aggregator van betrouwbare organisaties die helpen de Russische invasie te bestrijden en de gevolgen ervan te overwinnen.`,
+  footerGoals: 'Onze doelen',
+  goal1: 'Help het Oekraïense leger met wapens, munitie en militaire benodigdheden',
+  goal2: 'Rehabiliteer veteranen en oorlogsslachtoffers',
+  goal3: 'Geef onderdak en voeding aan vluchtelingen',
+  goal4: 'Help kinderen, ouderen en andere kwetsbare groepen',
+  goal5: 'Ondersteun onafhankelijke pers',
+  footerCreds: `Deze website is gemaakt door IT-ingenieurs, managers, ontwerpers, schrijvers, vertalers, journalisten en activisten uit heel Oekraïne en daarbuiten.`,
+  footerContact: 'Bereik ons',
 }

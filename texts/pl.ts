@@ -32,4 +32,15 @@ export default {
   'Non-lethal': 'Niezabójcze',
   'Non-government': 'Pozarządowe',
   'Human Rights': 'Prawa człowieka',
+
+  // footer
+  footerHeader: `Wspomóż Ukrainę to baza wiarygodnych organizacji, które pomagają walczyć z rosyjską inwazją i przezwyciężać jej konsekwencje.`,
+  footerGoals: 'Nasze cele',
+  goal1: 'Pomóż ukraińskiej armii z bronią, amunicją i zaopatrzeniem',
+  goal2: 'Rekonwalescencja weteranów i ofiar wojny',
+  goal3: 'Schronienie i żywność dla uchodźców',
+  goal4: 'Pomóż dzeciom, osobom starszym i innym grupom specjalnej opieki',
+  goal5: 'Wspomóż niezależną prasę',
+  footerCreds: `Ta strona internetowa jest tworzona przez inżynierów IT, menedżerów, projektantów, pisarzy, tłumaczy, dziennikarzy i aktywistów z całej Ukrainy i spoza niej.`,
+  footerContact: 'Dotrzyj do nas',
 }

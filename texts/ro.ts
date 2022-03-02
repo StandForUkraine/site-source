@@ -31,4 +31,15 @@ export default {
   'Non-lethal': 'Non-lethal',
   'Non-government': 'Non-government',
   'Human Rights': 'Human Rights',
+
+  // footer
+  footerHeader: `Împreună pentru Ucraina – este o bază de date pentru organizații de încredere, care ajută la combaterea invaziei ruse și la depășirea consecințelor sale.`,
+  footerGoals: 'Obiectivele Noastre',
+  goal1: 'Furnizarea armatai Ucrainei cu armament, muniție, și provizii',
+  goal2: 'Recuperarea veteranilor și victimelor războiului',
+  goal3: 'Adăpostirea și aprovizionarea cu hrană a refugiaților',
+  goal4: 'Ajutorarea copiilor, vârstnicilor, și grupurilor vulnerabile',
+  goal5: 'Susținerea presei independente',
+  footerCreds: `Acest site este realizat de ingineri IT, manageri, designeri, scriitori, translatori, jurnaliști, și activiști din Ucraina și de peste granițe.`,
+  footerContact: 'Contactează-ne',
 }
