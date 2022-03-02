@@ -9,7 +9,7 @@ export default {
   donateButton: 'Doneren',
 
   heroHeader: `Help Oekraïense militaire en humanitaire organisaties`,
-  heroText1: `Steun Oekraïne in het licht van Russische militaire agressie.`,
+  heroText1: `Steun Oekraïne in het licht van de Russische militaire agressie.`,
   heroText2: `Doneer aan geverifieerde projecten om de strijdkrachten van Oekraïne of humanitaire liefdadigheidsinstellingen te helpen`,
   heroText3: `Informeer het publiek door onze nieuwsbrieven te delen.`,
 
