@@ -19,7 +19,7 @@ export default {
   sharePopupText2: "Fai sapere alle persone come aiutare l'Ucraina",
   sharingText: 'Aiuta i militari ucraini e gli enti di beneficenza umanitari #StandForUkraine',
   copyLink: 'Copia il link',
-  // copyLinkDone: 'Copiato!',
+  copyLinkDone: 'Copiato!',
 
   // tags
   All: 'Tutto',

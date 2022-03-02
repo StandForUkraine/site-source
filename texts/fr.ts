@@ -20,7 +20,7 @@ export default {
   sharingText:
     "Aider les militaires ukrainiens et les organisations humanitaires #Soutien à l'Ukraine. ",
   copyLink: 'Copier le lien',
-  // copyLinkDone: 'Copié!',
+  copyLinkDone: 'Copié!',
 
   // tags
   All: 'Tout',
