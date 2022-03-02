@@ -36,8 +36,8 @@ const TagsWrapper = styled.div`
 const Tag = styled.button<{ isActive?: boolean }>`
   background: #f2f2f2;
   border-radius: 40px;
-  padding: 5px 9px;
-  border: 3px solid #f2f2f2;
+  padding: 6px 10px;
+  border: 2px solid #f2f2f2;
   margin-right: 5px;
   margin-top: 5px;
   outline: none;

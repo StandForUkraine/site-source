@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { useText } from 'utils/lang'
+import Button from './Button'
 import ShareIcon from './ShareIcon'
 import SharePopup from './SharePopup'
 
@@ -30,7 +31,7 @@ const TopHeaderWrapper = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 48px;
   padding-left: 90px;
   background: #fff;
   display: flex;
@@ -54,30 +55,23 @@ const TopHeaderTitle = styled.h1`
   flex-grow: 1;
 `
 
-const ShareButton = styled.button`
-  background: none;
-  border: none;
-  display: flex;
-  height: 100%;
-  width: 50px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.3);
-  }
+const ShareButton = styled(Button)`
+  margin-top: 6px;
 
   span {
     display: none;
-    margin-right: 5px;
+    margin-right: 10px;
   }
 
   @media (min-width: 768px) {
-    width: 100px;
+    margin-right: 9px;
     span {
       display: inline;
     }
+  }
+
+  @media (max-width: 768px) {
+    background-color: #fff !important;
+    border-color: #fff !important;
   }
 `

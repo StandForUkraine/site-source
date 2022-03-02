@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { DetailedHTMLProps, DetailsHTMLAttributes, FC, HTMLProps, useState } from 'react'
 import styled from 'styled-components'
 import { DonationItem } from 'utils/donations'
 import { useLang, useText } from 'utils/lang'
 import { allTags, TagOrAll } from 'utils/tags'
 import ContentTags from './ContentTags'
 import LazyLoad from 'react-lazyload'
+import Button from './Button'
 
 export const Donations = ({ donations }: { donations: DonationItem[] }) => {
   const t = useText()
@@ -28,7 +29,7 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
           </LazyLoad>
           <DonationTitle href={donation.link}>{donation.title}</DonationTitle>
           <DonationDescription>{donation.description}</DonationDescription>
-          <DonationButton href={donation.donateLink} target="_blank" rel="noopener">
+          <DonationButton as="a" href={donation.donateLink} target="_blank" rel="noopener">
             {t('donateButton')}
           </DonationButton>
         </DonationPost>
@@ -66,14 +67,6 @@ const DonationDescription = styled.p`
   margin: 10px 0 20px;
 `
 
-const DonationButton = styled.a`
-  display: inline-block;
-  text-decoration: none;
-  padding: 8px 16px;
-  background: #000;
-  color: #fff;
-  font-size: 24px;
-  border-radius: 4px;
-  border: none;
-  font-weight: 600;
-`
+const DonationButton = styled(Button).attrs({
+  color: 'dark'
+})``;

@@ -1,18 +1,32 @@
 import ShareIcon from 'components/ShareIcon'
 import SocialButtons from 'components/SocialButtons'
+import useMountedRef from 'hooks/useMountedRef'
+import { useState } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
 import styled from 'styled-components'
 import { useText } from 'utils/lang'
+import Button from './Button'
+import CloseIcon from './CloseIcon'
 
 export const SharePopup = ({ onClose }: { onClose: () => any }) => {
-  const t = useText()
+  const t = useText();
+  const mountedRef = useMountedRef();
+  const [copied, setCopied] = useState(false);
+
+  const button = <CopyButton
+    color={copied ? 'success' : 'default'}
+  >
+    {t(copied ? 'copyLinkDone' : 'copyLink')}
+  </CopyButton>;
 
   return (
     <>
       <SharePopupBG onClick={onClose} />
 
       <SharePopupWrapper>
-        <CloseButton onClick={onClose}>{t('close')}</CloseButton>
+        <CloseButton onClick={onClose}>
+          <CloseIcon />
+        </CloseButton>
         <ShareIcon size={60} />
         <SharePopupTitle>{t('sharePopupTitle')}</SharePopupTitle>
         <p>
@@ -21,9 +35,25 @@ export const SharePopup = ({ onClose }: { onClose: () => any }) => {
           {t('sharePopupText2')}
         </p>
         <SocialButtons link="https://standforukraine.com/" text={t('sharingText')} />
-        <CopyToClipboard text="https://standforukraine.com/">
-          <CopyButton>{t('copyLink')}</CopyButton>
-        </CopyToClipboard>
+        {
+          !copied ? (
+            <CopyToClipboard
+              text="https://standforukraine.com/"
+              onCopy={() => {
+                setCopied(true);
+                setTimeout(() => {
+                  if (!mountedRef.current) {
+                    return;
+                  }
+                  
+                  setCopied(false)
+                }, 2000);
+              }}
+            >
+              {button}
+            </CopyToClipboard>
+          ) : button
+        }
       </SharePopupWrapper>
     </>
   )
@@ -73,28 +103,23 @@ const SharePopupTitle = styled.h2`
 
 const CloseButton = styled.button`
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 19px;
+  right: 19px;
   background: none;
   padding: 5px;
   border: none;
+
+  svg path {
+    fill: #4F4F4F;
+  }
 
   &:hover {
     text-decoration: underline;
   }
 `
 
-const CopyButton = styled.button`
-  background: #f2f2f2;
-  border-radius: 4px;
-  padding: 8px;
-  margin-top: 10px;
-  border: none;
-  width: 100%;
-  font-weight: 600;
-  font-size: 20px;
-
-  &:hover {
-    background: #999;
-  }
-`
+const CopyButton = styled(Button).attrs({
+  fullWidth: true,
+})`
+  margin-top: 16px;
+`;
