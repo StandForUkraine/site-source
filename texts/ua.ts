@@ -19,6 +19,7 @@ export default {
   sharePopupText2: 'Дай людям знати як підтримати Україну.',
   sharingText: 'Підримай Українську Армію та благодійні організації #StandForUkraine',
   copyLink: 'Copy Link',
+  copyLinkDone: 'Copied!',
 
   // tags
   All: 'Усі',
