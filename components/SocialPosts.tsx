@@ -5,14 +5,16 @@ import LazyLoad from 'react-lazyload'
 
 export const SocialPosts = () => (
   <>
-    {posts.map((post) => (
-      <PostWrapper key={post.segment}>
-        <LazyLoad once offset={500}>
-          <PostImage src={post.image} alt={post.imageAlt} />
-        </LazyLoad>
-        <SocialButtons link={`https://standforukraine.com/p/${post.segment}`} text={post.text} />
-      </PostWrapper>
-    ))}
+    {posts
+      .filter((p) => !p.hidden)
+      .map((post) => (
+        <PostWrapper key={post.segment}>
+          <LazyLoad once offset={500}>
+            <PostImage src={post.image} alt={post.imageAlt} />
+          </LazyLoad>
+          <SocialButtons link={`https://standforukraine.com/p/${post.segment}`} text={post.text} />
+        </PostWrapper>
+      ))}
   </>
 )
 
