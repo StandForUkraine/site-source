@@ -8,11 +8,16 @@ export interface PostItem {
 
 export const posts: PostItem[] = [
   {
-    segment: 'declared-war',
+    segment: 'kid-on-chair',
     text: '#StandForUkraine',
-    image: '/posts/declared-war.png',
-    imageAlt: 'Russia & Belarus Officially Declared War on Ukraine.',
-    hidden: true,
+    image: '/posts/kid-on-chair.png',
+    imageAlt: 'You can help war-thorn Ukraine',
+  },
+  {
+    segment: 'broken-buildings',
+    text: '#StandForUkraine',
+    image: '/posts/broken-buildings.png',
+    imageAlt: 'You can help war-thorn Ukraine',
   },
   {
     segment: 'support-army',
@@ -51,12 +56,6 @@ export const posts: PostItem[] = [
     imageAlt: 'Ukraine needs a no-fly zone',
   },
   {
-    segment: 'kid-on-chair',
-    text: '#StandForUkraine',
-    image: '/posts/kid-on-chair.png',
-    imageAlt: 'You can help war-thorn Ukraine',
-  },
-  {
     segment: 'kick-off-russia',
     text: '#StandForUkraine',
     image: '/posts/kick-off-russia.png',
@@ -85,6 +84,13 @@ export const posts: PostItem[] = [
     text: '#StandForUkraine',
     image: '/posts/aggresion.png',
     imageAlt: 'RUSSIAN AGGRESION WILL BE STOPPED',
+  },
+  {
+    segment: 'declared-war',
+    text: '#StandForUkraine',
+    image: '/posts/declared-war.png',
+    imageAlt: 'Russia & Belarus Officially Declared War on Ukraine.',
+    hidden: true,
   },
   {
     segment: 'savelife',
