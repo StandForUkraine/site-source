@@ -1,7 +1,16 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import { defaultLang, langs } from 'texts'
+import { defaultLang, Lang as LangKeys, langs } from 'texts'
 import { useLang } from 'utils/lang'
+
+const _kFlags = new Map<LangKeys, string>([
+  ['en', '🇬🇧'],
+  ['es', '🇪🇸'],
+  ['fr', '🇫🇷'],
+  ['nl', '🇳🇱'],
+  ['it', '🇪🇸'],
+  ['pl', '🇮🇹'],
+]);
 
 export const Langs = () => {
   const { lang } = useLang()
@@ -16,7 +25,7 @@ export const Langs = () => {
             as={langKey === defaultLang ? '/' : `/${langKey}/`}
           >
             <Lang href={langKey === defaultLang ? '/' : `/${langKey}/`} isActive={langKey === lang}>
-              {langKey}
+              {_kFlags.get(langKey as never)}&nbsp;{langKey.toUpperCase()}
             </Lang>
           </Link>
         ))}
@@ -32,18 +41,23 @@ const LangsWrapper = styled.div`
   margin: auto;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  @media (min-width: 600px) {
+    justify-content: center;
+  }
 `
 
 const Lang = styled.a<{ isActive?: boolean }>`
   background: #f2f2f2;
   border-radius: 40px;
-  padding: 8px 12px;
+  padding: 8px 15px;
   border: none;
   margin-right: 5px;
   cursor: pointer;
   color: #000;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
 
   ${({ isActive }) =>
     isActive
