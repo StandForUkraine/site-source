@@ -27,7 +27,9 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
           <LazyLoad once offset={500}>
             <DonationLogo src={donation.logo} alt={donation.logoAlt || donation.title} />
           </LazyLoad>
-          <DonationTitle href={donation.link}>{donation.title}</DonationTitle>
+          <DonationTitle href={donation.link} target="_blank" rel="noopener">
+            {donation.title}
+          </DonationTitle>
           <DonationDescription>{donation.description}</DonationDescription>
           <DonationButton as="a" href={donation.donateLink} target="_blank" rel="noopener">
             {t('donateButton')}
@@ -68,5 +70,5 @@ const DonationDescription = styled.p`
 `
 
 const DonationButton = styled(Button).attrs({
-  color: 'dark'
-})``;
+  color: 'dark',
+})``
