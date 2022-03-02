@@ -10,7 +10,7 @@ export const SocialPosts = () => (
       .map((post) => (
         <PostWrapper key={post.segment}>
           <LazyLoad once offset={500}>
-            <PostImage src={post.image} alt={post.imageAlt} />
+            <PostImage width={1200} height={630} src={post.image} alt={post.imageAlt} />
           </LazyLoad>
           <SocialButtons link={`https://standforukraine.com/p/${post.segment}`} text={post.text} />
         </PostWrapper>
