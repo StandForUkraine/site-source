@@ -1,9 +1,15 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import { langs } from 'texts'
 
 export const GA_ID = 'G-48DN99WD6W'
 
-export default class MyDocument extends Document {
+type MyDocumentProps = DocumentInitialProps & {
+  origin: string
+  styles: JSX.Element
+};
+
+export default class MyDocument extends Document<MyDocumentProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
@@ -15,8 +21,16 @@ export default class MyDocument extends Document {
         })
 
       const initialProps = await Document.getInitialProps(ctx)
+
+      /**
+       * Taken from https://github.com/jakeburden/next-absolute-url/blob/master/index.ts
+       */
+      const host = ctx.req?.headers?.host ?? window.location.host;
+      const protocol = host.startsWith('localhost') ? 'http:' : 'https:';
+      
       return {
         ...initialProps,
+        origin: `${protocol}//${host}`,
         styles: (
           <>
             {initialProps.styles}
@@ -41,7 +55,7 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap"
             rel="stylesheet"
           />
 
@@ -57,6 +71,28 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+
+          <link
+            rel="canonical"
+            href={this.props.origin}
+          />
+          
+          {/* See: https://developers.google.com/search/docs/advanced/crawling/localized-versions#html */}
+          <link
+            rel="alternate"
+            hrefLang="x-default"
+            href={`${this.props.origin}/`}
+          />
+          {
+            langs.filter((lang) => lang !== 'ua').map((lang) => (
+              <link
+                key={lang}
+                rel="alternate"
+                hrefLang={lang}
+                href={`${this.props.origin}/${lang === 'en' ? '' : lang}`}
+              />
+            ))
+          }
         </Head>
         <body>
           <Main />
