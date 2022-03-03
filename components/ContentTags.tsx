@@ -41,6 +41,7 @@ const Tag = styled.button<{ isActive?: boolean }>`
   margin-right: 5px;
   margin-top: 5px;
   outline: none;
+  font-weight: 500;
 
   &:hover {
     border-color: rgba(255, 229, 0, 0.5);

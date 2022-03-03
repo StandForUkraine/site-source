@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, DetailsHTMLAttributes, FC, HTMLProps, useState } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { DonationItem } from 'utils/donations'
 import { useLang, useText } from 'utils/lang'
@@ -45,8 +45,12 @@ export default Donations
 const DonationPost = styled.div`
   padding: 20px;
   max-width: 556px;
-  min-width: 50%;
+  width: 100%;
   display: inline-block;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 `
 
 const DonationLogo = styled.img``

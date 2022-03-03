@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { useText } from 'utils/lang'
@@ -11,8 +12,24 @@ export const TopHeader = () => {
 
   return (
     <TopHeaderWrapper>
-      <TopHeaderFlag />
-      <TopHeaderTitle>{t('siteName')}</TopHeaderTitle>
+      <Link href="/" passHref>
+        <TopNavLink>
+          <TopHeaderFlag
+            srcSet={`/ua-flag.png 1x,
+            /ua-flag@2x.png`}
+            width={78}
+            height={72}
+          />
+        </TopNavLink>
+      </Link>
+      
+      <TopHeaderTitle>
+        <Link href="/" passHref={true}>
+          <TopNavLink>
+            {t('siteName')}
+          </TopNavLink>
+        </Link>
+      </TopHeaderTitle>
 
       <ShareButton onClick={() => setVisibleShare(true)}>
         <span>{t('share')}</span>
@@ -26,37 +43,55 @@ export const TopHeader = () => {
 
 export default TopHeader
 
+const TopNavLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+`;
+
 const TopHeaderWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 48px;
-  padding-left: 90px;
   background: #fff;
   display: flex;
+  justify-content: center;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.04);
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
 `
 
-const TopHeaderFlag = styled.div`
+const TopHeaderFlag = styled.img`
   position: absolute;
-  width: 83px;
-  height: 77px;
   left: 0px;
   top: 0px;
-
-  background: url(/ua-flag.png);
 `
 
 const TopHeaderTitle = styled.h1`
   text-align: center;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 700;
   flex-grow: 1;
+
+  @media (min-width: 375px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+    padding-left: 92px;
+  }
 `
 
 const ShareButton = styled(Button)`
-  margin-top: 6px;
+  position: absolute;
+  top: 6px;
+  right: 0;
 
   span {
     display: none;
@@ -64,7 +99,7 @@ const ShareButton = styled(Button)`
   }
 
   @media (min-width: 768px) {
-    margin-right: 9px;
+    right: 9px;
     span {
       display: inline;
     }
