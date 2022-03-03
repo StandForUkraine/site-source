@@ -33,7 +33,7 @@ export const Hero = () => {
         </p>
         <br />
         <SocialIcons>
-          <a href="https://twitter.com/StandForUkraine" target="_blank" rel="noopener">
+          <a href="https://twitter.com/stand4ukr" target="_blank" rel="noopener">
             <TwitterIcon />
           </a>
           <a
