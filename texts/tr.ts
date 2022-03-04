@@ -17,7 +17,7 @@ export default {
   sharePopupTitle: 'Herkese Duyur',
   sharePopupText1: 'Bu kaynağı arkadaşlarınız ve meslektaşlarınızla paylaşın.',
   sharePopupText2: 'İnsanlara Ukrayna\'yı nasıl destekleyeceklerini bildirin.',
-  sharingText: 'Ukrayna Ordusuna ve İnsani Kuruluşlarına Yardım Edin #StandForUkraine'',
+  sharingText: 'Ukrayna Ordusuna ve İnsani Kuruluşlarına Yardım Edin #StandForUkraine',
   copyLink: 'Linki Kopyala',
   copyLinkDone: 'Kopyalandı!',
 
