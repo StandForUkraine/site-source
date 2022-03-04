@@ -45,4 +45,17 @@ export default {
   footerCreds:
     'Este sitio web está hecho por ingenieros de TI, gerentes, diseñadores, escritores, traductores, periodistas y activistas de toda Ucrania y más allá.',
   footerContact: 'Contáctanos',
+
+  // filter
+  filterTo: 'Para',
+  filterPayVia: 'Vía',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Tarjeta de crédito',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }

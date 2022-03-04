@@ -44,4 +44,17 @@ export default {
   goal5: 'Soutenir la presse indépendante',
   footerCreds: `Ce site Web a été créé par des ingénieurs, managers, désigners, écrivains, traducteurs, journalistes et activistes de toute l'Ukraine et d'ailleur.`,
   footerContact: 'Rejoins-nous',
+
+  // filter
+  filterTo: 'Pour',
+  filterPayVia: 'Via',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Carte de crédit',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }

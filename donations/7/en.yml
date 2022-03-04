@@ -6,3 +6,6 @@ tags:
 description: Charitable foundation Voices of Children helps families affected by the war in Ukraine. It provides accommodation, humanitarian, and psychological support for refugees and helps Ukrainian children and families overcome the consequences of armed conflict.
 link: https://voices.org.ua/en/who-we-are/
 donateLink: https://voices.org.ua/en/donat/
+payMethods:
+  - IBAN
+  - Credit Card
