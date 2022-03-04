@@ -6,11 +6,14 @@ import { allTags, TagOrAll } from 'utils/tags'
 import ContentTags from './ContentTags'
 import LazyLoad from 'react-lazyload'
 import Button from './Button'
+import { useGtag } from 'hooks/useGtag'
 
 export const Donations = ({ donations }: { donations: DonationItem[] }) => {
   const t = useText()
   const [currentTag, setTag] = useState<TagOrAll>('All')
   const { lang } = useLang()
+  const gtag = useGtag();
+
   donations = donations.map((donation) => ({ ...donation, ...donation.byLang[lang] }))
 
   const filteredDonations =
@@ -27,11 +30,30 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
           <LazyLoad once offset={500}>
             <DonationLogo src={donation.logo} alt={donation.logoAlt || donation.title} />
           </LazyLoad>
-          <DonationTitle href={donation.link} target="_blank" rel="noopener">
+          <DonationTitle
+            href={donation.link}
+            target="_blank"
+            rel="noopener"
+            onClick={() => {
+              gtag('event', 'external_link_click', {
+                event_category: 'home_page',
+              });
+            }}
+          >
             {donation.title}
           </DonationTitle>
           <DonationDescription>{donation.description}</DonationDescription>
-          <DonationButton as="a" href={donation.donateLink} target="_blank" rel="noopener">
+          <DonationButton
+            as="a"
+            href={donation.donateLink}
+            target="_blank"
+            rel="noopener"
+            onClick={() => {
+              gtag('event', 'external_link_click', {
+                event_category: 'donate',
+              });
+            }}
+          >
             {t('donateButton')}
           </DonationButton>
         </DonationPost>
