@@ -5,6 +5,7 @@ import it from './it'
 import nl from './nl'
 import es from './es'
 import de from './de'
+import tr from './tr'
 import ua from './ua'
 
 export const defaultLang = 'en'
@@ -16,6 +17,7 @@ export const byLang = {
   it,
   es,
   nl,
+  tr,
   pl,
   ua,
 } as const

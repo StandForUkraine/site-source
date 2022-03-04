@@ -10,6 +10,7 @@ const _kFlags: Record<LangKeys, string> = {
   fr: '🇫🇷',
   nl: '🇳🇱',
   it: '🇮🇹',
+  tr: '🇹🇷',
   pl: '🇵🇱',
   ua: '🇺🇦',
 }
