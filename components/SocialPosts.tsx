@@ -2,31 +2,44 @@ import styled from 'styled-components'
 import { posts } from 'utils/posts'
 import SocialButtons from './SocialButtons'
 import LazyLoad from 'react-lazyload'
+import { useGtag } from 'hooks/useGtag'
 
-export const SocialPosts = () => (
-  <>
-    {posts
-      .filter((p) => !p.hidden)
-      .map((post) => (
-        <PostWrapper key={post.segment}>
-          <LazyLoad
-            once
-            offset={500}
-            placeholder={
-              <Placeholder
-                data-src={post.image}
-                alt={post.imageAlt}
-                src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
-              />
-            }
-          >
-            <PostImage width={1200} height={630} src={post.image} alt={post.imageAlt} />
-          </LazyLoad>
-          <SocialButtons link={`https://standforukraine.com/p/${post.segment}`} text={post.text} />
-        </PostWrapper>
-      ))}
-  </>
-)
+export const SocialPosts = () => {
+  const gtag = useGtag()
+
+  return (
+    <>
+      {posts
+        .filter((p) => !p.hidden)
+        .map((post) => (
+          <PostWrapper key={post.segment}>
+            <LazyLoad
+              once
+              offset={500}
+              placeholder={
+                <Placeholder
+                  data-src={post.image}
+                  alt={post.imageAlt}
+                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                />
+              }
+            >
+              <PostImage width={1200} height={630} src={post.image} alt={post.imageAlt} />
+            </LazyLoad>
+            <SocialButtons
+              link={`https://standforukraine.com/p/${post.segment}`}
+              text={post.text}
+              onClick={(network) =>
+                gtag('event', `share_post_click_${network}`, {
+                  event_category: post.segment,
+                })
+              }
+            />
+          </PostWrapper>
+        ))}
+    </>
+  )
+}
 
 export default SocialPosts
 
