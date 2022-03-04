@@ -12,25 +12,28 @@ import { payMethods, PayMethodWithAll } from 'utils/payMethods'
 
 export const Donations = ({ donations }: { donations: DonationItem[] }) => {
   const t = useText()
-  const [currentTag, setTag] = useState<TagOrAll>('All');
-  const [currentMethod, setMethod] = useState<PayMethodWithAll>('All');
+  const [currentTag, setTag] = useState<TagOrAll>('All')
+  const [currentMethod, setMethod] = useState<PayMethodWithAll>('All')
   const { lang } = useLang()
-  const gtag = useGtag();
+  const gtag = useGtag()
 
   donations = donations.map((donation) => ({ ...donation, ...donation.byLang[lang] }))
 
   const filteredDonations = donations.filter((donation) => {
-    const tagResult = currentTag !== 'All' ? donation.tags.includes(currentTag) : true;
-    const methodResult = currentMethod !== 'All' ? (donation.payMethods ?? []).includes(currentMethod) : true;
-    
-    return tagResult && methodResult;
-  });
+    const tagResult = currentTag !== 'All' ? donation.tags.includes(currentTag) : true
+    const methodResult =
+      currentMethod !== 'All' ? (donation.payMethods ?? []).includes(currentMethod) : true
+
+    return tagResult && methodResult
+  })
 
   return (
     <>
       <ContentTags tags={['All', ...allTags]} currentTag={currentTag} onTagChange={setTag} />
 
       <PayMethods methods={['All', ...payMethods]} active={currentMethod} onChange={setMethod} />
+
+      {filteredDonations.length < 1 && <h1>Nothing found.</h1>}
 
       {filteredDonations.map((donation) => (
         <DonationPost key={donation.id}>
@@ -41,11 +44,11 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
             href={donation.link}
             target="_blank"
             rel="noopener"
-            onClick={() => {
+            onClick={() =>
               gtag('event', 'external_link_click', {
                 event_category: 'home_page',
-              });
-            }}
+              })
+            }
           >
             {donation.title}
           </DonationTitle>
@@ -55,11 +58,11 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
             href={donation.donateLink}
             target="_blank"
             rel="noopener"
-            onClick={() => {
+            onClick={() =>
               gtag('event', 'external_link_click', {
                 event_category: 'donate',
-              });
-            }}
+              })
+            }
           >
             {t('donateButton')}
           </DonationButton>
