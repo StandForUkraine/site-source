@@ -43,4 +43,17 @@ export default {
   goal5: 'Ondersteun onafhankelijke pers',
   footerCreds: `Deze website is gemaakt door IT-ingenieurs, managers, ontwerpers, schrijvers, vertalers, journalisten en activisten uit heel Oekraïne en daarbuiten.`,
   footerContact: 'Bereik ons',
+
+  // filter
+  filterTo: 'Naar',
+  filterPayVia: 'Via',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Kredietkaart',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }

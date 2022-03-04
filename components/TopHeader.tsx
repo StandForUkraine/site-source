@@ -11,7 +11,7 @@ export const TopHeader = () => {
   const { lang } = useLang();
   const t = useText();
 
-  const rootPathname = lang === 'en' ? '/' : `${lang}/`;
+  const rootPathname = lang === 'en' ? '/' : `/${lang}`;
 
   return (
     <TopHeaderWrapper>
@@ -27,7 +27,7 @@ export const TopHeader = () => {
       </Link>
       
       <TopHeaderTitle>
-        <Link href={rootPathname} passHref={true}>
+        <Link href={rootPathname} passHref>
           <TopNavLink>
             {t('siteName')}
           </TopNavLink>

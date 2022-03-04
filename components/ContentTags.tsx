@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import { useText } from 'utils/lang'
 import { TagOrAll } from 'utils/tags'
+import Chip from './Chip'
+import ChipsWrapper from './ChipsWrapper'
+import FilterLabel from './FilterLabel'
 
 export const ContentTags = ({
   tags,
@@ -14,49 +17,15 @@ export const ContentTags = ({
   const t = useText()
 
   return (
-    <TagsWrapper>
+    <ChipsWrapper>
+      <FilterLabel>{t('filterTo')}</FilterLabel>
       {tags.map((tag) => (
-        <Tag key={tag} isActive={tag === currentTag} onClick={() => onTagChange(tag)}>
+        <Chip key={tag} isActive={tag === currentTag} onClick={() => onTagChange(tag)}>
           {t(tag)}
-        </Tag>
+        </Chip>
       ))}
-    </TagsWrapper>
+    </ChipsWrapper>
   )
 }
 
-export default ContentTags
-
-const TagsWrapper = styled.div`
-  overflow-x: auto;
-  padding: 10px;
-  margin: auto;
-  max-width: 100%;
-`
-
-const Tag = styled.button<{ isActive?: boolean }>`
-  background: #f2f2f2;
-  border-radius: 40px;
-  padding: 6px 10px;
-  border: 2px solid #f2f2f2;
-  margin-right: 5px;
-  margin-top: 5px;
-  outline: none;
-  font-weight: 500;
-
-  &:hover {
-    border-color: rgba(255, 229, 0, 0.5);
-  }
-
-  &:focus {
-    border-color: #ffe500;
-  }
-
-  ${({ isActive }) =>
-    isActive
-      ? `
-        background: #000;
-        color: #fff;
-        border-color: #000;
-        `
-      : ''}
-`
+export default ContentTags;

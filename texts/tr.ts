@@ -43,4 +43,17 @@ export default {
   goal5: 'Özgür basını desteklemek',
   footerCreds: 'Bu web sitesi, Ukrayna\'nın her yerinden ve ötesinden IT mühendisleri, yöneticiler, tasarımcılar, yazarlar, çevirmenler, gazeteciler ve aktivistler tarafından yapılmıştır.',
   footerContact: 'Bize Ulaşın',
+
+  // filter
+  filterTo: 'La',
+  filterPayVia: 'Prin intermediul',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Card de credit',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }

@@ -43,4 +43,17 @@ export default {
   goal5: 'Aiutare la stampa indipendente',
   footerCreds: `Questo sito è fatto da ingegneri IT, dirigenti, designers, scrittori, traduttori, giornalisti e attivisti dall'Ucraina e non solo.`,
   footerContact: 'Contattaci',
+
+  // filter
+  filterTo: 'A',
+  filterPayVia: 'Attraverso',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Carta di credito',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }

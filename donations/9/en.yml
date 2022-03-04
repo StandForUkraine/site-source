@@ -6,3 +6,5 @@ tags:
 description: Russian aggression deprived thousands of Ukrainians of their home, money, clothes, food, and other basic things. To streamline the inflows of funds as humanitarian aid to Ukrainians affected by the war, the NBU has opened an account for the Ministry of Social Policy to accumulate charitable contributions for social needs in wartime.
 link: https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-rahunok-dlya-gumanitarnoyi-dopomogi-ukrayintsyam-postrajdalim-vid-rosiyskoyi-agresiyi
 donateLink: https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-rahunok-dlya-gumanitarnoyi-dopomogi-ukrayintsyam-postrajdalim-vid-rosiyskoyi-agresiyi
+payMethods:
+  - IBAN

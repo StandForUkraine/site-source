@@ -43,4 +43,17 @@ export default {
   goal5: 'Förderung unabhängiger Journalisten',
   footerCreds: 'Diese Webseite wurde erstellt von IT technikern, Managern, Designern, Textern, Übersetzern, Journalisten, und Aktivisten aus der Ukraine und der ganzen Welt.',
   footerContact: 'Hier erreichst du uns',
+
+  // filter
+  filterTo: 'Zu',
+  filterPayVia: 'Über',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Kreditkarte',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }
