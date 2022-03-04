@@ -1,18 +1,21 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import styled from 'styled-components'
-import { useText } from 'utils/lang'
+import { useLang, useText } from 'utils/lang'
 import Button from './Button'
 import ShareIcon from './ShareIcon'
 import SharePopup from './SharePopup'
 
 export const TopHeader = () => {
-  const [visibleShare, setVisibleShare] = useState(false)
-  const t = useText()
+  const [visibleShare, setVisibleShare] = useState(false);
+  const { lang } = useLang();
+  const t = useText();
+
+  const rootPathname = lang === 'en' ? '/' : `${lang}/`;
 
   return (
     <TopHeaderWrapper>
-      <Link href="/" passHref>
+      <Link href={rootPathname} passHref>
         <TopNavLink>
           <TopHeaderFlag
             srcSet={`/ua-flag.png 1x,
@@ -24,7 +27,7 @@ export const TopHeader = () => {
       </Link>
       
       <TopHeaderTitle>
-        <Link href="/" passHref={true}>
+        <Link href={rootPathname} passHref={true}>
           <TopNavLink>
             {t('siteName')}
           </TopNavLink>
