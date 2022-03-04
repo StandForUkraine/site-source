@@ -30,8 +30,9 @@ export const SocialPosts = () => {
               link={`https://standforukraine.com/p/${post.segment}`}
               text={post.text}
               onClick={(network) =>
-                gtag('event', `share_post_click_${network}`, {
-                  event_category: post.segment,
+                gtag('event', 'share_post_click', {
+                  event_category: network,
+                  event_label: post.segment,
                 })
               }
             />

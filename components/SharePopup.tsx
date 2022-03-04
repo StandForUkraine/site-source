@@ -1,23 +1,28 @@
 import ShareIcon from 'components/ShareIcon'
 import SocialButtons from 'components/SocialButtons'
+import { useGtag } from 'hooks/useGtag'
 import useMountedRef from 'hooks/useMountedRef'
 import { useState } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
 import styled from 'styled-components'
-import { useText } from 'utils/lang'
+import { useLang, useText } from 'utils/lang'
 import Button from './Button'
 import CloseIcon from './CloseIcon'
 
 export const SharePopup = ({ onClose }: { onClose: () => any }) => {
-  const t = useText();
-  const mountedRef = useMountedRef();
-  const [copied, setCopied] = useState(false);
+  const t = useText()
+  const mountedRef = useMountedRef()
+  const [copied, setCopied] = useState(false)
+  const gtag = useGtag()
+  const { lang } = useLang()
 
-  const button = <CopyButton
-    color={copied ? 'success' : 'default'}
-  >
-    {t(copied ? 'copyLinkDone' : 'copyLink')}
-  </CopyButton>;
+  const link = 'https://standforukraine.com/' + (lang === 'en' ? '' : lang)
+
+  const button = (
+    <CopyButton color={copied ? 'success' : 'default'}>
+      {t(copied ? 'copyLinkDone' : 'copyLink')}
+    </CopyButton>
+  )
 
   return (
     <>
@@ -34,26 +39,30 @@ export const SharePopup = ({ onClose }: { onClose: () => any }) => {
           <br />
           {t('sharePopupText2')}
         </p>
-        <SocialButtons link="https://standforukraine.com/" text={t('sharingText')} />
-        {
-          !copied ? (
-            <CopyToClipboard
-              text="https://standforukraine.com/"
-              onCopy={() => {
-                setCopied(true);
-                setTimeout(() => {
-                  if (!mountedRef.current) {
-                    return;
-                  }
-                  
-                  setCopied(false)
-                }, 2000);
-              }}
-            >
-              {button}
-            </CopyToClipboard>
-          ) : button
-        }
+        <SocialButtons
+          link={link}
+          text={t('sharingText')}
+          onClick={(network) => gtag('event', 'social_profile_click', { event_category: network })}
+        />
+        {!copied ? (
+          <CopyToClipboard
+            text={link}
+            onCopy={() => {
+              setCopied(true)
+              setTimeout(() => {
+                if (!mountedRef.current) {
+                  return
+                }
+
+                setCopied(false)
+              }, 2000)
+            }}
+          >
+            {button}
+          </CopyToClipboard>
+        ) : (
+          button
+        )}
       </SharePopupWrapper>
     </>
   )
@@ -110,7 +119,7 @@ const CloseButton = styled.button`
   border: none;
 
   svg path {
-    fill: #4F4F4F;
+    fill: #4f4f4f;
   }
 
   &:hover {
@@ -122,4 +131,4 @@ const CopyButton = styled(Button).attrs({
   fullWidth: true,
 })`
   margin-top: 16px;
-`;
+`

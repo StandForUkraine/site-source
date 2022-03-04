@@ -47,6 +47,7 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
             onClick={() =>
               gtag('event', 'external_link_click', {
                 event_category: 'home_page',
+                event_label: donation.link,
               })
             }
           >
@@ -61,6 +62,7 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
             onClick={() =>
               gtag('event', 'external_link_click', {
                 event_category: 'donate',
+                event_label: donation.donateLink,
               })
             }
           >
