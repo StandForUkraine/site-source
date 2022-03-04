@@ -5,6 +5,7 @@ import { useLang } from 'utils/lang'
 
 const _kFlags: Record<LangKeys, string> = {
   en: '🇬🇧',
+  de: '🇩🇪',
   es: '🇪🇸',
   fr: '🇫🇷',
   nl: '🇳🇱',
