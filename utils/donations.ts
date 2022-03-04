@@ -4,6 +4,7 @@ import glob from 'glob'
 import path from 'path'
 import fs from 'fs'
 import getConfig from 'next/config'
+import { PayMethod } from './payMethods'
 const { serverRuntimeConfig } = getConfig()
 
 export interface DonationItemBase {
@@ -15,6 +16,7 @@ export interface DonationItemBase {
   tags: Tag[]
   donateLink: string
   link: string
+  payMethods: PayMethod[];
 }
 
 export interface DonationItem extends DonationItemBase {

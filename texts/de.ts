@@ -45,4 +45,17 @@ export default {
   footerCreds:
     'This website is made by IT engineers, managers, designers, writers, translators, journalists, and activists from all over Ukraine & beyond.',
   footerContact: 'Reach us',
+
+  // filter
+  filterTo: 'Zu',
+  filterPayVia: 'Über',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Kreditkarte',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }
