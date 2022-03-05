@@ -45,13 +45,13 @@ export default {
   footerContact: 'Зв\'язатись з нами',
 
   // filter
-  filterTo: 'Для',
-  filterPayVia: 'Через',
+  filterTo: 'Організації',
+  filterPayVia: 'Оплата',
 
   // payment methods
   IBAN: 'IBAN',
   Bitcoin: 'Bitcoin',
-  'Credit Card': 'Card de credit',
+  'Credit Card': 'Credit Card',
   PayPal: 'PayPal',
   Patreon: 'Patreon',
   'Western Union': 'Western Union',
