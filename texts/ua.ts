@@ -45,8 +45,8 @@ export default {
   footerContact: 'Зв\'язатись з нами',
 
   // filter
-  filterTo: 'La',
-  filterPayVia: 'Prin intermediul',
+  filterTo: 'Для',
+  filterPayVia: 'Через',
 
   // payment methods
   IBAN: 'IBAN',

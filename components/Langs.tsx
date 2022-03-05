@@ -19,20 +19,18 @@ export const Langs = () => {
   const { lang } = useLang()
   return (
     <LangsWrapper>
-      {langs
-        .filter((langKey) => langKey !== 'ua')
-        .map((langKey) => (
-          <Link
-            key={langKey}
-            href={langKey === defaultLang ? '/' : '/[lang]/'}
-            as={langKey === defaultLang ? '/' : `/${langKey}/`}
-          >
-            <Lang href={langKey === defaultLang ? '/' : `/${langKey}/`} isActive={langKey === lang}>
-              {_kFlags[langKey]}
-              <span>{langKey.toUpperCase()}</span>
-            </Lang>
-          </Link>
-        ))}
+      {langs.map((langKey) => (
+        <Link
+          key={langKey}
+          href={langKey === defaultLang ? '/' : '/[lang]/'}
+          as={langKey === defaultLang ? '/' : `/${langKey}/`}
+        >
+          <Lang href={langKey === defaultLang ? '/' : `/${langKey}/`} isActive={langKey === lang}>
+            {_kFlags[langKey]}
+            <span>{langKey.toUpperCase()}</span>
+          </Lang>
+        </Link>
+      ))}
     </LangsWrapper>
   )
 }
