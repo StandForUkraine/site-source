@@ -4,9 +4,9 @@ export default {
   thumbnail: `/thumbnail.png`,
 
   share: 'Comparte',
-  donate: 'Dona',
+  donate: 'Donate',
   inform: 'Informa',
-  donateButton: 'Dona',
+  donateButton: 'Donate',
 
   heroHeader: `Ayuda a las Organizaciones Militares y Humanitarias Ucranianas`,
   heroText1: `Apoya a Ucrania frente a la agresión militar rusa.`,
