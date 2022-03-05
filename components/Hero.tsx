@@ -6,13 +6,15 @@ export const Hero = () => {
   const t = useText()
 
   return (
-    <HeroWrapper>
+    <>
       <Langs />
-      <HeroHeader>{t('heroHeader')}</HeroHeader>
-      <HeroText>{t('heroText1')}</HeroText>
-      <HeroText>{t('heroText2')}</HeroText>
-      <HeroText>{t('heroText3')}</HeroText>
-    </HeroWrapper>
+      <HeroWrapper>
+        <HeroHeader>{t('heroHeader')}</HeroHeader>
+        <HeroText>{t('heroText1')}</HeroText>
+        <HeroText>{t('heroText2')}</HeroText>
+        <HeroText>{t('heroText3')}</HeroText>
+      </HeroWrapper>
+    </>
   )
 }
 
@@ -20,6 +22,7 @@ export default Hero
 
 const HeroWrapper = styled.div`
   padding: 20px;
+  padding-top: 0;
 `
 
 const HeroHeader = styled.h1`
@@ -27,6 +30,7 @@ const HeroHeader = styled.h1`
   font-weight: 900;
   line-height: 44px;
   text-align: center;
+  margin: 0;
 `
 
 const HeroText = styled.p`

@@ -5,30 +5,67 @@ import { useLang, useText } from 'utils/lang'
 import { allTags, TagOrAll } from 'utils/tags'
 import ContentTags from './ContentTags'
 import LazyLoad from 'react-lazyload'
+import Button from './Button'
+import { useGtag } from 'hooks/useGtag'
+import PayMethods from './PayMethods'
+import { payMethods, PayMethodWithAll } from 'utils/payMethods'
 
 export const Donations = ({ donations }: { donations: DonationItem[] }) => {
   const t = useText()
   const [currentTag, setTag] = useState<TagOrAll>('All')
+  const [currentMethod, setMethod] = useState<PayMethodWithAll>('All')
   const { lang } = useLang()
+  const gtag = useGtag()
+
   donations = donations.map((donation) => ({ ...donation, ...donation.byLang[lang] }))
 
-  const filteredDonations =
-    currentTag !== 'All'
-      ? donations.filter((donation) => donation.tags.includes(currentTag))
-      : donations
+  const filteredDonations = donations.filter((donation) => {
+    const tagResult = currentTag !== 'All' ? donation.tags.includes(currentTag) : true
+    const methodResult =
+      currentMethod !== 'All' ? (donation.payMethods ?? []).includes(currentMethod) : true
+
+    return tagResult && methodResult
+  })
 
   return (
     <>
       <ContentTags tags={['All', ...allTags]} currentTag={currentTag} onTagChange={setTag} />
+
+      <PayMethods methods={['All', ...payMethods]} active={currentMethod} onChange={setMethod} />
+
+      {filteredDonations.length < 1 && <h1>Nothing found.</h1>}
 
       {filteredDonations.map((donation) => (
         <DonationPost key={donation.id}>
           <LazyLoad once offset={500}>
             <DonationLogo src={donation.logo} alt={donation.logoAlt || donation.title} />
           </LazyLoad>
-          <DonationTitle href={donation.link}>{donation.title}</DonationTitle>
+          <DonationTitle
+            href={donation.link}
+            target="_blank"
+            rel="noopener"
+            onClick={() =>
+              gtag('event', 'external_link_click', {
+                event_category: 'home_page',
+                event_label: donation.link,
+              })
+            }
+          >
+            {donation.title}
+          </DonationTitle>
           <DonationDescription>{donation.description}</DonationDescription>
-          <DonationButton href={donation.donateLink} target="_blank" rel="noopener">
+          <DonationButton
+            as="a"
+            href={donation.donateLink}
+            target="_blank"
+            rel="noopener"
+            onClick={() =>
+              gtag('event', 'external_link_click', {
+                event_category: 'donate',
+                event_label: donation.donateLink,
+              })
+            }
+          >
             {t('donateButton')}
           </DonationButton>
         </DonationPost>
@@ -42,8 +79,12 @@ export default Donations
 const DonationPost = styled.div`
   padding: 20px;
   max-width: 556px;
-  min-width: 50%;
+  width: 100%;
   display: inline-block;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 `
 
 const DonationLogo = styled.img``
@@ -66,14 +107,6 @@ const DonationDescription = styled.p`
   margin: 10px 0 20px;
 `
 
-const DonationButton = styled.a`
-  display: inline-block;
-  text-decoration: none;
-  padding: 8px 16px;
-  background: #000;
-  color: #fff;
-  font-size: 24px;
-  border-radius: 4px;
-  border: none;
-  font-weight: 600;
-`
+const DonationButton = styled(Button).attrs({
+  color: 'dark',
+})``

@@ -19,7 +19,7 @@ export default {
   sharePopupText2: 'Poinformuj ludzi o tym, jak wspomóc Ukrainę.',
   sharingText: 'Pomóż ukraińskiej armii i organizacjom humanitarnym #StandForUkraine',
   copyLink: 'Skopiuj link',
-  // copyLinkDone: 'Skopiowano!',
+  copyLinkDone: 'Skopiowano!',
 
   // tags
   All: 'Wszystkie',
@@ -43,4 +43,17 @@ export default {
   goal5: 'Wspomóż niezależną prasę',
   footerCreds: `Ta strona internetowa jest tworzona przez inżynierów IT, menedżerów, projektantów, pisarzy, tłumaczy, dziennikarzy i aktywistów z całej Ukrainy i spoza niej.`,
   footerContact: 'Dotrzyj do nas',
+
+  // filter
+  filterTo: 'W celu',
+  filterPayVia: 'Przez',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Karta kredytowa',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }

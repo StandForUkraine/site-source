@@ -1,7 +1,15 @@
 import styled from 'styled-components'
 import { socialNetworks } from 'utils/socialNetworks'
 
-export const SocialButtons = ({ text, link }: { link: string; text?: string }) => (
+export const SocialButtons = ({
+  text,
+  link,
+  onClick,
+}: {
+  link: string
+  onClick: (networkName: string) => any
+  text?: string
+}) => (
   <SocialButtonsWrapper>
     {socialNetworks.map((network, i) => (
       <SocialButton
@@ -10,6 +18,7 @@ export const SocialButtons = ({ text, link }: { link: string; text?: string }) =
         rel="noopener"
         href={network.generateLink(link, text || '')}
         dangerouslySetInnerHTML={{ __html: network.icon }}
+        onClick={() => onClick(network.name)}
       />
     ))}
   </SocialButtonsWrapper>

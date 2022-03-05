@@ -19,6 +19,7 @@ export default {
   sharePopupText2: 'Дай людям знати як підтримати Україну.',
   sharingText: 'Підримай Українську Армію та благодійні організації #StandForUkraine',
   copyLink: 'Copy Link',
+  copyLinkDone: 'Copied!',
 
   // tags
   All: 'Усі',
@@ -44,4 +45,17 @@ export default {
   footerCreds:
     'This website is made by IT engineers, managers, designers, writers, translators, journalists, and activists from all over Ukraine & beyond.',
   footerContact: 'Reach us',
+
+  // filter
+  filterTo: 'La',
+  filterPayVia: 'Prin intermediul',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Card de credit',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }

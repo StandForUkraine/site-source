@@ -2,29 +2,65 @@ import styled from 'styled-components'
 import { posts } from 'utils/posts'
 import SocialButtons from './SocialButtons'
 import LazyLoad from 'react-lazyload'
+import { useGtag } from 'hooks/useGtag'
 
-export const SocialPosts = () => (
-  <>
-    {posts.map((post) => (
-      <PostWrapper key={post.segment}>
-        <LazyLoad once offset={500}>
-          <PostImage src={post.image} alt={post.imageAlt} />
-        </LazyLoad>
-        <SocialButtons link={`https://standforukraine.com/p/${post.segment}`} text={post.text} />
-      </PostWrapper>
-    ))}
-  </>
-)
+export const SocialPosts = () => {
+  const gtag = useGtag()
+
+  return (
+    <>
+      {posts
+        .filter((p) => !p.hidden)
+        .map((post) => (
+          <PostWrapper key={post.segment}>
+            <LazyLoad
+              once
+              offset={500}
+              placeholder={
+                <Placeholder
+                  data-src={post.image}
+                  alt={post.imageAlt}
+                  src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                />
+              }
+            >
+              <PostImage width={1200} height={630} src={post.image} alt={post.imageAlt} />
+            </LazyLoad>
+            <SocialButtons
+              link={`https://standforukraine.com/p/${post.segment}`}
+              text={post.text}
+              onClick={(network) =>
+                gtag('event', 'share_post_click', {
+                  event_category: network,
+                  event_label: post.segment,
+                })
+              }
+            />
+          </PostWrapper>
+        ))}
+    </>
+  )
+}
 
 export default SocialPosts
 
 const PostWrapper = styled.div`
   padding: 20px;
-  max-width: 556px;
+  width: 100%;
   display: inline-block;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 `
 
 const PostImage = styled.img`
-  max-width: 100%;
   width: 100%;
+  height: auto;
+`
+
+const Placeholder = styled.img`
+  width: 100%;
+  height: 0;
+  padding-bottom: ${(600 / 1200) * 100}%;
 `

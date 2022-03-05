@@ -5,10 +5,12 @@ import { useLang } from 'utils/lang'
 
 const _kFlags: Record<LangKeys, string> = {
   en: '🇬🇧',
+  de: '🇩🇪',
   es: '🇪🇸',
   fr: '🇫🇷',
   nl: '🇳🇱',
   it: '🇮🇹',
+  tr: '🇹🇷',
   pl: '🇵🇱',
   ua: '🇺🇦',
 }
@@ -26,7 +28,8 @@ export const Langs = () => {
             as={langKey === defaultLang ? '/' : `/${langKey}/`}
           >
             <Lang href={langKey === defaultLang ? '/' : `/${langKey}/`} isActive={langKey === lang}>
-              {_kFlags[langKey]}&nbsp;{langKey.toUpperCase()}
+              {_kFlags[langKey]}
+              <span>{langKey.toUpperCase()}</span>
             </Lang>
           </Link>
         ))}
@@ -38,20 +41,27 @@ export default Langs
 
 const LangsWrapper = styled.div`
   overflow-x: auto;
-  padding: 10px;
+  padding: 14px 16px;
   margin: auto;
   width: 100%;
   display: flex;
   justify-content: flex-start;
+
   @media (min-width: 600px) {
     justify-content: center;
+    padding-top: 38px;
   }
 `
 
 const Lang = styled.a<{ isActive?: boolean }>`
   background: #f2f2f2;
   border-radius: 40px;
-  padding: 8px 15px;
+  display: inline-flex;
+  justify-content: center;
+  width: 63px;
+  heigth: 33px;
+  align-items: center;
+  padding: 5px 12px;
   border: none;
   margin-right: 5px;
   cursor: pointer;
@@ -69,5 +79,9 @@ const Lang = styled.a<{ isActive?: boolean }>`
 
   &:hover {
     background: #999;
+  }
+
+  span {
+    margin-left: 5px;
   }
 `

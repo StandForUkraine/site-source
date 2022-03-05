@@ -10,3 +10,5 @@ description: Ukrainian voluntary women's organization, emerged in 2014 with the
   our training.
 link: https://uavarta.org/en/
 donateLink: https://uavarta.org/vnesok/
+payMethods:
+  - IBAN

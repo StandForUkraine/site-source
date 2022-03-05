@@ -19,7 +19,7 @@ export default {
   sharePopupText2: 'Let people know how to support Ukraine.',
   sharingText: 'Help Ukrainian Military & Humanitarian Organizations #StandForUkraine',
   copyLink: 'Copy Link',
-  // copyLinkDone: 'Coppied!',
+  copyLinkDone: 'Copied!',
 
   // tags
   All: 'All',
@@ -32,10 +32,10 @@ export default {
   'Non-lethal': 'Non-lethal',
   'Non-government': 'Non-government',
   'Human Rights': 'Human Rights',
-
+  
   // footer
   footerHeader:
-    'Stand for Ukraine—is an aggregator of reliable organizations that helps to fight the Russian invasion and overcome its consequences.',
+  'Stand for Ukraine—is an aggregator of reliable organizations that helps to fight the Russian invasion and overcome its consequences.',
   footerGoals: 'Our Goals',
   goal1: 'Help the Ukrainian military with weapons, ammunition, and supplies',
   goal2: 'Recover the veterans & victims of war',
@@ -43,6 +43,19 @@ export default {
   goal4: 'Aid children, elders, and other vulnerable groups',
   goal5: 'Support independent press',
   footerCreds:
-    'This website is made by IT engineers, managers, designers, writers, translators, journalists, and activists from all over Ukraine & beyond.',
+  'This website is made by IT engineers, managers, designers, writers, translators, journalists, and activists from all over Ukraine & beyond.',
   footerContact: 'Reach us',
+  
+  // filter
+  filterTo: 'To',
+  filterPayVia: 'Via',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Credit Card',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }

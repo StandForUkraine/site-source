@@ -19,6 +19,7 @@ export default {
   sharePopupText2: 'Let people know how to support Ukraine.',
   sharingText: 'Help Ukrainian Military & Humanitarian Organizations #StandForUkraine',
   copyLink: 'Copy Link',
+  copyLinkDone: 'Copied!',
 
   // tags
   All: 'All',
@@ -42,4 +43,17 @@ export default {
   goal5: 'Susținerea presei independente',
   footerCreds: `Acest site este realizat de ingineri IT, manageri, designeri, scriitori, translatori, jurnaliști, și activiști din Ucraina și de peste granițe.`,
   footerContact: 'Contactează-ne',
+
+  // filter
+  filterTo: 'La',
+  filterPayVia: 'Prin intermediul',
+  
+  // payment methods
+  IBAN: 'IBAN',
+  Bitcoin: 'Bitcoin',
+  'Credit Card': 'Card de credit',
+  PayPal: 'PayPal',
+  Patreon: 'Patreon',
+  'Western Union': 'Western Union',
+  Kuna: 'Kuna',
 }
