@@ -12,6 +12,7 @@ export const defaultLang = 'en'
 
 export const byLang = {
   en,
+  ua,
   de,
   fr,
   it,
@@ -19,7 +20,6 @@ export const byLang = {
   nl,
   tr,
   pl,
-  ua,
 } as const
 
 export type Lang = keyof typeof byLang

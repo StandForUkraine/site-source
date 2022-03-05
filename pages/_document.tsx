@@ -77,16 +77,14 @@ export default class MyDocument extends Document<MyDocumentProps> {
 
           {/* See: https://developers.google.com/search/docs/advanced/crawling/localized-versions#html */}
           <link rel="alternate" hrefLang="x-default" href={`${this.props.origin}/`} />
-          {langs
-            .filter((lang) => lang !== 'ua')
-            .map((lang) => (
-              <link
-                key={lang}
-                rel="alternate"
-                hrefLang={lang}
-                href={`${this.props.origin}/${lang === 'en' ? '' : lang}`}
-              />
-            ))}
+          {langs.map((lang) => (
+            <link
+              key={lang}
+              rel="alternate"
+              hrefLang={lang}
+              href={`${this.props.origin}/${lang === 'en' ? '' : lang}`}
+            />
+          ))}
         </Head>
         <body>
           <Main />
