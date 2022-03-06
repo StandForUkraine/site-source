@@ -94,6 +94,16 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
           >
             {donation.title}
           </DonationTitle>
+          <DonationTags>
+            {donation.tags.map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
+          </DonationTags>
+          <DonationTags>
+            {donation.payMethods.map((method) => (
+              <span key={method}>{method}</span>
+            ))}
+          </DonationTags>
           <DonationDescription>{donation.description}</DonationDescription>
           <DonationButton
             as="a"
@@ -141,6 +151,14 @@ const DonationTitle = styled.a`
 
   &:hover {
     text-decoration: underline;
+  }
+`
+
+const DonationTags = styled.div`
+  span {
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 8px;
   }
 `
 
