@@ -1,6 +1,6 @@
 export default {
   siteName: `Stand For Ukraine`,
-  siteDescription: `Допоможи Україні впоратись з військовою аграсією з боку Росії. Роби пожертву у перевірені проекти та підтримай Збройні Сили України і благодійні фонди. Сповісти людей навколо, поділившись нашими матеріалами.`,
+  siteDescription: `Допоможи Україні впоратись з військовою агресією з боку Росії. Роби пожертви до перевірених проектів і благодійних фондів та підтримай Збройні Сили України. Сповісти людей навколо, поділившись нашими матеріалами.`,
   thumbnail: `/thumbnail.png`,
 
   share: 'Поділись',
@@ -45,13 +45,13 @@ export default {
   footerContact: 'Зв\'язатись з нами',
 
   // filter
-  filterTo: 'Для',
-  filterPayVia: 'Через',
+  filterTo: 'Організації',
+  filterPayVia: 'Оплата',
 
   // payment methods
   IBAN: 'IBAN',
   Bitcoin: 'Bitcoin',
-  'Credit Card': 'Card de credit',
+  'Credit Card': 'Credit Card',
   PayPal: 'PayPal',
   Patreon: 'Patreon',
   'Western Union': 'Western Union',

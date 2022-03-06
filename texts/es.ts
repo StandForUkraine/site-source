@@ -1,6 +1,6 @@
 export default {
   siteName: `Stand For Ukraine`,
-  siteDescription: `Apoya a Ucrania frente a la agresión militar rusa. Dona a proyectos verificados para ayudar a las Fuerzas Armadas de Ucrania o a organizaciones benéficas humanitarias. Informa al público compartiendo nuestras noticias.`,
+  siteDescription: `Apoya a Ucrania frente a la agresión militar rusa. Donate a proyectos verificados para ayudar a las Fuerzas Armadas de Ucrania o a organizaciones benéficas humanitarias. Informa al público compartiendo nuestras noticias.`,
   thumbnail: `/thumbnail.png`,
 
   share: 'Comparte',
@@ -10,7 +10,7 @@ export default {
 
   heroHeader: `Ayuda a las Organizaciones Militares y Humanitarias Ucranianas`,
   heroText1: `Apoya a Ucrania frente a la agresión militar rusa.`,
-  heroText2: `Dona a proyectos verificados para ayudar a las Fuerzas Armadas de Ucrania o a organizaciones benéficas humanitarias.`,
+  heroText2: `Donate a proyectos verificados para ayudar a las Fuerzas Armadas de Ucrania o a organizaciones benéficas humanitarias.`,
   heroText3: `Informa al público compartiendo nuestras noticias.`,
 
   close: 'Cerrar',
@@ -49,7 +49,7 @@ export default {
   // filter
   filterTo: 'Para',
   filterPayVia: 'Vía',
-  
+
   // payment methods
   IBAN: 'IBAN',
   Bitcoin: 'Bitcoin',
