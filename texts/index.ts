@@ -6,6 +6,7 @@ import nl from './nl'
 import es from './es'
 import de from './de'
 import tr from './tr'
+import ru from './ru'
 import ua from './ua'
 
 export const defaultLang = 'en'
@@ -20,6 +21,7 @@ export const byLang = {
   nl,
   tr,
   pl,
+  ru,
 } as const
 
 export type Lang = keyof typeof byLang
