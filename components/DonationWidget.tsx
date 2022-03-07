@@ -4,10 +4,17 @@ import { useText } from 'utils/lang'
 import LazyLoad from 'react-lazyload'
 import Button from './Button'
 import { useGtag } from 'hooks/useGtag'
+import InfoIcon from 'assets/info.svg'
+import LegalPopup from './LegalPopup'
+import { useState } from 'react'
 
 export const DonationWidget = ({ donation }: { donation: DonationItem }) => {
+  const [visibleLegalPopup, setVisibleLegalPopup] = useState(false)
   const t = useText()
   const gtag = useGtag()
+
+  const showEin = !!donation.ein
+  const showEdrpou = !!donation.edrpou && !showEin
 
   return (
     <DonationPost>
@@ -37,20 +44,57 @@ export const DonationWidget = ({ donation }: { donation: DonationItem }) => {
         ))}
       </DonationPayMethods>
 
-      <DonationButton
-        as="a"
-        href={donation.donateLink}
-        target="_blank"
-        rel="noopener"
-        onClick={() =>
-          gtag('event', 'external_link_click', {
-            event_category: 'donate',
-            event_label: donation.donateLink,
-          })
-        }
-      >
-        {t('donateButton')}
-      </DonationButton>
+      <DonationFooter>
+        <DonationButton
+          as="a"
+          href={donation.donateLink}
+          target="_blank"
+          rel="noopener"
+          onClick={() =>
+            gtag('event', 'external_link_click', {
+              event_category: 'donate',
+              event_label: donation.donateLink,
+            })
+          }
+        >
+          {t('donateButton')}
+        </DonationButton>
+
+        {showEdrpou && (
+          <LegalNumber
+            onClick={() => {
+              gtag('event', 'legal_info_click', {
+                event_category: 'edrpou',
+                event_label: donation.edrpou,
+              })
+              setVisibleLegalPopup(true)
+            }}
+          >
+            ЄДРПОУ: {donation.edrpou} <InfoIcon />
+          </LegalNumber>
+        )}
+
+        {showEin && (
+          <LegalNumber
+            as="a"
+            target="_blank"
+            rel="noopener"
+            href={`https://charitynavigator.org/ein/${donation.ein!.replace('-', '')}`}
+            onClick={() =>
+              gtag('event', 'legal_info_click', {
+                event_category: 'ein',
+                event_label: donation.ein,
+              })
+            }
+          >
+            EIN: {donation.ein} <InfoIcon />
+          </LegalNumber>
+        )}
+      </DonationFooter>
+
+      {visibleLegalPopup && (
+        <LegalPopup donation={donation} onClose={() => setVisibleLegalPopup(false)} />
+      )}
     </DonationPost>
   )
 }
@@ -102,6 +146,31 @@ const DonationPayMethods = styled.div`
 
 const DonationDescription = styled.p`
   margin: 10px 0 20px;
+`
+
+const DonationFooter = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+const LegalNumber = styled.button`
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  background: none;
+  font-size: 14px;
+  color: #777;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    color: #555;
+    text-decoration: underline;
+  }
 `
 
 const DonationButton = styled(Button).attrs({

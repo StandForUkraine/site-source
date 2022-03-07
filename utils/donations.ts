@@ -16,12 +16,13 @@ export interface DonationItemBase {
   tags: Tag[]
   donateLink: string
   link: string
-  payMethods: PayMethod[];
+  payMethods: PayMethod[]
+  edrpou?: string
+  ein?: string
 }
 
 export interface DonationItem extends DonationItemBase {
   id: number
-  logo: string
   byLang: {
     [key: string]: DonationItemBase
   }
