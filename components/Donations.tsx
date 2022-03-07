@@ -94,17 +94,13 @@ export const Donations = ({ donations }: { donations: DonationItem[] }) => {
           >
             {donation.title}
           </DonationTitle>
-          <DonationTags>
-            {donation.tags.map((tag) => (
-              <span key={tag}>{tag}</span>
-            ))}
-          </DonationTags>
-          <DonationTags>
+          <DonationTags>{donation.tags.join(', ')}</DonationTags>
+          <DonationDescription>{donation.description}</DonationDescription>
+          <DonationPayMethods>
             {donation.payMethods.map((method) => (
               <span key={method}>{method}</span>
             ))}
-          </DonationTags>
-          <DonationDescription>{donation.description}</DonationDescription>
+          </DonationPayMethods>
           <DonationButton
             as="a"
             href={donation.donateLink}
@@ -146,7 +142,7 @@ const DonationTitle = styled.a`
   width: 100%;
   font-size: 20px;
   font-weight: 600;
-  margin-top: 10px;
+  margin: 10px 0;
   text-decoration: none;
 
   &:hover {
@@ -155,9 +151,17 @@ const DonationTitle = styled.a`
 `
 
 const DonationTags = styled.div`
+  color: #777;
+`
+
+const DonationPayMethods = styled.div`
+  margin-bottom: 15px;
+
   span {
-    font-weight: 600;
-    font-size: 12px;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    padding: 3px 5px;
+    font-size: 13px;
     margin-right: 8px;
   }
 `
