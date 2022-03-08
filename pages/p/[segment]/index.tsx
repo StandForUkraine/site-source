@@ -1,24 +1,7 @@
-import Head from 'next/head'
-import { useMetadataRenderer } from 'core/utils/metadata'
-import LandingPage from 'core/components/LandingPage'
-import { PostItem, posts } from 'core/utils/posts'
-import { langs } from 'core/texts'
-import { DonationItem, loadDonations } from 'core/utils/donations'
-
-export default ({ postData, donations }: { postData: PostItem; donations: DonationItem[] }) => {
-  const renderMetadata = useMetadataRenderer()
-  return (
-    <>
-      <Head>
-        {renderMetadata({
-          title: postData.imageAlt,
-          image: postData.image,
-        })}
-      </Head>
-      <LandingPage donations={donations} />
-    </>
-  )
-}
+export { getStaticPaths } from 'core/post-page'
+import Page from 'core/post-page'
+import { loadDonations } from 'core/utils/donations'
+import { posts } from 'core/utils/posts'
 
 export async function getStaticProps({ params }: any) {
   const postData = posts.find((p) => p.segment === params.segment.toLowerCase().trim())
@@ -31,15 +14,4 @@ export async function getStaticProps({ params }: any) {
   }
 }
 
-export async function getStaticPaths() {
-  return {
-    fallback: false,
-    paths: langs
-      .map((lang) =>
-        posts.map(({ segment }) => ({
-          params: { segment, lang },
-        }))
-      )
-      .flat(),
-  }
-}
+export default Page

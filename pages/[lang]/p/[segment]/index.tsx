@@ -1,4 +1,5 @@
-export { getStaticPaths, getStaticProps } from 'pages/p/[segment]/index'
-import Page from 'pages/p/[segment]/index'
+export { getStaticPaths } from 'core/post-page'
+import Page from 'core/post-page'
+export { getStaticProps } from 'pages/p/[segment]'
 
 export default Page
