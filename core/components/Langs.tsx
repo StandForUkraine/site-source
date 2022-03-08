@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import { defaultLang, flagsMap, langs } from 'texts'
-import { useLang } from 'utils/lang'
+import { defaultLang, flagsMap, langs } from 'core/texts'
+import { useLang } from 'core/utils/lang'
 
 export const Langs = () => {
   const { lang } = useLang()

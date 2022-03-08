@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { useText } from 'utils/lang'
-import InstagramIcon from 'assets/instagram.svg'
-import FacebookIcon from 'assets/facebook.svg'
-import TwitterIcon from 'assets/twitter.svg'
+import { useText } from 'core/utils/lang'
+import InstagramIcon from 'core/assets/instagram.svg'
+import FacebookIcon from 'core/assets/facebook.svg'
+import TwitterIcon from 'core/assets/twitter.svg'
 
 const email = process.env.NEXT_PUBLIC_EMAIL
 const instagramLink = process.env.NEXT_PUBLIC_INSTAGRAM_LINK

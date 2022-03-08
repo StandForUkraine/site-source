@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import styled from 'styled-components'
-import { useLang, useText } from 'utils/lang'
+import { useLang, useText } from 'core/utils/lang'
 import Button from './Button'
 import ShareIcon from './ShareIcon'
 import SharePopup from './SharePopup'

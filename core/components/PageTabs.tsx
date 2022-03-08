@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { useText } from 'utils/lang'
+import { useText } from 'core/utils/lang'
 
 export type Tab = 'donate' | 'inform'
 

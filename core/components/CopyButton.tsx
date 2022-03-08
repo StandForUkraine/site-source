@@ -1,8 +1,8 @@
-import useMountedRef from 'hooks/useMountedRef'
+import useMountedRef from 'core/utils/useMountedRef'
 import { useState } from 'react'
 import CopyToClipboard from 'react-copy-to-clipboard'
 import styled from 'styled-components'
-import { useText } from 'utils/lang'
+import { useText } from 'core/utils/lang'
 import Button from './Button'
 
 export const CopyButton = ({ content }: { content: string }) => {

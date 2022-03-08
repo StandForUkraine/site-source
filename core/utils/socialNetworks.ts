@@ -1,6 +1,6 @@
 import React from 'react'
-import FacebookIcon from 'assets/facebook.svg'
-import TwitterIcon from 'assets/twitter.svg'
+import FacebookIcon from 'core/assets/facebook.svg'
+import TwitterIcon from 'core/assets/twitter.svg'
 
 export interface SocialNetwork {
   name: string

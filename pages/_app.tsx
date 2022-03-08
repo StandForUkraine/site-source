@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app'
 import { createGlobalStyle } from 'styled-components'
-import { LangContextProvider } from 'utils/lang'
+import { LangContextProvider } from 'core/utils/lang'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import Head from 'next/head'

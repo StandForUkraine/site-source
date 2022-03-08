@@ -1,8 +1,8 @@
-import ShareIcon from 'components/ShareIcon'
-import SocialButtons from 'components/SocialButtons'
-import { useGtag } from 'hooks/useGtag'
+import ShareIcon from 'core/components/ShareIcon'
+import SocialButtons from 'core/components/SocialButtons'
+import { useGtag } from 'core/utils/useGtag'
 import styled from 'styled-components'
-import { useLang, useText } from 'utils/lang'
+import { useLang, useText } from 'core/utils/lang'
 import CopyButton from './CopyButton'
 import Popup from './Popup'
 

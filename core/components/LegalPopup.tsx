@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import { DonationItem } from 'utils/donations'
-import { useText } from 'utils/lang'
-import { useGtag } from 'hooks/useGtag'
+import { DonationItem } from 'core/utils/donations'
+import { useText } from 'core/utils/lang'
+import { useGtag } from 'core/utils/useGtag'
 import Popup from './Popup'
 import CopyButton from './CopyButton'
-import OutIcon from 'assets/out.svg'
+import OutIcon from 'core/assets/out.svg'
 
 export const LegalPopup = ({
   donation,

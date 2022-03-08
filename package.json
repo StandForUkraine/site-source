@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "start": "node server.js",
-    "deploy": "npm run build && node deploy.js",
+    "start": "node core/scripts/server.js",
+    "deploy": "npm run build && node core/scripts/deploy.js",
     "build-next": "next build && next export",
-    "build": "rm -rf out && npm run build-next && node after-build.js",
+    "build": "rm -rf out && npm run build-next && node core/scripts/after-build.js",
     "lint": "tslint -p . -c tslint.json --fix --format verbose",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },

@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react'
-import { defaultLang, Lang, Texts, byLang, TextKeys } from 'texts'
+import { defaultLang, Lang, Texts, byLang, TextKeys } from 'core/texts'
 import { useRouter } from 'next/router'
 
 export interface LangContextValue {

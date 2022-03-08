@@ -1,4 +1,4 @@
-import { useText } from 'utils/lang'
+import { useText } from 'core/utils/lang'
 import Chip from './Chip'
 import ChipsWrapper from './ChipsWrapper'
 import FilterLabel from './FilterLabel'

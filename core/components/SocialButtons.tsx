@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { socialNetworks } from 'utils/socialNetworks'
+import { socialNetworks } from 'core/utils/socialNetworks'
 
 export const SocialButtons = ({
   text,

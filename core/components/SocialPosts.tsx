@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { posts } from 'utils/posts'
+import { posts } from 'core/utils/posts'
 import SocialButtons from './SocialButtons'
 import LazyLoad from 'react-lazyload'
-import { useGtag } from 'hooks/useGtag'
+import { useGtag } from 'core/utils/useGtag'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_BASEURL
 

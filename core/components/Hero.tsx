@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { useText } from 'utils/lang'
+import { useText } from 'core/utils/lang'
 import Langs from './Langs'
 
 export const Hero = () => {

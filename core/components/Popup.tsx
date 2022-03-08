@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import styled from 'styled-components'
-import CloseIcon from 'assets/close.svg'
+import CloseIcon from 'core/assets/close.svg'
 
 export const Popup = ({
   onClose,

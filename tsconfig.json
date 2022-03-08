@@ -5,7 +5,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "utils/styles.js"
+    "core/utils/styles.js"
   ],
   "compilerOptions": {
     "target": "es5",

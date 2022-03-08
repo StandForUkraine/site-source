@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import { useMetadataRenderer } from 'utils/metadata'
-import LandingPage from 'components/LandingPage'
-import { PostItem, posts } from 'utils/posts'
-import { langs } from 'texts'
-import { DonationItem, loadDonations } from 'utils/donations'
+import { useMetadataRenderer } from 'core/utils/metadata'
+import LandingPage from 'core/components/LandingPage'
+import { PostItem, posts } from 'core/utils/posts'
+import { langs } from 'core/texts'
+import { DonationItem, loadDonations } from 'core/utils/donations'
 
 export default ({ postData, donations }: { postData: PostItem; donations: DonationItem[] }) => {
   const renderMetadata = useMetadataRenderer()

@@ -1,6 +1,6 @@
 export { getStaticProps } from 'pages/index'
 import Index from 'pages/index'
-import { langs } from 'texts'
+import { langs } from 'core/texts'
 
 export default Index
 

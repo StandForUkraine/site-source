@@ -1,8 +1,8 @@
 import { useState, useMemo, useCallback } from 'react'
-import { DonationItem } from 'utils/donations'
-import { useLang, useText } from 'utils/lang'
-import { allTags, Tag } from 'utils/tags'
-import { payMethods, PayMethod } from 'utils/payMethods'
+import { DonationItem } from 'core/utils/donations'
+import { useLang, useText } from 'core/utils/lang'
+import { allTags, Tag } from 'core/utils/tags'
+import { payMethods, PayMethod } from 'core/utils/payMethods'
 import MultipleSelection from './MultipleSelection'
 import DonationWidget from './DonationWidget'
 

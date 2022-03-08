@@ -23,6 +23,7 @@ app.prepare().then(() => {
       if (pathname.indexOf('/logos') === 0) {
         const file = path.join(
           __dirname,
+          '../..',
           req.url.replace('/logos', 'donations').replace('.png', '/logo.png')
         )
         const stream = fs.createReadStream(file)
