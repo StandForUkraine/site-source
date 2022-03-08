@@ -13,7 +13,7 @@ const _kFlags: Record<LangKeys, string> = {
   tr: '🇹🇷',
   pl: '🇵🇱',
   ua: '🇺🇦',
-  ru: '🇷🇺',
+  ru: '🏳',
 }
 
 export const Langs = () => {
