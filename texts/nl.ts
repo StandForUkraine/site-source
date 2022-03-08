@@ -47,7 +47,7 @@ export default {
   // filter
   filterTo: 'Naar',
   filterPayVia: 'Via',
-  
+
   // payment methods
   IBAN: 'IBAN',
   Bitcoin: 'Bitcoin',

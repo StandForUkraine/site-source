@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Chip = styled.button<{ isActive?: boolean }>`
   background: #f2f2f2;
@@ -26,6 +26,6 @@ export const Chip = styled.button<{ isActive?: boolean }>`
         border-color: #000;
         `
       : ''}
-`;
+`
 
-export default Chip;
+export default Chip

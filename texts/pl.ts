@@ -47,7 +47,7 @@ export default {
   // filter
   filterTo: 'W celu',
   filterPayVia: 'Przez',
-  
+
   // payment methods
   IBAN: 'IBAN',
   Bitcoin: 'Bitcoin',
