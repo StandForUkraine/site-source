@@ -48,7 +48,7 @@ export default {
   // filter
   filterTo: 'Pour',
   filterPayVia: 'Via',
-  
+
   // payment methods
   IBAN: 'IBAN',
   Bitcoin: 'Bitcoin',

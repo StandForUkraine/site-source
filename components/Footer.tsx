@@ -4,6 +4,11 @@ import InstagramIcon from 'assets/instagram.svg'
 import FacebookIcon from 'assets/facebook.svg'
 import TwitterIcon from 'assets/twitter.svg'
 
+const email = process.env.NEXT_PUBLIC_EMAIL
+const instagramLink = process.env.NEXT_PUBLIC_INSTAGRAM_LINK
+const facebookLink = process.env.NEXT_PUBLIC_FACEBOOK_LINK
+const twitterLink = 'https://twitter.com/' + process.env.NEXT_PUBLIC_TWITTER_USER
+
 export const Hero = () => {
   const t = useText()
 
@@ -28,22 +33,17 @@ export const Hero = () => {
         <Flags>🇺🇦 🇬🇧 🇫🇷 🇩🇪 🇦🇹 🇵🇱 🇷🇴 🇹🇷</Flags>
         <br />
         <p>
-          {t('footerContact')}:{' '}
-          <a href="mailto:team@standforukraine.com">team@standforukraine.com</a>
+          {t('footerContact')}: <a href={`mailto:${email}`}>{email}</a>
         </p>
         <br />
         <SocialIcons>
-          <a href="https://twitter.com/stand4ukr" target="_blank" rel="noopener">
+          <a href={twitterLink} target="_blank" rel="noopener">
             <TwitterIcon />
           </a>
-          <a
-            href="https://www.facebook.com/Stand-For-Ukraine-107357145224435/"
-            target="_blank"
-            rel="noopener"
-          >
+          <a href={facebookLink} target="_blank" rel="noopener">
             <FacebookIcon />
           </a>
-          <a href="https://www.instagram.com/stand4ukraine/" target="_blank" rel="noopener">
+          <a href={instagramLink} target="_blank" rel="noopener">
             <InstagramIcon />
           </a>
         </SocialIcons>

@@ -4,6 +4,8 @@ import SocialButtons from './SocialButtons'
 import LazyLoad from 'react-lazyload'
 import { useGtag } from 'hooks/useGtag'
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_BASEURL
+
 export const SocialPosts = () => {
   const gtag = useGtag()
 
@@ -27,7 +29,7 @@ export const SocialPosts = () => {
               <PostImage width={1200} height={630} src={post.image} alt={post.imageAlt} />
             </LazyLoad>
             <SocialButtons
-              link={`https://standforukraine.com/p/${post.segment}`}
+              link={`${baseUrl}p/${post.segment}`}
               text={post.text}
               onClick={(network) =>
                 gtag('event', 'share_post_click', {

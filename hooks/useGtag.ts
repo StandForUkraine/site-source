@@ -1,15 +1,14 @@
-declare const gtag: Gtag.GTag;
+declare const gtag: GTag
 
-declare namespace Gtag {
-  interface GTag {
-    (command: 'event', action: string, params: EventParams): void;
-  }
+export type GTag = (command: 'event', action: string, params: EventParams) => void
 
-  interface EventParams {
-    event_category: string;
-    event_label?: string;
-    value?: string;
-  }
+interface EventParams {
+  event_category: string
+  event_label?: string
+  value?: string
 }
 
-export const useGtag = (): typeof gtag => (...args) => gtag(...args);
+export const useGtag =
+  (): typeof gtag =>
+  (...args) =>
+    gtag(...args)

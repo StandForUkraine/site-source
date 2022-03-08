@@ -1,112 +1,82 @@
-import { useState } from 'react'
-import styled from 'styled-components'
+import { useState, useMemo, useCallback } from 'react'
 import { DonationItem } from 'utils/donations'
 import { useLang, useText } from 'utils/lang'
-import { allTags, TagOrAll } from 'utils/tags'
-import ContentTags from './ContentTags'
-import LazyLoad from 'react-lazyload'
-import Button from './Button'
-import { useGtag } from 'hooks/useGtag'
-import PayMethods from './PayMethods'
-import { payMethods, PayMethodWithAll } from 'utils/payMethods'
+import { allTags, Tag } from 'utils/tags'
+import { payMethods, PayMethod } from 'utils/payMethods'
+import MultipleSelection from './MultipleSelection'
+import DonationWidget from './DonationWidget'
 
 export const Donations = ({ donations }: { donations: DonationItem[] }) => {
   const t = useText()
-  const [currentTag, setTag] = useState<TagOrAll>('All')
-  const [currentMethod, setMethod] = useState<PayMethodWithAll>('All')
+  const [selectedTags, setSelectedTags] = useState<Tag[]>([])
+  const [selectedMethods, setSelectedMethods] = useState<PayMethod[]>([])
   const { lang } = useLang()
-  const gtag = useGtag()
 
-  donations = donations.map((donation) => ({ ...donation, ...donation.byLang[lang] }))
+  const filteredDonations = useMemo(
+    () =>
+      donations
+        .filter((donation) => {
+          const tagResult =
+            selectedTags.length > 0
+              ? !!donation.tags.find((tag) => selectedTags.indexOf(tag) >= 0)
+              : true
 
-  const filteredDonations = donations.filter((donation) => {
-    const tagResult = currentTag !== 'All' ? donation.tags.includes(currentTag) : true
-    const methodResult =
-      currentMethod !== 'All' ? (donation.payMethods ?? []).includes(currentMethod) : true
+          const methodResult =
+            selectedMethods.length > 0
+              ? !!donation.payMethods.find((method) => selectedMethods.indexOf(method) >= 0)
+              : true
 
-    return tagResult && methodResult
-  })
+          return tagResult && methodResult
+        })
+        .map((donation) => ({ ...donation, ...donation.byLang[lang] })),
+    [donations, selectedTags, selectedMethods, lang]
+  )
+
+  const onTagClick = useCallback(
+    (tag: Tag) => {
+      const newTags =
+        selectedTags.indexOf(tag) >= 0
+          ? selectedTags.filter((_t) => _t !== tag)
+          : [...selectedTags, tag]
+      setSelectedTags(newTags)
+    },
+    [selectedTags, setSelectedTags]
+  )
+
+  const onMethodClick = useCallback(
+    (method: PayMethod) => {
+      const newMethods =
+        selectedMethods.indexOf(method) >= 0
+          ? selectedMethods.filter((m) => m !== method)
+          : [...selectedMethods, method]
+      setSelectedMethods(newMethods)
+    },
+    [selectedMethods, setSelectedMethods]
+  )
 
   return (
     <>
-      <ContentTags tags={['All', ...allTags]} currentTag={currentTag} onTagChange={setTag} />
+      <MultipleSelection
+        title={t('filterTo')}
+        allOptions={[...allTags]}
+        selectedOptions={selectedTags}
+        onOptionClick={onTagClick}
+      />
 
-      <PayMethods methods={['All', ...payMethods]} active={currentMethod} onChange={setMethod} />
+      <MultipleSelection
+        title={t('filterPayVia')}
+        allOptions={payMethods.filter((m) => m !== 'Western Union')}
+        selectedOptions={selectedMethods}
+        onOptionClick={onMethodClick}
+      />
 
       {filteredDonations.length < 1 && <h1>Nothing found.</h1>}
 
       {filteredDonations.map((donation) => (
-        <DonationPost key={donation.id}>
-          <LazyLoad once offset={500}>
-            <DonationLogo src={donation.logo} alt={donation.logoAlt || donation.title} />
-          </LazyLoad>
-          <DonationTitle
-            href={donation.link}
-            target="_blank"
-            rel="noopener"
-            onClick={() =>
-              gtag('event', 'external_link_click', {
-                event_category: 'home_page',
-                event_label: donation.link,
-              })
-            }
-          >
-            {donation.title}
-          </DonationTitle>
-          <DonationDescription>{donation.description}</DonationDescription>
-          <DonationButton
-            as="a"
-            href={donation.donateLink}
-            target="_blank"
-            rel="noopener"
-            onClick={() =>
-              gtag('event', 'external_link_click', {
-                event_category: 'donate',
-                event_label: donation.donateLink,
-              })
-            }
-          >
-            {t('donateButton')}
-          </DonationButton>
-        </DonationPost>
+        <DonationWidget key={donation.id} donation={donation} />
       ))}
     </>
   )
 }
 
 export default Donations
-
-const DonationPost = styled.div`
-  padding: 20px;
-  max-width: 556px;
-  width: 100%;
-  display: inline-block;
-
-  @media (min-width: 768px) {
-    width: 50%;
-  }
-`
-
-const DonationLogo = styled.img``
-
-const DonationTitle = styled.a`
-  display: block;
-  color: #000;
-  width: 100%;
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 10px;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`
-
-const DonationDescription = styled.p`
-  margin: 10px 0 20px;
-`
-
-const DonationButton = styled(Button).attrs({
-  color: 'dark',
-})``

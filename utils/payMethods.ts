@@ -6,8 +6,6 @@ export const payMethods = [
   'Bitcoin',
   'Kuna',
   'Western Union',
-] as const;
+] as const
 
-export type PayMethod = typeof payMethods[number];
-
-export type PayMethodWithAll = PayMethod | 'All';
+export type PayMethod = typeof payMethods[number]

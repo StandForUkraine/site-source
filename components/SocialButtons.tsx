@@ -17,9 +17,10 @@ export const SocialButtons = ({
         target="_blank"
         rel="noopener"
         href={network.generateLink(link, text || '')}
-        dangerouslySetInnerHTML={{ __html: network.icon }}
         onClick={() => onClick(network.name)}
-      />
+      >
+        <network.Icon />
+      </SocialButton>
     ))}
   </SocialButtonsWrapper>
 )

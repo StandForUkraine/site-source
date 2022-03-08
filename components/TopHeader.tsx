@@ -7,11 +7,11 @@ import ShareIcon from './ShareIcon'
 import SharePopup from './SharePopup'
 
 export const TopHeader = () => {
-  const [visibleShare, setVisibleShare] = useState(false);
-  const { lang } = useLang();
-  const t = useText();
+  const [visibleShare, setVisibleShare] = useState(false)
+  const { lang } = useLang()
+  const t = useText()
 
-  const rootPathname = lang === 'en' ? '/' : `/${lang}`;
+  const rootPathname = lang === 'en' ? '/' : `/${lang}`
 
   return (
     <TopHeaderWrapper>
@@ -25,12 +25,10 @@ export const TopHeader = () => {
           />
         </TopNavLink>
       </Link>
-      
+
       <TopHeaderTitle>
         <Link href={rootPathname} passHref>
-          <TopNavLink>
-            {t('siteName')}
-          </TopNavLink>
+          <TopNavLink>{t('siteName')}</TopNavLink>
         </Link>
       </TopHeaderTitle>
 
@@ -49,7 +47,7 @@ export default TopHeader
 const TopNavLink = styled.a`
   color: inherit;
   text-decoration: none;
-`;
+`
 
 const TopHeaderWrapper = styled.div`
   position: fixed;

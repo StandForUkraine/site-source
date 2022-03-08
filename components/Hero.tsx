@@ -31,6 +31,7 @@ const HeroHeader = styled.h1`
   line-height: 44px;
   text-align: center;
   margin: 0;
+  word-wrap: break-word;
 `
 
 const HeroText = styled.p`
