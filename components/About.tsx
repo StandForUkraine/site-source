@@ -7,7 +7,7 @@ import { useText } from 'utils/lang'
 import AboutTeamItem from './AboutTeamItem'
 import Link from 'next/link'
 import Button from './Button'
-import OrganizationVerify from './OrganizationVerify'
+import AboutOrganization from './AboutOrganization'
 
 export default function About() {
   const t = useText()
@@ -21,52 +21,47 @@ export default function About() {
           <HeroHeader>{t('aboutHeader')}</HeroHeader>
           <HeroText>{t('aboutHeaderText1')}</HeroText>
         </HeroWrapper>
-        <AboutContent>
-          <AboutContentHeader>{t('aboutManifestoHeader')}</AboutContentHeader>
-          <AboutContentText>{t('aboutManifestoText1')}</AboutContentText>
-          <AboutContentText>{t('aboutManifestoText2')}</AboutContentText>
-          <AboutContentText>{t('aboutManifestoText3')}</AboutContentText>
-          <AboutContentText>{t('aboutManifestoText4')}</AboutContentText>
-          <AboutContentText>
-            <AboutContentLink href="">{t('aboutDonateLink')}</AboutContentLink>
-            {t('aboutManifestoText5')}
+        <AboutHeader>
+          <AboutHeaderContent>
+            <AboutContentHeader>{t('aboutManifestoHeader')}</AboutContentHeader>
+            <AboutHeaderText>
+              <i>{t('aboutManifestoText1')}</i>
+            </AboutHeaderText>
+            <AboutHeaderText>{t('aboutManifestoText2')}</AboutHeaderText>
+            <AboutHeaderText>{t('aboutManifestoText3')}</AboutHeaderText>
+            <AboutHeaderText>{t('aboutManifestoText4')}</AboutHeaderText>
+            <AboutHeaderText>
+              <AboutHeaderLink href="">{t('aboutDonateLink')}</AboutHeaderLink>
+              {t('aboutManifestoText5')}
 
-            <AboutContentLink href="">{t('aboutShareLink')}</AboutContentLink>
-            {t('aboutManifestoText6')}
-          </AboutContentText>
-        </AboutContent>
+              <AboutHeaderLink href="">{t('aboutShareLink')}</AboutHeaderLink>
+              {t('aboutManifestoText6')}
+            </AboutHeaderText>
+          </AboutHeaderContent>
+
+          <AboutHeaderImage src="/about/ukraine.png" />
+        </AboutHeader>
         <AboutContent>
           <AboutContentHeader>{t('aboutTeamHeader')}</AboutContentHeader>
           {teamMembers.map((member, i) => (
             <AboutTeamItem key={i} member={member} />
           ))}
-          <AboutTeamMore>
-            <AboutTeamMoreText>{t('aboutTeamMore')}</AboutTeamMoreText>
-            🇺🇦 🇬🇧 🇪🇸 🇫🇷 🇩🇪 🇦🇹 🇵🇱 🇷🇴 🇭🇺 🇬🇷 🇹🇷 🇮🇱
-          </AboutTeamMore>
-          <JoinWrapper>
-            <JoinWrapperHeader>{t('aboutTeamJoinHeader')}</JoinWrapperHeader>
-            <JoinWrapperText>{t('aboutTeamJoinText')}</JoinWrapperText>
-            <Link href="/">
-              <JoinWrapperLink href="/">{t('aboutTeamJoinLink')}</JoinWrapperLink>
-            </Link>
-          </JoinWrapper>
+          <AboutFlexBlock>
+            <AboutTeamMore>
+              <AboutTeamMoreText>{t('aboutTeamMore')}</AboutTeamMoreText>
+              🇺🇦 🇬🇧 🇪🇸 🇫🇷 🇩🇪 🇦🇹 🇵🇱 🇷🇴 🇭🇺 🇬🇷 🇹🇷 🇮🇱
+            </AboutTeamMore>
+            <JoinWrapper>
+              <JoinWrapperHeader>{t('aboutTeamJoinHeader')}</JoinWrapperHeader>
+              <JoinWrapperText>{t('aboutTeamJoinText')}</JoinWrapperText>
+              <Link href="/">
+                <JoinWrapperLink href="/">{t('aboutTeamJoinLink')}</JoinWrapperLink>
+              </Link>
+            </JoinWrapper>
+          </AboutFlexBlock>
         </AboutContent>
 
-        <AboutContent>
-          <AboutContentHeader>{t('aboutOrganizationHeader')}</AboutContentHeader>
-          <AboutContentText>{t('aboutOrganizationText1')}</AboutContentText>
-          <AboutContentText>{t('aboutOrganizationText2')}</AboutContentText>
-          <AboutContentText>{t('aboutOrganizationText3')}</AboutContentText>
-          <AboutContentText>{t('aboutOrganizationText4')}</AboutContentText>
-          <Link href="">
-            <Button>{t('suggestOrganization')}</Button>
-          </Link>
-        </AboutContent>
-
-        <AboutContent>
-          <OrganizationVerify />
-        </AboutContent>
+        <AboutOrganization />
 
         <Footer />
       </Page>
@@ -140,6 +135,10 @@ const HeroHeader = styled.h1`
   line-height: 44px;
   text-align: center;
   margin: 0;
+  @media (min-width: 768px) {
+    font-size: 64px;
+    line-height: 78px;
+  }
 `
 
 const HeroText = styled.p`
@@ -148,27 +147,83 @@ const HeroText = styled.p`
   text-align: center;
   color: #333;
 `
+const AboutHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #e0e0e0;
+  padding: 16px;
+  @media (min-width: 768px) {
+    align-items: center;
+    flex-direction: row;
+  }
+`
+
+const AboutHeaderContent = styled.div`
+  @media (min-width: 768px) {
+    max-width: 640px;
+  }
+`
+
+const AboutHeaderImage = styled.img`
+  display: none;
+
+  @media (min-width: 768px) {
+    width: 663px;
+    display: block;
+    position: absolute;
+    right: 0;
+    transform: translateY(64px);
+  }
+`
+
 const AboutContent = styled.div`
   border-top: 1px solid #e0e0e0;
   padding: 16px;
 `
+
 const AboutContentHeader = styled.h3`
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
   color: #000000;
-`
+  margin: 0 0 16px 0;
 
+  @media (min-width: 768px) {
+    font-size: 36px;
+  }
+`
+const AboutHeaderText = styled.p`
+  font-size: 16px;
+  line-height: 140%;
+  color: #4f4f4f;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+`
 const AboutContentText = styled.p`
   font-size: 16px;
   line-height: 140%;
   color: #4f4f4f;
 `
 
-const AboutContentLink = styled.a`
+const AboutHeaderLink = styled.a`
   font-size: 16px;
   line-height: 140%;
   color: #2f80ed;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+`
+
+const AboutFlexBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    align-items: center;
+    flex-direction: row;
+  }
 `
 
 const AboutTeamMore = styled.div`
@@ -176,6 +231,9 @@ const AboutTeamMore = styled.div`
   line-height: 128%;
   color: #4f4f4f;
   text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `
 const AboutTeamMoreText = styled.p`
   margin-bottom: 16px;
@@ -190,7 +248,12 @@ const JoinWrapper = styled.div`
   border-radius: 16px;
   padding: 16px;
   margin: 24px auto 0;
-  max-width: 500px;
+  max-width: 536px;
+
+  @media (min-width: 768px) {
+    margin: 0 0 0 auto;
+    width: 536px;
+  }
 `
 const JoinWrapperHeader = styled.h3`
   font-weight: 900;

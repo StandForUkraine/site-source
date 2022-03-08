@@ -32,8 +32,8 @@ export default function AboutTeamItem({ member }) {
         <TeamMemberAvatar src={member.avatar} alt={member.name} />
       </LazyLoad>
       <TeamMemberName>{member.name}</TeamMemberName>
-      <TeamMemberSocial>{renderSocialLinks(member.links)}</TeamMemberSocial>
       <TeamMemberPosition>{member.position}</TeamMemberPosition>
+      <TeamMemberSocial>{renderSocialLinks(member.links)}</TeamMemberSocial>
       <TeamMemberDescription>{member.description}</TeamMemberDescription>
     </TeamMember>
   )
@@ -41,7 +41,6 @@ export default function AboutTeamItem({ member }) {
 
 const TeamMember = styled.div`
   padding: 24px 0;
-  max-width: 556px;
   width: 100%;
   display: inline-block;
 
@@ -50,9 +49,9 @@ const TeamMember = styled.div`
     max-width: none;
     vertical-align: top;
     margin-right: 48px;
-  }
-  &:nth-child(5) {
-    margin-right: 0;
+    &:nth-child(5) {
+      margin-right: 0;
+    }
   }
 `
 
@@ -68,6 +67,7 @@ const TeamMemberName = styled.h3`
   font-size: 18px;
   line-height: 22px;
   color: #333333;
+  margin: 8px 0;
 `
 const TeamMemberPosition = styled.h4`
   text-transform: uppercase;
@@ -77,14 +77,18 @@ const TeamMemberPosition = styled.h4`
   font-size: 14px;
   line-height: 140%;
   text-align: center;
+  margin: 8px 0;
 `
 const TeamMemberDescription = styled.div`
   font-size: 16px;
   line-height: 140%;
   color: #4f4f4f;
+  max-width: 556px;
+  margin: 0 auto;
 `
 
 const TeamMemberSocial = styled.div`
+  margin: 8px 0;
   text-align: center;
 `
 
