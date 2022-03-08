@@ -5,6 +5,7 @@
     "deploy": "npm run build && node core/scripts/deploy.js",
     "build-next": "next build && next export",
     "build": "rm -rf out && npm run build-next && node core/scripts/after-build.js",
+    "fetch-t10n": "export GOOGLE_APPLICATION_CREDENTIALS='./secrets.json' && node core/scripts/fetch-t10n.js",
     "lint": "tslint -p . -c tslint.json --fix --format verbose",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
@@ -28,6 +29,7 @@
     "@types/react-lazyload": "^3.1.1",
     "@types/styled-components": "^5.1.23",
     "babel-plugin-styled-components": "^2.0.6",
+    "googleapis": "^95.0.0",
     "prettier": "^2.5.1",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
