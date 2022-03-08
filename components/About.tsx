@@ -155,6 +155,7 @@ const AboutHeader = styled.div`
   @media (min-width: 768px) {
     align-items: center;
     flex-direction: row;
+    padding: 40px 0;
   }
 `
 
@@ -179,6 +180,10 @@ const AboutHeaderImage = styled.img`
 const AboutContent = styled.div`
   border-top: 1px solid #e0e0e0;
   padding: 16px;
+
+  @media (min-width: 768px) {
+    padding: 40px 0;
+  }
 `
 
 const AboutContentHeader = styled.h3`

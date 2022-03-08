@@ -94,4 +94,8 @@ const TeamMemberSocial = styled.div`
 
 const SocialLink = styled.a`
   margin-right: 16px;
+
+  path {
+    fill: #828282;
+  }
 `
