@@ -6,12 +6,14 @@ import { useLang, useText } from 'utils/lang'
 import CopyButton from './CopyButton'
 import Popup from './Popup'
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_BASEURL
+
 export const SharePopup = ({ onClose }: { onClose: () => any }) => {
   const t = useText()
   const gtag = useGtag()
   const { lang } = useLang()
 
-  const link = 'https://standforukraine.com/' + (lang === 'en' ? '' : lang)
+  const link = baseUrl + (lang === 'en' ? '' : lang)
 
   return (
     <Popup onClose={onClose}>

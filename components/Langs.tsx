@@ -1,20 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import { defaultLang, Lang as LangKeys, langs } from 'texts'
+import { defaultLang, flagsMap, langs } from 'texts'
 import { useLang } from 'utils/lang'
-
-const _kFlags: Record<LangKeys, string> = {
-  en: '🇬🇧',
-  de: '🇩🇪',
-  es: '🇪🇸',
-  fr: '🇫🇷',
-  nl: '🇳🇱',
-  it: '🇮🇹',
-  tr: '🇹🇷',
-  pl: '🇵🇱',
-  ua: '🇺🇦',
-  ru: '🏳',
-}
 
 export const Langs = () => {
   const { lang } = useLang()
@@ -27,7 +14,7 @@ export const Langs = () => {
           as={langKey === defaultLang ? '/' : `/${langKey}/`}
         >
           <Lang href={langKey === defaultLang ? '/' : `/${langKey}/`} isActive={langKey === lang}>
-            {_kFlags[langKey]}
+            {flagsMap[langKey]}
             <span>{langKey.toUpperCase()}</span>
           </Lang>
         </Link>

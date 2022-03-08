@@ -9,7 +9,8 @@ import Document, {
 import { ServerStyleSheet } from 'styled-components'
 import { langs } from 'texts'
 
-export const GA_ID = 'G-48DN99WD6W'
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+const baseUrl = process.env.NEXT_PUBLIC_SITE_BASEURL
 
 type MyDocumentProps = DocumentInitialProps & {
   origin: string
@@ -31,7 +32,7 @@ export default class MyDocument extends Document<MyDocumentProps> {
 
       return {
         ...initialProps,
-        origin: `https://standforukraine.com`,
+        origin: baseUrl,
         styles: (
           <>
             {initialProps.styles}

@@ -3,8 +3,9 @@ import { createGlobalStyle } from 'styled-components'
 import { LangContextProvider } from 'utils/lang'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import { GA_ID } from './_document'
 import Head from 'next/head'
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 const GlobalStyles = createGlobalStyle`
   * {

@@ -7,8 +7,11 @@ export interface MetadataParams {
   siteName: string
 }
 
+const twitterUser = process.env.NEXT_PUBLIC_TWITTER_USER
+const baseUrl = process.env.NEXT_PUBLIC_SITE_BASEURL
+
 export const renderMetaData = ({ title, description, image, siteName }: MetadataParams) => {
-  const fullImage = 'https://standforukraine.com' + image + '?t=' + Date.now()
+  const fullImage = baseUrl + image.replace('/', '') + '?t=' + Date.now()
 
   return (
     <>
@@ -20,7 +23,7 @@ export const renderMetaData = ({ title, description, image, siteName }: Metadata
       <meta itemProp="name" content={title} />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@stand4ukr" />
+      <meta name="twitter:site" content={'@' + twitterUser} />
       <meta name="twitter:title" content={title} />
 
       <meta name="description" content={description} />
