@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const { google } = require('googleapis');
 
 const fetchT10n = async () => {
@@ -31,7 +32,7 @@ const fetchT10n = async () => {
 
         const content = `export default {\n${translation},\n}\n`;
 
-        fs.writeFile(`./texts/${language.toLowerCase()}.ts`, content, err => {
+        fs.writeFile(path.join(__dirname, `../../texts/${language.toLowerCase()}.ts`), content, err => {
             if (err) {
                 console.error(`The ${language.toLowerCase()}.ts file wasn't save. Error: ${err}`);
             } else {
