@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { useText } from 'utils/lang'
+import { useText } from 'core/utils/lang'
 import LazyLoad from 'react-lazyload'
-import Button from './Button'
+import Button from 'core/components/Button'
 import Link from 'next/link'
 type Tab = 'uk' | 'us'
 

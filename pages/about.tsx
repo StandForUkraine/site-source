@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { useMetadataRenderer } from 'utils/metadata'
+import { useMetadataRenderer } from 'core/utils/metadata'
 import About from 'components/About'
 
 export default function AboutPage() {

@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import TopHeader from 'components/TopHeader'
-import Langs from 'components/Langs'
-import Footer from 'components/Footer'
-import { useText } from 'utils/lang'
+import TopHeader from 'core/components/TopHeader'
+import Langs from 'core/components/Langs'
+import Footer from 'core/components/Footer'
+import { useText } from 'core/utils/lang'
 import AboutTeamItem from './AboutTeamItem'
 import Link from 'next/link'
-import Button from './Button'
+import Button from 'core/components/Button'
 import AboutOrganization from './AboutOrganization'
+
+const email = process.env.NEXT_PUBLIC_EMAIL
 
 export default function About() {
   const t = useText()
@@ -31,10 +33,12 @@ export default function About() {
             <AboutHeaderText>{t('aboutManifestoText3')}</AboutHeaderText>
             <AboutHeaderText>{t('aboutManifestoText4')}</AboutHeaderText>
             <AboutHeaderText>
-              <AboutHeaderLink href="">{t('aboutDonateLink')}</AboutHeaderLink>
+              {t('aboutDonateLink')}
+              {/* <AboutHeaderLink href="">{t('aboutDonateLink')}</AboutHeaderLink> */}
               {t('aboutManifestoText5')}
 
-              <AboutHeaderLink href="">{t('aboutShareLink')}</AboutHeaderLink>
+              {/* <AboutHeaderLink href="">{t('aboutShareLink')}</AboutHeaderLink> */}
+              {t('aboutShareLink')}
               {t('aboutManifestoText6')}
             </AboutHeaderText>
           </AboutHeaderContent>
@@ -54,14 +58,12 @@ export default function About() {
             <JoinWrapper>
               <JoinWrapperHeader>{t('aboutTeamJoinHeader')}</JoinWrapperHeader>
               <JoinWrapperText>{t('aboutTeamJoinText')}</JoinWrapperText>
-              <Link href="/">
-                <JoinWrapperLink href="/">{t('aboutTeamJoinLink')}</JoinWrapperLink>
-              </Link>
+              <JoinWrapperLink href={`mailto:${email}`}>{t('aboutTeamJoinLink')}</JoinWrapperLink>
             </JoinWrapper>
           </AboutFlexBlock>
         </AboutContent>
 
-        <AboutOrganization />
+        {/* <AboutOrganization /> */}
 
         <Footer />
       </Page>

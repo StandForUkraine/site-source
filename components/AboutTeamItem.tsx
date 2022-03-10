@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import LazyLoad from 'react-lazyload'
 import Link from 'next/link'
-import InstagramIcon from 'assets/instagram.svg'
-import FacebookIcon from 'assets/facebook.svg'
-import TwitterIcon from 'assets/twitter.svg'
+import InstagramIcon from 'core/assets/instagram.svg'
+import FacebookIcon from 'core/assets/facebook.svg'
+import TwitterIcon from 'core/assets/twitter.svg'
 import ViberIcon from 'assets/viber.svg'
 import LinkedinIcon from 'assets/linkedin.svg'
 import TelegramIcon from 'assets/telegram.svg'
@@ -33,7 +33,7 @@ export default function AboutTeamItem({ member }) {
       </LazyLoad>
       <TeamMemberName>{member.name}</TeamMemberName>
       <TeamMemberPosition>{member.position}</TeamMemberPosition>
-      <TeamMemberSocial>{renderSocialLinks(member.links)}</TeamMemberSocial>
+      {/* <TeamMemberSocial>{renderSocialLinks(member.links)}</TeamMemberSocial> */}
       <TeamMemberDescription>{member.description}</TeamMemberDescription>
     </TeamMember>
   )
