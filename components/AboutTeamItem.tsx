@@ -16,11 +16,21 @@ const socialLinks = {
   viber: <ViberIcon />,
   linkedIn: <LinkedinIcon />,
   telegram: <TelegramIcon />,
+} as const
+
+type SocialKey = keyof typeof socialLinks
+
+export interface TeamMember {
+  name: string
+  position: string
+  avatar: string
+  links: Partial<Record<SocialKey, string>>
+  description: string
 }
 
-export default function AboutTeamItem({ member }) {
-  const renderSocialLinks = (links) =>
-    Object.keys(links).map((key) => (
+export default function AboutTeamItem({ member }: { member: any }) {
+  const renderSocialLinks = (links: typeof member.links) =>
+    (Object.keys(links) as SocialKey[]).map((key) => (
       <Link href={links[key]} key={key}>
         <SocialLink href={links[key]}>{socialLinks[key]}</SocialLink>
       </Link>
