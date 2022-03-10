@@ -106,11 +106,11 @@ const ExplanationText = styled.p`
   margin: 12px 0;
 `
 
-const VerifyTabButton = styled(Button)`
+const VerifyTabButton = styled(Button).attrs({
+  borderRadius: 16,
+})`
   margin-right: 8px;
-  border-radius: 16px;
   font-size: 14px;
-  line-height: 17px;
 `
 const VerifyText = styled.p`
   font-size: 16px;
