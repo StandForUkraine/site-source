@@ -1,8 +1,12 @@
-title: Ukraine Crisis Media Center
+title: HappyOld
 tags:
   - Non-government
-description: The Ukraine Crisis Media Center was launched in the spirit of the Revolution of Dignity in March 2014 as a rapid response to the Russian occupation of Crimea to defend Ukraine’s sovereignty and its national interests in the global information space.
-link: https://uacrisis.org/en/pro-nas
-donateLink: https://uacrisis.org/en/donate
+  - Humanitarian
+  - Medical
+description: This charity provides older people across Ukraine with groceries and medicine, holds educational and entertainment events, helps with employment. They even created a modeling agency for the elderly.
+link: https://happyold.com.ua/
+donateLink: https://happyold.com.ua/help
 payMethods:
   - IBAN
+  - Credit Card
+edrpou: "39059088"
