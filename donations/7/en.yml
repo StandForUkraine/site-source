@@ -9,4 +9,7 @@ donateLink: https://voices.org.ua/en/donat/
 payMethods:
   - IBAN
   - Credit Card
+  - PayPal
+  - Patreon
+  - Bitcoin
 edrpou: "43381277"
