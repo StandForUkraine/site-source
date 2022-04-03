@@ -1,15 +1,11 @@
-title: People's Project
+title: Ministry of Digital Tranformation of Ukraine
 tags:
-  - Non-government
   - Humanitarian
   - Military
-  - Medical
-  - Non-lethal
 description: >
-  Ukraine's military and civil crowdfunding with multiple initiatives. We respond to official requests and hand over critical equipment to the military: high-tech devices, weapon modification, optics, communication equipment, and ammunition. We also coordinate volunteer efforts to provide necessary medical help and support treatment and rehabilitation of injured people.
-link: https://www.peoplesproject.com/en/about/
-donateLink: https://www.peoplesproject.com/en/projects/
+  Crypto account of the National Bank of Ukraine. The funds will be used for the support of humanitarian aid programs and the Armed Forces of Ukraine.
+link: https://donate.thedigital.gov.ua/
+donateLink: https://donate.thedigital.gov.ua/
 payMethods:
   - IBAN
-  - Credit Card
-edrpou: '36143302'
+  - Bitcoin
