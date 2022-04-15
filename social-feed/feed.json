@@ -3,61 +3,42 @@
     "id": "1",
     "link": "https://twitter.com/Boycott_RU/status/1513623686229729294",
     "network": "twitter",
-    "tags": [
-      "BoycottRussia",
-      "StandWithUkraine",
-      "StopRussianAgression"
-    ]
+    "tags": "BoycottRussia,StandWithUkraine,StopRussianAgression"
   },
   {
     "id": "2",
     "link": "https://www.facebook.com/stopvladimirputin/posts/5033754676700466",
     "network": "facebook",
-    "tags": [
-      "BoycottRussia",
-      "StandWithUkraine",
-      "StopRussianAgression"
-    ]
+    "tags": "BoycottRussia,StandWithUkraine,StopRussianAgression"
   },
   {
     "id": "3",
     "link": "https://twitter.com/Boycott_RU/status/1513601836934217729",
     "network": "twitter",
-    "tags": [
-      "BoycottRussia",
-      "StandWithUkraine"
-    ]
+    "tags": "BoycottRussia,StandWithUkraine,StopRussianAgression"
   },
   {
     "id": "4",
     "link": "https://www.facebook.com/stopvladimirputin/posts/5033490353393565",
     "network": "facebook",
-    "tags": [
-      "BoycottRussia",
-      "StandWithUkraine",
-      "StopRussianAgression"
-    ]
+    "tags": "BoycottRussia,StandWithUkraine,StopRussianAgression"
   },
   {
     "id": "5",
     "link": "https://twitter.com/Boycott_RU/status/1513417466436796418",
     "network": "twitter",
-    "tags": [
-      "boycottrussia",
-      "StandWithUkraine",
-      "StopRussianAgression"
-    ]
+    "tags": "BoycottRussia,StandWithUkraine,StopRussianAgression"
   },
   {
     "id": "6",
     "link": "https://www.instagram.com/p/CcKe1s7NFQ8/",
     "network": "instagram",
-    "tags": []
+    "tags": ""
   },
   {
     "id": "7",
     "link": "https://www.instagram.com/p/CcLZD0wtKTh/",
     "network": "instagram",
-    "tags": []
+    "tags": ""
   }
 ]
