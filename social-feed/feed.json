@@ -1,44 +1,314 @@
 [
   {
-    "id": "1",
-    "link": "https://twitter.com/Boycott_RU/status/1513623686229729294",
-    "network": "twitter",
-    "tags": "BoycottRussia,StandWithUkraine,StopRussianAgression"
+    "ID": 1,
+    "LINK": "https://www.facebook.com/stopvladimirputin/posts/4999341913475076",
+    "NETWORK": "facebook",
+    "TAGS": "BoycottRussia, DontFundWar"
   },
   {
-    "id": "2",
-    "link": "https://www.facebook.com/stopvladimirputin/posts/5033754676700466",
-    "network": "facebook",
-    "tags": "BoycottRussia,StandWithUkraine,StopRussianAgression"
+    "ID": 2,
+    "LINK": "https://twitter.com/Boycott_RU/status/1512184960488288257",
+    "NETWORK": "twitter",
+    "TAGS": "BoycottRussia, DontFundWar, Embargo"
   },
   {
-    "id": "3",
-    "link": "https://twitter.com/Boycott_RU/status/1513601836934217729",
-    "network": "twitter",
-    "tags": "BoycottRussia,StandWithUkraine,StopRussianAgression"
+    "ID": 3,
+    "LINK": "https://www.instagram.com/tv/CcHSioZMHFf/?igshid=YmMyMTA2M2Y=",
+    "NETWORK": "instagram",
+    "TAGS": "Genocide, russiaWarCrimes"
   },
   {
-    "id": "4",
-    "link": "https://www.facebook.com/stopvladimirputin/posts/5033490353393565",
-    "network": "facebook",
-    "tags": "BoycottRussia,StandWithUkraine,StopRussianAgression"
+    "ID": 4,
+    "LINK": "https://twitter.com/Boycott_RU/status/1513417466436796418",
+    "NETWORK": "twitter",
+    "TAGS": "BoycottRussia, DontFundWar"
   },
   {
-    "id": "5",
-    "link": "https://twitter.com/Boycott_RU/status/1513417466436796418",
-    "network": "twitter",
-    "tags": "BoycottRussia,StandWithUkraine,StopRussianAgression"
+    "ID": 5,
+    "LINK": "https://twitter.com/IN_searchOFlife/status/1514398051946881024",
+    "NETWORK": "twitter",
+    "TAGS": "BoycottRussia, DontFundWar"
   },
   {
-    "id": "6",
-    "link": "https://www.instagram.com/p/CcKe1s7NFQ8/",
-    "network": "instagram",
-    "tags": ""
+    "ID": 6,
+    "LINK": "https://www.facebook.com/zelenskiy.official/posts/3053126458271043",
+    "NETWORK": "facebook",
+    "TAGS": "ArmUkraineNow"
   },
   {
-    "id": "7",
-    "link": "https://www.instagram.com/p/CcLZD0wtKTh/",
-    "network": "instagram",
-    "tags": ""
+    "ID": 7,
+    "LINK": "https://twitter.com/MamonovaYuliia/status/1514744312780800012",
+    "NETWORK": "twitter",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 8,
+    "LINK": "https://twitter.com/MamonovaYuliia/status/1514745476263862279",
+    "NETWORK": "twitter",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 9,
+    "LINK": "https://www.facebook.com/promoteukraine/posts/5031311256938533?__cft__[0]=AZXHuEAz2UXiaVMN9DmAQco1F9aw8BBW6OS7U7G3ZzP5en8b_eScPbWfS2zC-AsWi2ZvzclWj4sCAcYiD65JHsEy7b9wtYvfbsBjn2H58lg_i60Z_GqIHGviEfhV2W4esV7uWmSvU0DGLrBZiPnzU69h&__tn__=%2CO%2CP-R",
+    "NETWORK": "facebook",
+    "TAGS": "ArmUkraineNow"
+  },
+  {
+    "ID": 10,
+    "LINK": "https://twitter.com/Boycott_RU/status/1512085363359051782",
+    "NETWORK": "twitter",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 11,
+    "LINK": "https://twitter.com/SeanPenn/status/1514657810423840768",
+    "NETWORK": "twitter",
+    "TAGS": "ArmUkraineNow"
+  },
+  {
+    "ID": 12,
+    "LINK": "https://twitter.com/Tobias_Ellwood/status/1504493453958385668",
+    "NETWORK": "twitter",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 13,
+    "LINK": "https://www.facebook.com/permalink.php?story_fbid=309795787930281&id=100066995871358",
+    "NETWORK": "facebook",
+    "TAGS": "russiaWarCrimes"
+  },
+  {
+    "ID": 14,
+    "LINK": "https://twitter.com/curlyfoxy/status/1513259289028308993",
+    "NETWORK": "twitter",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 15,
+    "LINK": "https://twitter.com/HolodomorMuseum/status/1513865282875502593",
+    "NETWORK": "twitter",
+    "TAGS": "Genocide"
+  },
+  {
+    "ID": 16,
+    "LINK": "https://twitter.com/MamonovaYuliia/status/1512216691006230528",
+    "NETWORK": "twitter",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 17,
+    "LINK": "https://www.facebook.com/kyivnotkievchannel/posts/513793856892578",
+    "NETWORK": "facebook",
+    "TAGS": "russiaWarCrimes"
+  },
+  {
+    "ID": 18,
+    "LINK": "https://www.facebook.com/tasha.mille.5/posts/5011302662284095",
+    "NETWORK": "facebook",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 19,
+    "LINK": "https://twitter.com/ginnnnt72/status/1514969786932994052",
+    "NETWORK": "twitter",
+    "TAGS": "ArmUkraineNow"
+  },
+  {
+    "ID": 20,
+    "LINK": "https://www.facebook.com/groups/513537512529662/posts/1053857948497613/",
+    "NETWORK": "facebook",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 21,
+    "LINK": "https://www.facebook.com/vitaliy.andarak/posts/5552577474771120",
+    "NETWORK": "facebook",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 22,
+    "LINK": "https://twitter.com/ukraine_world/status/1514973560837656577",
+    "NETWORK": "twitter",
+    "TAGS": "Genocide, russiaWarCrimes"
+  },
+  {
+    "ID": 23,
+    "LINK": "https://www.facebook.com/inukraine.official/posts/2750598321913921",
+    "NETWORK": "facebook",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 24,
+    "LINK": "https://www.facebook.com/DontFundWar/posts/111318951521900",
+    "NETWORK": "facebook",
+    "TAGS": "BoycottRussia, DontFundWar"
+  },
+  {
+    "ID": 25,
+    "LINK": "https://twitter.com/StratcomCentre/status/1514913926709874699",
+    "NETWORK": "twitter",
+    "TAGS": "ArmUkraineNow"
+  },
+  {
+    "ID": 26,
+    "LINK": "https://twitter.com/ukraine_world/status/1514561553240104969",
+    "NETWORK": "twitter",
+    "TAGS": "ArmUkraineNow"
+  },
+  {
+    "ID": 27,
+    "LINK": "https://twitter.com/ukraine_world/status/1514698724190085126",
+    "NETWORK": "twitter",
+    "TAGS": "russiaWarCrimes, UkraineEUmembership"
+  },
+  {
+    "ID": 28,
+    "LINK": "https://twitter.com/OlenaHalushka/status/1514905051155861506",
+    "NETWORK": "twitter",
+    "TAGS": "ArmUkraineNow"
+  },
+  {
+    "ID": 29,
+    "LINK": "https://www.facebook.com/MichaelRapaportOfficial/posts/601897524831870?__cft__[0]=AZW41wDm3GdOpO6cS8nuQVbLFXP8mLIXGkwu0Rl85tBq3s4iKL--UmZh7fh-GkcEwXpqJLRiDDuIajvUGFVWAiY0lxVvtXLFez5hBnYVi7MTpT5Z8X-5nUs7OGoVHV81u_kzcxm1j-zCnBd-FlVDl6XN&__tn__=%2CO%2CP-R",
+    "NETWORK": "facebook",
+    "TAGS": "Genocide"
+  },
+  {
+    "ID": 30,
+    "LINK": "https://twitter.com/ptuxerman/status/1513656827799650312",
+    "NETWORK": "twitter",
+    "TAGS": "ArmUkraineNow"
+  },
+  {
+    "ID": 31,
+    "LINK": "https://www.facebook.com/luba.dub/posts/10159130248777968",
+    "NETWORK": "facebook",
+    "TAGS": "Genocide"
+  },
+  {
+    "ID": 32,
+    "LINK": "https://twitter.com/mariaorestivna/status/1514191524023746561",
+    "NETWORK": "twitter",
+    "TAGS": "Genocide"
+  },
+  {
+    "ID": 33,
+    "LINK": "https://www.youtube.com/watch?v=PTJUauFoKEo",
+    "NETWORK": "youtube",
+    "TAGS": "Genocide"
+  },
+  {
+    "ID": 34,
+    "LINK": "https://www.facebook.com/promoteukraine/posts/5011149485621377?__cft__[0]=AZX3uEy8JUrxvb4zLYAA-s3Eo6Y5zfObpK_B2oyDaEyt8A28Ib2ka4Ka9D9cZIkPtqOi9T1q96nBE6EpPFSBD9UVde34wOqCsuuBUxTem6YmPTmGkbM3_HMN4k0NJSnJQZa5hylc5C1nqcGxNds9wcP9&__tn__=%2CO%2CP-R",
+    "NETWORK": "facebook",
+    "TAGS": "Embargo, Genocide"
+  },
+  {
+    "ID": 35,
+    "LINK": "https://twitter.com/Podolyak_M/status/1514283862100258817",
+    "NETWORK": "twitter",
+    "TAGS": "Embargo, Genocide"
+  },
+  {
+    "ID": 36,
+    "LINK": "https://www.facebook.com/navy.mil.gov.ua/posts/355356966631892?__cft__[0]=AZXO8RWS9lCx82Y02S6UzpD6OQEth14fP_Q7Fiu4zpJ1MEtKUXA7fayIYOwoozpJUgT9l8b38bO7YuKOG5IaTn91TvSR3cLXXYcaKiBOND8gCVQMp2ZUzNqDMx6u8_IB3h9rX5FkDJONx1fmwgMgIgFN&__tn__=%2CO%2CP-R",
+    "NETWORK": "facebook",
+    "TAGS": "Embargo"
+  },
+  {
+    "ID": 37,
+    "LINK": "https://twitter.com/HalynaYanchenko/status/1511965212160798725",
+    "NETWORK": "twitter",
+    "TAGS": "Embargo"
+  },
+  {
+    "ID": 38,
+    "LINK": "https://www.facebook.com/MediaInitiativeForHumanRights/posts/7542952265744716",
+    "NETWORK": "facebook",
+    "TAGS": "russiaWarCrimes"
+  },
+  {
+    "ID": 39,
+    "LINK": "https://twitter.com/guyverhofstadt/status/1511667812137377804",
+    "NETWORK": "twitter",
+    "TAGS": "Embargo"
+  },
+  {
+    "ID": 40,
+    "LINK": "https://twitter.com/EuromaidanPress/status/1511786466728415241",
+    "NETWORK": "twitter",
+    "TAGS": "Embargo"
+  },
+  {
+    "ID": 41,
+    "LINK": "https://twitter.com/TheEconomist/status/1514977374491795456",
+    "NETWORK": "twitter",
+    "TAGS": "Embargo"
+  },
+  {
+    "ID": 42,
+    "LINK": "https://twitter.com/Tim_Phelan/status/1498659697414524928",
+    "NETWORK": "twitter",
+    "TAGS": "UkraineEUmembership"
+  },
+  {
+    "ID": 43,
+    "LINK": "https://twitter.com/kravchukev/status/1498641885195390977",
+    "NETWORK": "twitter",
+    "TAGS": "UkraineEUmembership"
+  },
+  {
+    "ID": 44,
+    "LINK": "https://twitter.com/ukraine_world/status/1514549967003820035",
+    "NETWORK": "twitter",
+    "TAGS": "russiaWarCrimes"
+  },
+  {
+    "ID": 45,
+    "LINK": "https://twitter.com/ukraine_world/status/1514208324828512258",
+    "NETWORK": "twitter",
+    "TAGS": "Genocide, russiaWarCrimes"
+  },
+  {
+    "ID": 46,
+    "LINK": "https://www.instagram.com/p/CcLCxJnMd7F/?igshid=YmMyMTA2M2Y=",
+    "NETWORK": "instagram",
+    "TAGS": "BoycottRussia"
+  },
+  {
+    "ID": 47,
+    "LINK": "https://www.instagram.com/p/CcLeBv8NO_P/?igshid=YmMyMTA2M2Y=",
+    "NETWORK": "instagram",
+    "TAGS": "BoycottRussia"
+  },
+  {
+    "ID": 48,
+    "LINK": "https://www.instagram.com/p/CcPvz2-tz-W/?igshid=YmMyMTA2M2Y=",
+    "NETWORK": "instagram",
+    "TAGS": "BoycottRussia"
+  },
+  {
+    "ID": 49,
+    "LINK": "https://www.instagram.com/p/Cbsd7nitgAr/?igshid=YmMyMTA2M2Y=",
+    "NETWORK": "instagram",
+    "TAGS": "BoycottRussia"
+  },
+  {
+    "ID": 50,
+    "LINK": "https://www.instagram.com/p/CbVM-ozNmah/?igshid=YmMyMTA2M2Y=",
+    "NETWORK": "instagram",
+    "TAGS": "BoycottRussia"
+  },
+  {
+    "ID": 51,
+    "LINK": "https://www.instagram.com/p/CcVGOxDoa2Y/?igshid=YmMyMTA2M2Y=",
+    "NETWORK": "instagram",
+    "TAGS": "russiaWarCrimes"
+  },
+  {
+    "ID": 52,
+    "LINK": "https://www.instagram.com/tv/CcDKOd7lCwF/?igshid=YmMyMTA2M2Y=",
+    "NETWORK": "instagram",
+    "TAGS": "russiaWarCrimes"
   }
 ]
