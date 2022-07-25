@@ -1,4 +1,4 @@
-import Index from 'core/home-page'
+import Index from 'pages/index'
 export { getStaticPaths } from 'core/home-page'
 export { getStaticProps } from 'pages/index'
 

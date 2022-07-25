@@ -1,5 +1,6 @@
 import Index from 'core/home-page'
-import { loadDonations } from 'core/utils/donations'
+import { DonationItem, loadDonations } from 'core/utils/donations'
+import WidgetScript from 'core/components/WidgetScript'
 
 export async function getStaticProps({ params }: any) {
   const donations = loadDonations(params?.lang)
@@ -10,4 +11,9 @@ export async function getStaticProps({ params }: any) {
   }
 }
 
-export default Index
+export default ({ donations }: { donations: DonationItem[] }) => (
+  <>
+    <Index donations={donations} />
+    <WidgetScript />
+  </>
+)

@@ -1,5 +1,5 @@
+import WidgetScript from 'core/components/WidgetScript';
 import { useRouter } from 'next/router';
-import Script from 'next/script';
 import * as React from 'react'
 import styled, { createGlobalStyle } from 'styled-components';
 import DeferredRender from '../core/components/DeferredRender';
@@ -37,11 +37,7 @@ const CodeSandboxPage: NextPageWithLayout = () => {
     <DeferredRender>
       <>
         <GlobalStyles />
-        <Script
-          id="sfuw"
-          async={true}
-          src={`https://cdn.jsdelivr.net/gh/StandForUkraine/site-widget@1.0/artifacts/index.iife.min.js?${search}`}
-        />
+        <WidgetScript params={search} />
         <SiteContent>Site content</SiteContent>
       </>
     </DeferredRender>
