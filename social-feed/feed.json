@@ -3,19 +3,19 @@
         "id": "1",
         "link": "https://twitter.com/stand4ukr/status/1579470757062905856",
         "network": "twitter",
-        "tags": "ArmUkraineNow, StopRussiaNOW"
+        "tags": "ArmUkraineNow,StopRussiaNOW"
     },
     {
         "id": "2",
         "link": "https://twitter.com/stand4ukr/status/1579532218074005513",
         "network": "twitter",
-        "tags": "ArmUkraineNow, StopRussiaNOW"
+        "tags": "ArmUkraineNow,StopRussiaNOW"
     },
     {
         "id": "3",
         "link": "https://twitter.com/stand4ukr/status/1579577517622497282",
         "network": "twitter",
-        "tags": "ArmUkraineNow, StopRussiaNOW"
+        "tags": "ArmUkraineNow,StopRussiaNOW"
     },
     {
         "id": "4",
@@ -51,6 +51,6 @@
         "id": "9",
         "link": "https://twitter.com/ukraine_world/status/1579466368579407873",
         "network": "twitter",
-        "tags": "StopRussiaNOW, RussiaisATerroistState"
+        "tags": "StopRussiaNOW,RussiaisATerroistState"
     }
 ]
