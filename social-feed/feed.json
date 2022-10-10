@@ -1,332 +1,56 @@
 [
-  {
-    "id": 1,
-    "link": "https://twitter.com/Boycott_RU/status/1512184960488288257",
-    "network": "twitter",
-    "tags": "Embargo,BoycottRussia"
-  },
-  {
-    "id": 2,
-    "link": "https://www.youtube.com/watch?v=foPUxMvXbhk",
-    "network": "youtube",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 3,
-    "link": "https://twitter.com/__ol0__/status/1515750334131539970",
-    "network": "twitter",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 4,
-    "link": "https://www.instagram.com/tv/CcHSioZMHFf/?igshid=YmMyMTA2M2Y=",
-    "network": "instagram",
-    "tags": "Genocide,russiaWarCrimes"
-  },
-  {
-    "id": 5,
-    "link": "https://twitter.com/Boycott_RU/status/1513417466436796418",
-    "network": "twitter",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 6,
-    "link": "https://twitter.com/__ol0__/status/1516149388686630915",
-    "network": "twitter",
-    "tags": "russiaWarCrimes"
-  },
-  {
-    "id": 7,
-    "link": "https://www.facebook.com/stopvladimirputin/posts/4999341913475076",
-    "network": "facebook",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 8,
-    "link": "https://twitter.com/IN_searchOFlife/status/1514398051946881024",
-    "network": "twitter",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 9,
-    "link": "https://www.facebook.com/zelenskiy.official/posts/3053126458271043",
-    "network": "facebook",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 10,
-    "link": "https://twitter.com/MamonovaYuliia/status/1514744312780800012",
-    "network": "twitter",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 11,
-    "link": "https://twitter.com/MamonovaYuliia/status/1514745476263862279",
-    "network": "twitter",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 12,
-    "link": "https://twitter.com/Boycott_RU/status/1512085363359051782",
-    "network": "twitter",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 13,
-    "link": "https://twitter.com/SeanPenn/status/1514657810423840768",
-    "network": "twitter",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 14,
-    "link": "https://twitter.com/Tobias_Ellwood/status/1504493453958385668",
-    "network": "twitter",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 15,
-    "link": "https://www.facebook.com/promoteukraine/posts/5031311256938533",
-    "network": "facebook",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 16,
-    "link": "https://twitter.com/curlyfoxy/status/1513259289028308993",
-    "network": "twitter",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 17,
-    "link": "https://www.facebook.com/permalink.php?story_fbid=309795787930281&id=100066995871358",
-    "network": "facebook",
-    "tags": "russiaWarCrimes"
-  },
-  {
-    "id": 18,
-    "link": "https://twitter.com/HolodomorMuseum/status/1513865282875502593",
-    "network": "twitter",
-    "tags": "Genocide"
-  },
-  {
-    "id": 19,
-    "link": "https://twitter.com/MamonovaYuliia/status/1512216691006230528",
-    "network": "twitter",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 20,
-    "link": "https://www.facebook.com/kyivnotkievchannel/posts/513793856892578",
-    "network": "facebook",
-    "tags": "russiaWarCrimes"
-  },
-  {
-    "id": 21,
-    "link": "https://www.facebook.com/tasha.mille.5/posts/5011302662284095",
-    "network": "facebook",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 22,
-    "link": "https://twitter.com/ginnnnt72/status/1514969786932994052",
-    "network": "twitter",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 23,
-    "link": "https://www.facebook.com/vitaliy.andarak/posts/5552577474771120",
-    "network": "facebook",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 24,
-    "link": "https://twitter.com/ukraine_world/status/1514973560837656577",
-    "network": "twitter",
-    "tags": "Genocide,russiaWarCrimes"
-  },
-  {
-    "id": 25,
-    "link": "https://www.facebook.com/inukraine.official/posts/2750598321913921",
-    "network": "facebook",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 26,
-    "link": "https://www.facebook.com/DontFundWar/posts/111318951521900",
-    "network": "facebook",
-    "tags": "BoycottRussia,DontFundWar"
-  },
-  {
-    "id": 27,
-    "link": "https://twitter.com/StratcomCentre/status/1514913926709874699",
-    "network": "twitter",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 28,
-    "link": "https://twitter.com/ukraine_world/status/1514561553240104969",
-    "network": "twitter",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 29,
-    "link": "https://twitter.com/ukraine_world/status/1514698724190085126",
-    "network": "twitter",
-    "tags": "russiaWarCrimes,UkraineEUmembership"
-  },
-  {
-    "id": 30,
-    "link": "https://twitter.com/OlenaHalushka/status/1514905051155861506",
-    "network": "twitter",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 31,
-    "link": "https://www.facebook.com/MichaelRapaportOfficial/posts/601897524831870",
-    "network": "facebook",
-    "tags": "Genocide"
-  },
-  {
-    "id": 32,
-    "link": "https://twitter.com/ptuxerman/status/1513656827799650312",
-    "network": "twitter",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 33,
-    "link": "https://www.facebook.com/luba.dub/posts/10159130248777968",
-    "network": "facebook",
-    "tags": "Genocide"
-  },
-  {
-    "id": 34,
-    "link": "https://twitter.com/mariaorestivna/status/1514191524023746561",
-    "network": "twitter",
-    "tags": "Genocide"
-  },
-  {
-    "id": 35,
-    "link": "https://www.youtube.com/watch?v=PTJUauFoKEo",
-    "network": "youtube",
-    "tags": "Genocide"
-  },
-  {
-    "id": 36,
-    "link": "https://www.facebook.com/promoteukraine/posts/5011149485621377",
-    "network": "facebook",
-    "tags": "Embargo,Genocide"
-  },
-  {
-    "id": 37,
-    "link": "https://twitter.com/Podolyak_M/status/1514283862100258817",
-    "network": "twitter",
-    "tags": "Embargo,Genocide"
-  },
-  {
-    "id": 38,
-    "link": "https://www.facebook.com/navy.mil.gov.ua/posts/355356966631892",
-    "network": "facebook",
-    "tags": "Embargo"
-  },
-  {
-    "id": 39,
-    "link": "https://twitter.com/HalynaYanchenko/status/1511965212160798725",
-    "network": "twitter",
-    "tags": "Embargo"
-  },
-  {
-    "id": 40,
-    "link": "https://www.facebook.com/MediaInitiativeForHumanRights/posts/7542952265744716",
-    "network": "facebook",
-    "tags": "russiaWarCrimes"
-  },
-  {
-    "id": 41,
-    "link": "https://twitter.com/guyverhofstadt/status/1511667812137377804",
-    "network": "twitter",
-    "tags": "Embargo"
-  },
-  {
-    "id": 42,
-    "link": "https://twitter.com/EuromaidanPress/status/1511786466728415241",
-    "network": "twitter",
-    "tags": "Embargo"
-  },
-  {
-    "id": 43,
-    "link": "https://twitter.com/TheEconomist/status/1514977374491795456",
-    "network": "twitter",
-    "tags": "Embargo"
-  },
-  {
-    "id": 44,
-    "link": "https://twitter.com/Tim_Phelan/status/1498659697414524928",
-    "network": "twitter",
-    "tags": "UkraineEUmembership"
-  },
-  {
-    "id": 45,
-    "link": "https://twitter.com/kravchukev/status/1498641885195390977",
-    "network": "twitter",
-    "tags": "UkraineEUmembership"
-  },
-  {
-    "id": 46,
-    "link": "https://twitter.com/ukraine_world/status/1514549967003820035",
-    "network": "twitter",
-    "tags": "russiaWarCrimes"
-  },
-  {
-    "id": 47,
-    "link": "https://twitter.com/ukraine_world/status/1514208324828512258",
-    "network": "twitter",
-    "tags": "Genocide,russiaWarCrimes"
-  },
-  {
-    "id": 48,
-    "link": "https://www.instagram.com/p/CcLCxJnMd7F/?igshid=YmMyMTA2M2Y=",
-    "network": "instagram",
-    "tags": "BoycottRussia"
-  },
-  {
-    "id": 49,
-    "link": "https://www.instagram.com/p/CcLeBv8NO_P/?igshid=YmMyMTA2M2Y=",
-    "network": "instagram",
-    "tags": "BoycottRussia"
-  },
-  {
-    "id": 50,
-    "link": "https://www.tiktok.com/@dorn_ivan/video/7087257860547104001",
-    "network": "tiktok",
-    "tags": "ArmUkraineNow"
-  },
-  {
-    "id": 51,
-    "link": "https://www.instagram.com/p/CcPvz2-tz-W/?igshid=YmMyMTA2M2Y=",
-    "network": "instagram",
-    "tags": "BoycottRussia"
-  },
-  {
-    "id": 52,
-    "link": "https://www.instagram.com/p/Cbsd7nitgAr/?igshid=YmMyMTA2M2Y=",
-    "network": "instagram",
-    "tags": "BoycottRussia"
-  },
-  {
-    "id": 53,
-    "link": "https://www.instagram.com/p/CbVM-ozNmah/?igshid=YmMyMTA2M2Y=",
-    "network": "instagram",
-    "tags": "BoycottRussia"
-  },
-  {
-    "id": 54,
-    "link": "https://www.instagram.com/p/CcVGOxDoa2Y/?igshid=YmMyMTA2M2Y=",
-    "network": "instagram",
-    "tags": "russiaWarCrimes"
-  },
-  {
-    "id": 55,
-    "link": "https://www.instagram.com/tv/CcDKOd7lCwF/?igshid=YmMyMTA2M2Y=",
-    "network": "instagram",
-    "tags": "russiaWarCrimes"
-  }
+    {
+        "id": "1",
+        "link": "https://twitter.com/stand4ukr/status/1579470757062905856",
+        "network": "twitter",
+        "tags": "ArmUkraineNow, StopRussiaNOW"
+    },
+    {
+        "id": "2",
+        "link": "https://twitter.com/stand4ukr/status/1579532218074005513",
+        "network": "twitter",
+        "tags": "ArmUkraineNow, StopRussiaNOW"
+    },
+    {
+        "id": "3",
+        "link": "https://twitter.com/stand4ukr/status/1579577517622497282",
+        "network": "twitter",
+        "tags": "ArmUkraineNow, StopRussiaNOW"
+    },
+    {
+        "id": "4",
+        "link": "https://www.facebook.com/stand4ukr/posts/pfbid0LBzMsLNiGx5yomYDmHHQomaX3MEJAwQhfBrBGGEsAsbqQNxDeDyvnAxPGJ8D4jPql",
+        "network": "facebook",
+        "tags": "ArmUkraineNow"
+    },
+    {
+        "id": "5",
+        "link": "https://www.facebook.com/stand4ukr/posts/pfbid02rRTzi9VxkA1CS81PiXDHfqoADgBcRSEdTe5BEmBdHFQWEskvvvozbCyi3Cjv6aAnl",
+        "network": "facebook",
+        "tags": "ArmUkraineNow"
+    },
+    {
+        "id": "6",
+        "link": "https://www.facebook.com/stand4ukr/posts/pfbid02hGbWtyjVwNbnN2WCkVhwyQRAR3ThQDXDbqYZWVJbkR6hkUhevVQtrJtn9Fm2zXLpl",
+        "network": "facebook",
+        "tags": "ArmUkraineNow"
+    },
+    {
+        "id": "7",
+        "link": "https://www.instagram.com/p/CjiRiGOM58n/?igshid=YmMyMTA2M2Y=",
+        "network": "instagram",
+        "tags": "ArmUkraineNow"
+    },
+    {
+        "id": "8",
+        "link": "https://www.instagram.com/p/CjizhtgMgrU/?igshid=YmMyMTA2M2Y=",
+        "network": "instagram",
+        "tags": "ArmUkraineNow"
+    },
+    {
+        "id": "9",
+        "link": "https://twitter.com/ukraine_world/status/1579466368579407873",
+        "network": "twitter",
+        "tags": "StopRussiaNOW, RussiaisATerroistState"
+    }
 ]
