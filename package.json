@@ -18,9 +18,11 @@
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^17.0.2",
+    "react-is": "18.2.0",
     "react-lazyload": "^3.2.0",
     "react-social-media-embed": "^2.0.12",
     "styled-components": "^5.3.3",
+    "stylis-plugin-rtl": "1.1.0",
     "yaml": "^1.10.2"
   },
   "devDependencies": {
