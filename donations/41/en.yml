@@ -1,3 +1,4 @@
+# TODO: Romove this org
 title: Territory of Life
 tags:
   - Non-government
@@ -12,3 +13,4 @@ payMethods:
   - IBAN
   - PayPal
 edrpou: "39333332"
+hidden: yes

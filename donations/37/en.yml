@@ -11,3 +11,4 @@ payMethods:
   - Credit Card
   - PayPal
 edrpou: "38862120"
+hidden: yes # TODO: was offline, revisit

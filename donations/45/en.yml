@@ -1,3 +1,4 @@
+# TODO: Romove this org
 title: Broniki
 tags:
   - Non-government
@@ -12,3 +13,4 @@ payMethods:
   - Credit Card
   - Bitcoin
 edrpou: "44695731"
+hidden: yes

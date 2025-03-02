@@ -9,3 +9,4 @@ donateLink: https://donate.thedigital.gov.ua/
 payMethods:
   - IBAN
   - Bitcoin
+hidden: yes # TODO: change to https://u24.gov.ua/uk

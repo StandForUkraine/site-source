@@ -1,3 +1,4 @@
+# TODO: we need to remove this org
 title: ASAP Rescue
 tags:
   - Non-government
@@ -10,3 +11,4 @@ donateLink: https://www.liqpay.ua/ru/checkout/card/checkout_1646745691426997_130
 payMethods:
   - Credit Card
 edrpou: "39472085"
+hidden: true

@@ -9,7 +9,10 @@ description: Ukrainian voluntary women's organization, emerged in 2014 with the
   psychiatric training. Since 2014 more than 30,000 women across Ukraine passed
   our training.
 link: https://uavarta.org/en/
-donateLink: https://uavarta.org/vnesok/
+donateLink: https://uavarta.org/en/donate/
 payMethods:
   - IBAN
+  - Credit Card
+  - PayPal
+  - Bitcoin
 edrpou: "39439514"
