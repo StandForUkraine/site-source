@@ -1,12 +1,13 @@
-logoAlt: National bank of Ukraine
-title: Armed Forces of Ukraine
+title: Come Back Alive
 tags:
   - Military
-description: >
-  An official fundraising account created by NBU to support the Armed Forces of Ukraine. All collected funds are directed to enhance Ukraine's defense capability: weapons, equipment, food, medicine, and other supplies.
-link: https://bank.gov.ua/en/about/support-the-armed-forces/
-donateLink: https://bank.gov.ua/en/about/support-the-armed-forces/
+  - Non-government
+  - Medical
+description: The Foundation stands with the Ukrainian Armed Forces by funding defensive initiatives. We supply technology, training, and ammunition. After arriving home from the front line of defense, our troops receive support with sports rehabilitation and the development of veteran-run businesses.
+link: https://savelife.in.ua/
+donateLink: https://savelife.in.ua/donate/
 payMethods:
   - IBAN
+  - Bitcoin
   - Credit Card
-edrpou: "00032106"
+edrpou: "39696398"

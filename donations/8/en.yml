@@ -1,14 +1,12 @@
-title: Serhiy Prytula Foundation
+logoAlt: National bank of Ukraine
+title: Armed Forces of Ukraine
 tags:
-  - Non-government
-  - Humanitarian
   - Military
 description: >
-  Donate money to purchase SUVs, pickup trucks and ATVs for the Armed Forces, Territorial Defense units, National Guard, and other military units of the Ukrainian Army.
-link: https://prytulafoundation.org/en/
-donateLink: https://prytulafoundation.org/en/help-army
+  An official fundraising account created by NBU to support the Armed Forces of Ukraine. All collected funds are directed to enhance Ukraine's defense capability: weapons, equipment, food, medicine, and other supplies.
+link: https://bank.gov.ua/en/about/support-the-armed-forces/
+donateLink: https://bank.gov.ua/en/about/support-the-armed-forces/
 payMethods:
   - IBAN
   - Credit Card
-  - Bitcoin
-edrpou: "43720363"
+edrpou: "00032106"

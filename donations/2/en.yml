@@ -1,13 +1,14 @@
-title: Come Back Alive
+title: Serhiy Prytula Foundation
 tags:
-  - Military
   - Non-government
-  - Medical
-description: The Foundation stands with the Ukrainian Armed Forces by funding defensive initiatives. We supply technology, training, and ammunition. After arriving home from the front line of defense, our troops receive support with sports rehabilitation and the development of veteran-run businesses.
-link: https://savelife.in.ua/
-donateLink: https://savelife.in.ua/donate/
+  - Humanitarian
+  - Military
+description: >
+  Donate money to purchase SUVs, pickup trucks and ATVs for the Armed Forces, Territorial Defense units, National Guard, and other military units of the Ukrainian Army.
+link: https://prytulafoundation.org/en/
+donateLink: https://prytulafoundation.org/en/help-army
 payMethods:
   - IBAN
-  - Bitcoin
   - Credit Card
-edrpou: "39696398"
+  - Bitcoin
+edrpou: "43720363"
