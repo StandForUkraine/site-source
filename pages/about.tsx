@@ -8,7 +8,12 @@ export default function AboutPage() {
   const renderMetadata = useMetadataRenderer()
   return (
     <>
-      <Head>{renderMetadata({})}</Head>
+      <Head>
+        {renderMetadata({
+          title: 'About the Project — Stand For Ukraine',
+          description: 'Learn about Stand For Ukraine, a volunteer-run project that curates vetted Ukrainian military and humanitarian organizations for international donors.',
+        })}
+      </Head>
       <About />
       <WidgetScript />
     </>
