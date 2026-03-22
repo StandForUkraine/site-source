@@ -1,8 +1,8 @@
 title: Army SOS
 tags:
   - Military
-  - Non-government
-  - Non-lethal
+  - NGO
+  - Non-combat
 description: Army SOS Citizen’s Initiative coordinates people’s efforts to help soldiers of Ukraine. Manages purchases of necessary ammunition, shields, intercommunication and reconnaissance facilities, uniforms, and food supply. Delivers all goods directly to the unit’s emplacement and passes them right to the hands of our warriors.
 link: https://armysos.com.ua/
 donateLink: https://armysos.com.ua/donate/
@@ -10,5 +10,5 @@ payMethods:
   - IBAN
   - Credit Card
   - PayPal
-  - Bitcoin
+  - Crypto
 edrpou: "39363613"

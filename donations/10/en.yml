@@ -1,8 +1,8 @@
 title: Hospitallers
 tags:
-  - Non-government
+  - NGO
   - Medical
-  - Non-lethal
+  - Non-combat
 description: >
   "For the sake of every life."  Volunteer organization of paramedics who work directly on the front line.
 link: https://www.hospitallers.life/
@@ -10,7 +10,6 @@ donateLink: https://www.hospitallers.life/needs-hospitallers
 payMethods:
   - IBAN
   - Credit Card
-  - Bitcoin
+  - Crypto
   - PayPal
-  - Western Union
 edrpou: "40070581"

@@ -1,8 +1,8 @@
 # TODO: Romove this org
 title: Broniki
 tags:
-  - Non-government
-  - Non-lethal
+  - NGO
+  - Non-combat
   - Military
 description: >
   Raising money for bulletproof vests for the Ukrainian Armed Forces and Teroborona (Civil Defense).
@@ -11,6 +11,6 @@ donateLink: https://broniki.org.ua/
 payMethods:
   - IBAN
   - Credit Card
-  - Bitcoin
+  - Crypto
 edrpou: "44695731"
 hidden: yes
