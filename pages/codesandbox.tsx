@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components'
 import type { NextPageWithLayout } from './_app'
 
 const GlobalStyles = createGlobalStyle`
@@ -32,8 +32,8 @@ const CodeSandboxPage: NextPageWithLayout = () => {
 
 const SiteContent = styled.h2`
   padding: 0 20px;
-`;
+`
 
-CodeSandboxPage.getLayout = (page) => page;
+CodeSandboxPage.getLayout = (page) => page
 
-export default CodeSandboxPage;
+export default CodeSandboxPage

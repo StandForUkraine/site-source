@@ -10,7 +10,8 @@ export default function AboutPage() {
       <Head>
         {renderMetadata({
           title: 'About the Project — Stand For Ukraine',
-          description: 'Learn about Stand For Ukraine, a volunteer-run project that curates vetted Ukrainian military and humanitarian organizations for international donors.',
+          description:
+            'Learn about Stand For Ukraine, a volunteer-run project that curates vetted Ukrainian military and humanitarian organizations for international donors.',
         })}
       </Head>
       <About />

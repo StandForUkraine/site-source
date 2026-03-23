@@ -14,6 +14,4 @@ export async function getStaticProps({ params }: any) {
   }
 }
 
-export default (params: PostPageParams) => (
-  <Page {...params} />
-)
+export default (params: PostPageParams) => <Page {...params} />

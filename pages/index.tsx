@@ -10,6 +10,4 @@ export async function getStaticProps({ params }: any) {
   }
 }
 
-export default ({ donations }: { donations: DonationItem[] }) => (
-  <Index donations={donations} />
-)
+export default ({ donations }: { donations: DonationItem[] }) => <Index donations={donations} />
