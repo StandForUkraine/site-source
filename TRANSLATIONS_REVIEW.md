@@ -267,3 +267,23 @@ Voice choices a native reviewer should sanity-check:
 - Place names: `Kyiv`, `Kharkiv`, `Dnipro`, `Donbas` (Ukraine-aligned spellings).
 - PT-PT vocabulary used over PT-BR: `Partilhar` (not Compartilhar), `ligação` (not link), `connosco`, `ótica`, `eletrónica`.
 - `spreadTheWorld` left as the English "Spread the word" (matches `de.ts`; appears to be discontinued share copy).
+
+---
+
+## New locale: Kazakh (kk) — added this pass
+
+Kazakh (Cyrillic), informal *сен*, voice per `TRANSLATIONS_GUIDE.md`. Shipped on its own branch (`add-kazakh`) / PR, independent of the main pass (#58) and of the Portuguese branch.
+
+> ⚠️ **LOW CONFIDENCE.** Unlike the other locales, this was drafted without any author who can read Kazakh and without an existing Kazakh file to anchor against. Every `kk.yml` and `kk.ts` is marked accordingly. **This locale needs a thorough native review before it should be considered usable — not just a light proofread.** Treat case endings, agreement, register (сен vs сіз consistency), and terminology as unverified.
+
+What was added:
+- **Registration** in `core/texts/index.ts`: `import kk`, added to `byLang`, `flagsMap['kk'] = '🇰🇿'`. Not RTL.
+- **Chrome** `core/texts/kk.ts`: meta, buttons, hero, tags, footer + goals, filter, payment methods, browseAll, legal popup. About / verify / widget blocks kept in **English** (out-of-scope per guide + required for `TextKeys` parity — `core/texts/index.ts:72`).
+- **Cards**: `kk.yml` for all 42 non-hidden orgs (description only; titles left as the orgs' original names). Hidden orgs not touched.
+
+Specific things for a native reviewer to check first:
+- Tags: `Refugees → Босқындарға көмек`, `Non-combat → Шайқастан тыс қолдау`, `NGO → ҮЕҰ`, `filterTo → Санат`, `filterPayVia → Тәсілі`.
+- `donate` button rendered as `Қолдау` ("support") rather than a literal "donate" — confirm this reads right on a donate button.
+- Place names: `Киев`/`Харьков`/`Днипро` were written in their common Russian-derived Cyrillic forms; a Kazakh editor may prefer Ukrainian-aligned spellings (e.g. `Киів`). Flagged — not decided.
+- `goal1` uses *resist* framing (қарсы тұру), not a "based on" calque.
+- Script: Cyrillic only. If the project ever wants Latin Kazakh, that's a separate variant.
