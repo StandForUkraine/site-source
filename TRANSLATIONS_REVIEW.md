@@ -251,6 +251,25 @@ Chrome `pl.ts` fixes (real bugs, not just voice):
 
 ---
 
+## New locale: Portuguese (pt-PT) — added this pass
+
+European Portuguese, informal *tu*, voice per `TRANSLATIONS_GUIDE.md`. **Entirely AI-assisted — no native pass yet. Needs a native PT reviewer before it is treated as final.** Shipped on its own branch (`add-portuguese`) / PR, separate from the main translations pass (#58).
+
+What was added:
+- **Registration** in `core/texts/index.ts`: `import pt`, added to `byLang`, `flagsMap['pt'] = '🇵🇹'`. Not RTL.
+- **Chrome** `core/texts/pt.ts`: meta, buttons, hero, tags, footer + goals, filter, payment methods, browseAll, legal popup translated. The About / verify / widget blocks are kept in **English** (out-of-scope per guide) — they *must* be present because `TextKeys` is the intersection of all locales' keys (`core/texts/index.ts:72`), so every locale carries the full key set; same approach as `de.ts`.
+- **Cards**: `pt.yml` for all 42 non-hidden orgs (description only; titles left as the orgs' original names — none have an established PT identity). Hidden orgs (#3, #4, #6, #13, #32, #35, #37, #38, #41, #45, #47, #49) not touched.
+
+Voice choices a native reviewer should sanity-check:
+- Tags: `Refugees → Ajuda a refugiados`, `Non-combat → Apoio não-combatente`, `filterTo → Causa`.
+- Inclusivity: PT has no clean inclusive marker, so neutral nouns where natural (`pessoas deslocadas`, `quem defende o país`, `quem precisa`). Generic masculine kept for profession words (`voluntários`, `veteranos`) — flag if the project wants these reframed, as was done for ES/IT.
+- `goal1` uses *resistir à invasão* (resist), not a "based on" calque.
+- Place names: `Kyiv`, `Kharkiv`, `Dnipro`, `Donbas` (Ukraine-aligned spellings).
+- PT-PT vocabulary used over PT-BR: `Partilhar` (not Compartilhar), `ligação` (not link), `connosco`, `ótica`, `eletrónica`.
+- `spreadTheWorld` left as the English "Spread the word" (matches `de.ts`; appears to be discontinued share copy).
+
+---
+
 ## New locale: Kazakh (kk) — added this pass
 
 Kazakh (Cyrillic), informal *сен*, voice per `TRANSLATIONS_GUIDE.md`. Shipped on its own branch (`add-kazakh`) / PR, independent of the main pass (#58) and of the Portuguese branch.
