@@ -95,10 +95,10 @@ Before calling a locale "done for this round":
 ## Scope tracker (May 2026)
 
 - **Fully aligned to this guide:** EN (canonical), UA (native sign-off).
-- **Voice-passed AI drafts, pending native review:** DE, PL, ES, FR, SW, NL, IT, RU, JA.
+- **Voice-passed AI drafts, pending native review:** DE, PL, ES, FR, SW, NL, IT, RU, JA, PT (pt-PT — chrome + all 42 cards, added on its own branch).
 - **New locale, AI draft — LOW CONFIDENCE, needs thorough native review:** KK (Kazakh — chrome + all 42 cards, on its own branch).
 - **Tag/chrome touched only, cards untouched:** EL, TR, DK, NO, LV, RO.
 - **Needs full pass (still partly English fallback):** AR.
-- **Deferred until a later session:** PT-BR (Brazil ~1% traffic, currently English fallback).
+- **Deferred until a later session:** PT-BR (Brazil) — we shipped pt-PT (Portugal); a Brazilian variant could follow if traffic warrants.
 - **Out of scope, deferred:** team list (`About.tsx` `teamMembers` array), refreshing 2022-era card framing.
 - **Out of scope permanently:** widget page (discontinued), share / social copy (discontinued), About page localisation (English-only by design).
