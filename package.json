@@ -6,6 +6,7 @@
     "build-next": "next build && next export",
     "build": "rm -rf out && npm run build-next && node core/scripts/after-build.js",
     "fetch-t10n": "export GOOGLE_APPLICATION_CREDENTIALS='./secrets.json' && node core/scripts/fetch-t10n.js",
+    "check-links": "node scripts/check-links.js",
     "lint": "tslint -p . -c tslint.json --fix --format verbose",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },

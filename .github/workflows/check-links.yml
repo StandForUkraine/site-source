@@ -1,0 +1,72 @@
+name: Check donation links
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # every Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install yaml parser
+        run: npm install --no-save --no-package-lock yaml@1
+
+      - name: Check links
+        id: check
+        run: |
+          set +e
+          node scripts/check-links.js > report.txt 2>&1
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          cat report.txt
+
+      - name: Open or update issue on failure
+        if: steps.check.outputs.exit_code != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs')
+            const report = fs.readFileSync('report.txt', 'utf8')
+            const title = 'Broken donation links detected'
+            const body = [
+              'The weekly link check found donation links that are broken or look like expired/parked domains.',
+              '',
+              '```',
+              report.trim(),
+              '```',
+              '',
+              `[Workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`,
+            ].join('\n')
+            const { data: issues } = await github.rest.issues.listForRepo({
+              ...context.repo,
+              state: 'open',
+              labels: 'link-check',
+            })
+            if (issues.length > 0) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: issues[0].number,
+                body,
+              })
+            } else {
+              await github.rest.issues.create({
+                ...context.repo,
+                title,
+                body,
+                labels: ['link-check'],
+              })
+            }
+
+      - name: Fail the run if links are broken
+        if: steps.check.outputs.exit_code != '0'
+        run: exit 1
