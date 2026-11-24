@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 6 * * 1' # every Monday 06:00 UTC
   workflow_dispatch:
+  # Live requests to donation URLs. Narrow path filter only; does not re-enable
+  # a workflow GitHub has disabled, and does not open or comment on issues.
+  pull_request:
+    paths:
+      - 'donations/**'
 
 permissions:
   contents: read
@@ -31,7 +36,7 @@ jobs:
           cat report.txt
 
       - name: Open or update issue on failure
-        if: steps.check.outputs.exit_code != '0'
+        if: steps.check.outputs.exit_code != '0' && github.event_name != 'pull_request'
         uses: actions/github-script@v7
         with:
           script: |
