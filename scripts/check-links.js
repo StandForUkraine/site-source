@@ -7,7 +7,6 @@
 // Exit code: 0 = all good (warnings allowed), 1 = at least one failure.
 const fs = require('fs')
 const path = require('path')
-const yaml = require('yaml')
 
 const ROOT = path.join(__dirname, '..')
 const TIMEOUT_MS = 20000
@@ -45,6 +44,7 @@ function registrableDomain(hostname) {
 }
 
 function collectLinks() {
+  const yaml = require('yaml')
   const links = [] // { url, org, title, file, field }
   const dirs = fs
     .readdirSync(path.join(ROOT, 'donations'))
@@ -65,6 +65,28 @@ function collectLinks() {
     }
   }
   return links
+}
+
+async function readHtmlSample(res) {
+  const limit = 200000
+  if (!res.body || typeof res.body.getReader !== 'function') return ''
+  const reader = res.body.getReader()
+  const decoder = new TextDecoder()
+  let sample = ''
+  try {
+    while (sample.length < limit) {
+      const { done, value } = await reader.read()
+      if (done) break
+      sample += decoder.decode(value, { stream: true })
+    }
+  } finally {
+    try {
+      await reader.cancel()
+    } catch {
+      /* body already closed */
+    }
+  }
+  return sample.slice(0, limit).toLowerCase()
 }
 
 async function fetchWithRedirects(url) {
@@ -96,7 +118,7 @@ async function fetchWithRedirects(url) {
     let bodySample = ''
     try {
       if ((res.headers.get('content-type') || '').includes('html')) {
-        bodySample = (await res.text()).slice(0, 200000).toLowerCase()
+        bodySample = await readHtmlSample(res)
       } else {
         res.body?.cancel()
       }
@@ -118,17 +140,22 @@ function verdict(link, result) {
   if (PARKING_HOSTS.includes(finalDomain)) {
     return { level: 'FAIL', reason: `redirects to domain marketplace/registrar: ${finalHost}` }
   }
+  // Bot protection (Cloudflare & co) answers 403/429/503 to scripts while the site is fine in a browser.
+  // That stays a warning even if the protected body contains a parking phrase.
+  const botStatuses = [403, 429, 503]
+  if (botStatuses.includes(result.status)) {
+    return { level: 'WARN', reason: `HTTP ${result.status} — possibly bot protection, verify in a browser` }
+  }
   const phrase = PARKING_PHRASES.find((p) => result.bodySample?.includes(p))
   if (phrase) {
     return { level: 'FAIL', reason: `page looks parked/expired (matched: "${phrase}")` }
   }
   if (result.status >= 400) {
-    // Bot protection (Cloudflare & co) answers 403/429/503 to scripts while the site is fine in a browser.
-    const botStatuses = [403, 429, 503]
-    if (botStatuses.includes(result.status)) {
-      return { level: 'WARN', reason: `HTTP ${result.status} — possibly bot protection, verify in a browser` }
-    }
     return { level: 'FAIL', reason: `HTTP ${result.status}` }
+  }
+  // Redirects with Location are followed above. A 3xx that arrives here has none.
+  if (result.status >= 300 && result.status < 400) {
+    return { level: 'FAIL', reason: `HTTP ${result.status} without Location` }
   }
   if (result.status === -1 || result.status === 0) {
     return { level: 'FAIL', reason: 'no response' }
@@ -151,6 +178,15 @@ async function checkUrl(url) {
       return { chain: [], finalUrl: url, status: 0, error: err2.cause?.code || err2.message }
     }
   }
+}
+
+function classify(link, result) {
+  if (result.error) return { level: 'FAIL', reason: `network error: ${result.error}` }
+  return verdict(link, result)
+}
+
+function failureExit(problems) {
+  return problems.some((p) => p.level === 'FAIL') ? 1 : 0
 }
 
 async function main() {
@@ -178,9 +214,7 @@ async function main() {
   const problems = []
   for (const [url, sources] of byUrl) {
     const result = results.get(url)
-    const v = result.error
-      ? { level: 'FAIL', reason: `network error: ${result.error}` }
-      : verdict(sources[0], result)
+    const v = classify(sources[0], result)
     if (v.level !== 'OK') {
       problems.push({ url, sources, ...v, status: result.status, finalUrl: result.finalUrl })
     }
@@ -201,7 +235,11 @@ async function main() {
     }
     console.log(`\n${urls.length} URLs checked: ${urls.length - problems.length} ok, ${warns.length} warnings, ${fails.length} failures`)
   }
-  process.exit(problems.some((p) => p.level === 'FAIL') ? 1 : 0)
+  process.exit(failureExit(problems))
 }
 
-main()
+if (require.main === module) {
+  main()
+}
+
+module.exports = { fetchWithRedirects, checkUrl, classify, failureExit }
